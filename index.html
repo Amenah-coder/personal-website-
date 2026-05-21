@@ -283,32 +283,6 @@
     .form-success { display: none; text-align: center; padding: 30px; color: var(--green); }
     .form-success__icon { font-size: 2.8rem; margin-bottom: 11px; }
 
-    /* RESEARCH SUB-NAV */
-    .research-subnav {
-      background: var(--white);
-      border-bottom: 1px solid var(--gray-200);
-      position: sticky; top: 68px; z-index: 100;
-      box-shadow: 0 2px 12px rgba(15,30,61,0.07);
-    }
-    .research-subnav__inner {
-      display: flex; gap: 0; align-items: center; overflow-x: auto;
-    }
-    .research-subnav__link {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 14px 22px; font-size: 0.84rem; font-weight: 600;
-      color: var(--gray-500); cursor: pointer; white-space: nowrap;
-      border-bottom: 3px solid transparent; transition: var(--transition);
-      text-decoration: none;
-    }
-    .research-subnav__link:hover { color: var(--navy); border-bottom-color: var(--gray-200); }
-    .research-subnav__link.active { color: var(--navy); border-bottom-color: var(--gold); }
-    .research-subnav__count {
-      background: var(--gray-100); color: var(--gray-700);
-      font-size: 0.7rem; font-weight: 700; padding: 1px 7px;
-      border-radius: 10px;
-    }
-    .research-subnav__link.active .research-subnav__count { background: var(--navy); color: var(--white); }
-
     /* BLOG */
     .blog-hero { background: linear-gradient(135deg, var(--navy) 0%, #0d2244 55%, var(--green) 100%); color: var(--white); padding: 72px 0 80px; }
     .blog-layout { display: grid; grid-template-columns: 1fr 320px; gap: 52px; align-items: start; }
@@ -344,16 +318,6 @@
     .blog-about__name { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--navy); margin-bottom: 6px; }
     .blog-about__bio { font-size: 0.82rem; color: var(--gray-500); line-height: 1.65; }
     .blog-write-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); border-radius: var(--radius-lg); padding: 28px; color: var(--white); text-align: center; }
-    .blog-post__full {
-      display: none;
-      margin-top: 18px;
-      padding-top: 18px;
-      border-top: 1px solid var(--gray-200);
-    }
-    .blog-post__full p { font-size: 0.9rem; color: var(--gray-700); line-height: 1.82; margin-bottom: 15px; }
-    .blog-post__full h3 { font-family: "Playfair Display", serif; font-size: 1.05rem; color: var(--navy); margin: 20px 0 10px; }
-    .blog-post__full.open { display: block; }
-    .blog-post__read.active { color: var(--navy); }
     .blog-write-cta h4 { font-family: 'Playfair Display', serif; color: var(--gold); margin-bottom: 8px; }
     .blog-write-cta p { font-size: 0.83rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 14px; }
 
@@ -417,15 +381,7 @@
   <nav class="nav">
     <div class="container">
       <div class="nav__inner">
-        <div class="nav__logo" onclick="showPage('home')" style="display:flex;align-items:center;gap:11px;">
-          <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
-            <circle cx="18" cy="18" r="18" fill="#0f1e3d"/>
-            <circle cx="18" cy="18" r="15" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.5"/>
-            <path d="M9 14 L14 14 L18 20 L22 14 L27 14 L27 22 L24.5 22 L24.5 17 L20.5 22.5 L18 22.5 L15.5 22.5 L11.5 17 L11.5 22 L9 22 Z" fill="#c9a84c"/>
-            <path d="M10 26 Q18 23 26 26" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.55"/>
-          </svg>
-          <span>Michel <span style="color:var(--gold)">Amenah</span></span>
-        </div>
+        <div class="nav__logo" onclick="showPage('home')">Michel <span>Amenah</span></div>
         <div class="nav__links">
           <a class="nav__link active" onclick="showPage('home')"       data-page="home">Home</a>
           <a class="nav__link"        onclick="showPage('about')"      data-page="about">About</a>
@@ -534,7 +490,7 @@
       <div class="container">
         <div class="about-hero__inner">
           <div class="about-avatar fade-up">
-            <div class="about-avatar__initials">MAA</div>
+            <img src="photos/profile.jpeg" alt="Michel Amenah" style="width:100%; border-radius:20px;">
             <div class="about-avatar__label">Michel Adurayi Amenah</div>
           </div>
           <div class="fade-up fade-up-delay-1">
@@ -587,92 +543,74 @@
       </div>
     </section>
 
-    <!-- PHOTO GALLERY -->
-    <section class="section">
-      <div class="container">
-        <span class="eyebrow">In the Field &amp; Around the World</span>
-        <h2 class="section-title">Field Work &amp; Conferences</h2>
-        <div class="divider"></div>
-        <div class="gallery-note">
-          📁 <strong>Adding your photos:</strong> Place image files (JPG/PNG) into the <code>photos/</code> folder alongside this file. Name them as shown below each placeholder and they will appear automatically.
+   <!-- PHOTO GALLERY -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">In the Field &amp; Around the World</span>
+    <h2 class="section-title">Field Work &amp; Conferences</h2>
+    <div class="divider"></div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item fade-up">
+        <div class="gallery-item__img-wrap">
+          <img src="photos/ihea_bali_2025.jpeg" alt="IHEA World Congress 2025, Bali">
         </div>
-        <div class="gallery-grid">
-
-          <div class="gallery-item fade-up">
-            <div class="gallery-item__img-wrap">
-              <img src="photos/ihea_bali_2025.jpg" alt="IHEA World Congress 2025, Bali" onerror="this.style.display='none'">
-              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/ihea_bali_2025.jpg</span></div>
-            </div>
-            <div class="gallery-item__caption"><strong>IHEA World Congress 2025</strong><span>Bali, Indonesia · July 2025</span></div>
-          </div>
-
-          <div class="gallery-item fade-up fade-up-delay-1">
-            <div class="gallery-item__img-wrap">
-              <img src="photos/hsg_nagasaki_2024.jpg" alt="Health Systems Global 2024, Nagasaki" onerror="this.style.display='none'">
-              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/hsg_nagasaki_2024.jpg</span></div>
-            </div>
-            <div class="gallery-item__caption"><strong>Health Systems Global 2024</strong><span>Nagasaki, Japan · 2024</span></div>
-          </div>
-
-          <div class="gallery-item fade-up fade-up-delay-2">
-            <div class="gallery-item__img-wrap">
-              <img src="photos/afhea_2025.jpg" alt="AfHEA Conference 2025" onerror="this.style.display='none'">
-              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/afhea_2025.jpg</span></div>
-            </div>
-            <div class="gallery-item__caption"><strong>AfHEA Conference 2025</strong><span>African Health Economics &amp; Policy Association</span></div>
-          </div>
-
-          <div class="gallery-item fade-up">
-            <div class="gallery-item__img-wrap">
-              <img src="photos/afhea_abuja.jpg" alt="AfHEA Abuja" onerror="this.style.display='none'">
-              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/afhea_abuja.jpg</span></div>
-            </div>
-            <div class="gallery-item__caption"><strong>AfHEA Conference</strong><span>Abuja, Nigeria</span></div>
-          </div>
-
-          <div class="gallery-item fade-up fade-up-delay-1">
-            <div class="gallery-item__img-wrap">
-              <img src="photos/lancaster_nihr.jpg" alt="Lancaster University, NIHR" onerror="this.style.display='none'">
-              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/lancaster_nihr.jpg</span></div>
-            </div>
-            <div class="gallery-item__caption"><strong>Lancaster University — NIHR</strong><span>Lancaster, United Kingdom</span></div>
-          </div>
-
-          <div class="gallery-item fade-up fade-up-delay-2">
-            <div class="gallery-item__img-wrap">
-              <img src="photos/who_ghana.jpg" alt="WHO Ghana" onerror="this.style.display='none'">
-              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/who_ghana.jpg</span></div>
-            </div>
-            <div class="gallery-item__caption"><strong>WHO Ghana</strong><span>World Health Organization, Accra</span></div>
-          </div>
-
-          <div class="gallery-item fade-up">
-            <div class="gallery-item__img-wrap">
-              <img src="photos/field_work_ghana.jpg" alt="Field work, Ghana" onerror="this.style.display='none'">
-              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/field_work_ghana.jpg</span></div>
-            </div>
-            <div class="gallery-item__caption"><strong>Community Health Field Work</strong><span>Ghana — Primary Care Research</span></div>
-          </div>
-
-          <div class="gallery-item fade-up fade-up-delay-1">
-            <div class="gallery-item__img-wrap">
-              <img src="photos/aphrc.jpg" alt="APHRC" onerror="this.style.display='none'">
-              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/aphrc.jpg</span></div>
-            </div>
-            <div class="gallery-item__caption"><strong>APHRC Research Meeting</strong><span>African Population &amp; Health Research Center</span></div>
-          </div>
-
-          <div class="gallery-item fade-up fade-up-delay-2">
-            <div class="gallery-item__img-wrap">
-              <img src="photos/field_trip_2.jpg" alt="Field trip" onerror="this.style.display='none'">
-              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/field_trip_2.jpg</span></div>
-            </div>
-            <div class="gallery-item__caption"><strong>Research in the Field</strong><span>West Africa — Health Systems Fieldwork</span></div>
-          </div>
-
-        </div>
+        <div class="gallery-item__caption"><strong>IHEA World Congress 2025</strong><span>Bali, Indonesia · July 2025</span></div>
       </div>
-    </section>
+
+      <div class="gallery-item fade-up fade-up-delay-1">
+        <div class="gallery-item__img-wrap">
+          <img src="photos/hsg_nagasaki_2024.jpeg" alt="Health Systems Global 2024, Nagasaki">
+        </div>
+        <div class="gallery-item__caption"><strong>Health Systems Global 2024</strong><span>Nagasaki, Japan · 2024</span></div>
+      </div>
+
+      <div class="gallery-item fade-up fade-up-delay-2">
+        <div class="gallery-item__img-wrap">
+          <img src="photos/afhea_abuja.jpeg" alt="AfHEA Conference">
+        </div>
+        <div class="gallery-item__caption"><strong>AfHEA Conference</strong><span>Abuja, Nigeria</span></div>
+      </div>
+
+      <div class="gallery-item fade-up">
+        <div class="gallery-item__img-wrap">
+          <img src="photos/lancaster_nihr.jpeg" alt="Lancaster University, NIHR">
+        </div>
+        <div class="gallery-item__caption"><strong>Lancaster University — NIHR</strong><span>Lancaster, United Kingdom</span></div>
+      </div>
+
+      <div class="gallery-item fade-up fade-up-delay-1">
+        <div class="gallery-item__img-wrap">
+          <img src="photos/who_ghana.jpeg" alt="WHO Ghana">
+        </div>
+        <div class="gallery-item__caption"><strong>WHO Ghana</strong><span>World Health Organization, Accra</span></div>
+      </div>
+
+      <div class="gallery-item fade-up fade-up-delay-2">
+        <div class="gallery-item__img-wrap">
+          <img src="photos/field_work_ghana.jpeg" alt="Field work, Ghana">
+        </div>
+        <div class="gallery-item__caption"><strong>Community Health Field Work</strong><span>Ghana — Primary Care Research</span></div>
+      </div>
+
+      <div class="gallery-item fade-up">
+        <div class="gallery-item__img-wrap">
+          <img src="photos/aphrc.jpeg" alt="APHRC">
+        </div>
+        <div class="gallery-item__caption"><strong>APHRC Research Meeting</strong><span>African Population &amp; Health Research Center</span></div>
+      </div>
+
+      <div class="gallery-item fade-up fade-up-delay-1">
+        <div class="gallery-item__img-wrap">
+          <img src="photos/field_trip_2.jpeg" alt="Field trip">
+        </div>
+        <div class="gallery-item__caption"><strong>Research in the Field</strong><span>West Africa — Health Systems Fieldwork</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <section class="section section--alt">
       <div class="container">
@@ -706,28 +644,11 @@
       </div>
     </section>
 
-    <!-- RESEARCH SUB-NAV -->
-    <div class="research-subnav">
-      <div class="container">
-        <div class="research-subnav__inner">
-          <a class="research-subnav__link active" onclick="scrollToSection('published-papers', this)">
-            Published Papers <span class="research-subnav__count">15</span>
-          </a>
-          <a class="research-subnav__link" onclick="scrollToSection('under-review', this)">
-            Under Review &amp; Revision <span class="research-subnav__count">8</span>
-          </a>
-          <a class="research-subnav__link" onclick="scrollToSection('active-research', this)">
-            Active Research <span class="research-subnav__count">5</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
     <section class="section">
       <div class="container">
 
         <!-- PUBLISHED -->
-        <div class="research-section-hd" id="published-papers">
+        <div class="research-section-hd">
           <h3>Published Papers</h3>
           <div class="research-section-hd__count">15</div>
           <div class="research-section-hd__line"></div>
@@ -813,7 +734,6 @@
             <div class="research-card__desc">Data envelopment analysis of technical efficiency in primary healthcare delivery of adolescent sexual and reproductive health services across Ghana, with implications for resource allocation and facility management.</div>
             <div class="research-card__footer">
               <div class="research-card__topics"><span class="topic-tag">Technical Efficiency</span><span class="topic-tag">Adolescent SRHR</span><span class="topic-tag">DEA</span></div>
-              <a class="research-card__link" href="https://doi.org/10.1371/journal.pone.0321265" target="_blank">View →</a>
             </div>
           </div>
 
@@ -841,7 +761,6 @@
             <div class="research-card__desc">Assessment of service availability and readiness for sexual and reproductive health and rights services across primary healthcare facilities in Ghana — benchmarking against WHO SARA standards and identifying critical gaps.</div>
             <div class="research-card__footer">
               <div class="research-card__topics"><span class="topic-tag">SRHR</span><span class="topic-tag">Service Readiness</span><span class="topic-tag">Primary Healthcare</span></div>
-              <a class="research-card__link" href="https://doi.org/10.1186/s12978-025-01955-w" target="_blank">View →</a>
             </div>
           </div>
 
@@ -855,7 +774,6 @@
             <div class="research-card__desc">Examining the determinants and socioeconomic consequences of youth unemployment in Ghana, with a focus on labour market transitions, skills mismatches, and policy implications for employment reform.</div>
             <div class="research-card__footer">
               <div class="research-card__topics"><span class="topic-tag">Youth Unemployment</span><span class="topic-tag">Labour Market</span><span class="topic-tag">Ghana</span></div>
-              <a class="research-card__link" href="https://doi.org/10.1007/s43545-025-01113-w" target="_blank">View →</a>
             </div>
           </div>
 
@@ -883,7 +801,6 @@
             <div class="research-card__desc">Analysis of technical efficiency in primary healthcare facilities in Burkina Faso using Data Envelopment Analysis, examining resource utilization patterns and the determinants of efficiency variation across facilities.</div>
             <div class="research-card__footer">
               <div class="research-card__topics"><span class="topic-tag">Technical Efficiency</span><span class="topic-tag">Primary Healthcare</span><span class="topic-tag">Burkina Faso</span></div>
-              <a class="research-card__link" href="https://doi.org/10.1186/s12875-026-03240-6" target="_blank">View →</a>
             </div>
           </div>
 
@@ -897,7 +814,6 @@
             <div class="research-card__desc">Identifying and quantifying the individual, facility-level, and structural drivers of non-communicable disease care access in Ghana's primary health care system, using mixed-methods analysis.</div>
             <div class="research-card__footer">
               <div class="research-card__topics"><span class="topic-tag">NCDs</span><span class="topic-tag">Access to Care</span><span class="topic-tag">Ghana</span></div>
-              <a class="research-card__link" href="https://doi.org/10.1186/s12913-026-14032-0" target="_blank">View →</a>
             </div>
           </div>
 
@@ -911,7 +827,6 @@
             <div class="research-card__desc">Estimating the direct and indirect economic burden of Type 2 diabetes mellitus on patients, households, and health systems in Ghana — providing the evidence base for cost-effective intervention prioritization and health insurance design.</div>
             <div class="research-card__footer">
               <div class="research-card__topics"><span class="topic-tag">Diabetes</span><span class="topic-tag">Economic Burden</span><span class="topic-tag">NCDs</span></div>
-              <a class="research-card__link" href="https://doi.org/10.1002/hsr2.72417" target="_blank">View →</a>
             </div>
           </div>
 
@@ -925,7 +840,6 @@
             <div class="research-card__desc">Analysis of equity dimensions in COVID-19 vaccine uptake across Ghana, examining socioeconomic, geographic, and demographic determinants of vaccination and implications for pandemic preparedness policy.</div>
             <div class="research-card__footer">
               <div class="research-card__topics"><span class="topic-tag">COVID-19</span><span class="topic-tag">Vaccine Equity</span><span class="topic-tag">Ghana</span></div>
-              <a class="research-card__link" href="https://doi.org/10.3389/fpubh.2025.1610765" target="_blank">View →</a>
             </div>
           </div>
 
@@ -946,7 +860,7 @@
         </div><!-- end published grid -->
 
         <!-- UNDER REVIEW / REVISION -->
-        <div class="research-section-hd" id="under-review">
+        <div class="research-section-hd">
           <h3>Under Review &amp; Revision</h3>
           <div class="research-section-hd__count">8</div>
           <div class="research-section-hd__line"></div>
@@ -1052,7 +966,7 @@
         </div><!-- end under-review grid -->
 
         <!-- ACTIVE PROJECTS -->
-        <div class="research-section-hd" id="active-research">
+        <div class="research-section-hd">
           <h3>Active Research Projects</h3>
           <div class="research-section-hd__count">5</div>
           <div class="research-section-hd__line"></div>
@@ -1386,43 +1300,38 @@
           <!-- POSTS -->
           <div id="blogPosts">
 
-            <!-- POST 1: Ghana Free Primary Healthcare -->
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner blog-post__banner--research"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat blog-post__cat--research">Research</span>
+                  <span class="blog-post__date">May 2026</span>
+                </div>
+                <h2 class="blog-post__title">What 225 Citations Taught Me About Global Health Research</h2>
+                <p class="blog-post__excerpt">When our GBD 2023 cardiovascular disease paper was published in JACC, I didn't expect the response it would get. Within months, 225 citations. It was a reminder that the most impactful work isn't always the most novel — sometimes it's the most rigorous assembly of what we already know, done with enough care and scale to matter globally. Here's what I learned from being part of that collaboration...</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read">Read more →</span>
+                  <span class="blog-post__readtime">~5 min read</span>
+                </div>
+              </div>
+            </article>
+
             <article class="blog-post fade-up">
               <div class="blog-post__banner blog-post__banner--policy"></div>
               <div class="blog-post__body">
                 <div class="blog-post__meta">
                   <span class="blog-post__cat blog-post__cat--policy">Policy</span>
-                  <span class="blog-post__date">May 2026</span>
+                  <span class="blog-post__date">April 2026</span>
                 </div>
-                <h2 class="blog-post__title">Starting Where It Matters Most: Ghana&#39;s Free Primary Healthcare Takes Its First Steps</h2>
-                <p class="blog-post__excerpt">Ghana has just launched one of its most ambitious health commitments in recent memory — free primary healthcare for all citizens. And in a telling sign of intent, the rollout is beginning not in the cities, but in the most deprived rural communities. This is a policy worth watching closely, and worth understanding well.</p>
-                <div class="blog-post__full" id="post-full-1">
-                  <p>As a Ghanaian and a health economist, I have spent considerable time studying the quiet ways in which cost shapes health decisions across this country. The data is consistent, and it tells a sobering story: for many households, especially in rural and low-income communities, the decision to seek care is never purely medical. It is financial. The fear of a bill at the end of a consultation keeps people away from facilities until conditions become impossible to ignore — and by then, much harder to treat.</p>
-                  <p>Ghana's newly launched free primary healthcare policy is a direct response to that reality. And it is barely weeks old. This is not the moment for sweeping verdicts — positive or negative. It is, however, exactly the right moment to understand what Ghana is attempting, why it matters, and what will need to go right for this vision to become a lived reality for every citizen. I want to hold two things together: genuine excitement about what has been launched, and honest reflection on the road ahead.</p>
-                  <h3>Starting from the Margins — Deliberately</h3>
-                  <p>One of the most significant — and most encouraging — features of Ghana's rollout strategy is where it is beginning. Rather than launching first in urban centres where health infrastructure is comparatively stronger, the government has chosen to prioritise the most deprived rural communities. This is an equity-first approach, and it deserves recognition. For too long, geography has been a silent determinant of health quality in Ghana. The lessons learned from this rural-first approach will be critical in shaping how the policy scales nationally.</p>
-                  <h3>What the Policy Gets Right</h3>
-                  <p>Beyond the rollout strategy, the policy itself addresses one of the most persistent barriers to healthcare in Ghana: cost. Financial barriers are among the most consistent predictors of delayed or foregone care — particularly among low-income households and women of reproductive age. Removing user fees at the primary care level is a direct intervention against that barrier.</p>
-                  <p>Preventive care is at the heart of this vision. One of the most critical — and often underappreciated — pillars of free primary healthcare is its explicit focus on preventive activities: health education, routine screenings, antenatal care, and community outreach. The logic is sound. Prevention is not only morally compelling; it is economically rational. When people do not fear a bill at the end of a consultation, they are more likely to present early — before a manageable condition becomes a crisis.</p>
-                  <h3>The NCD Double Burden: A Crisis at Our Doorstep</h3>
-                  <p>Perhaps nowhere is the case for robust free primary healthcare more urgent than in the context of non-communicable diseases (NCDs). Ghana, like much of Sub-Saharan Africa, faces the "double burden" of disease: the unfinished agenda of infectious illness alongside the rapidly growing weight of NCDs — hypertension, diabetes, cardiovascular disease. NCDs are ambulatory care-sensitive conditions. When caught early, they are manageable. When missed, they are devastating. Free primary healthcare, properly resourced, is our single strongest tool against this tide.</p>
-                  <p>Routine blood pressure checks, blood glucose screening, and basic counselling on diet and lifestyle — these are not expensive interventions. But they require consistent access, and access requires removing the cost barrier at the facility door.</p>
-                  <h3>The Road Ahead: Questions Worth Asking Now</h3>
-                  <p>Every ambitious policy faces implementation realities, and asking hard questions early is an act of support — not scepticism. Many CHPS compounds and district hospitals already operate under significant strain — long queues, overstretched staff, and essential medicines that are intermittently out of stock. An influx of newly empowered patients will place additional demand on these facilities. Managing that demand well requires investment in workforce, supply chains, and physical infrastructure running in parallel with the policy rollout.</p>
-                  <p>Financing sustainability through the NHIS — particularly timely reimbursements to facilities — will also be critical. Facilities that are not reimbursed promptly may begin to ration care informally, quietly undermining the very access the policy is designed to guarantee.</p>
-                  <h3>A Hopeful, Eyes-Open Moment</h3>
-                  <p>Ghana has done something significant. In a region where public health financing remains chronically underfunded, committing to free primary care — and choosing to begin with the most marginalised communities — is a statement of values and a standard to live up to. What the policy needs now is not cynicism, but constructive accompaniment: sustained investment in health workers, medicines, and facilities; a financing architecture that does not buckle under pressure; and the voices of rural communities kept firmly at the centre.</p>
-                  <p>Ghana has taken its first step. With the right support and the right accountability, this journey can go the distance.</p>
-                  <p style="font-style:italic; color:var(--gray-500); font-size:0.83rem; margin-top:18px;">Originally published via Rewrite to Build Africa &middot; May 2026</p>
-                </div>
+                <h2 class="blog-post__title">Ghana's NHIS at a Crossroads: What the Data Actually Says</h2>
+                <p class="blog-post__excerpt">The National Health Insurance Scheme was supposed to end catastrophic health expenditure in Ghana. Our research shows the picture is more complicated. Yes, coverage has expanded. But certain service categories still push households to the financial brink — and the people most affected are not the ones with political voice. Here is what I found, and what I think should be done about it.</p>
                 <div class="blog-post__footer">
-                  <span class="blog-post__read" onclick="togglePost(this)" data-target="post-full-1">Read more &rarr;</span>
-                  <span class="blog-post__readtime">~6 min read</span>
+                  <span class="blog-post__read">Read more →</span>
+                  <span class="blog-post__readtime">~7 min read</span>
                 </div>
               </div>
             </article>
 
-            <!-- POST 2: On Being an African Researcher -->
             <article class="blog-post fade-up">
               <div class="blog-post__banner blog-post__banner--reflect"></div>
               <div class="blog-post__body">
@@ -1431,25 +1340,14 @@
                   <span class="blog-post__date">March 2026</span>
                 </div>
                 <h2 class="blog-post__title">On Being an African Researcher in a Global System</h2>
-                <p class="blog-post__excerpt">At IHEA Bali, I sat in a room where less than 10% of the speakers were from Sub-Saharan Africa — yet our region carries the majority of the global disease burden. That gap between who produces health economics knowledge and whose lives that knowledge is supposed to improve is not accidental. It is structural.</p>
-                <div class="blog-post__full" id="post-full-2">
-                  <p>Conferences are mirrors. They reflect who we have decided should speak, who we have decided deserves a platform, and whose knowledge counts as knowledge. At IHEA Bali, I was genuinely inspired by the science on display. I was also struck by something that never quite leaves me: the gap between who produces health economics knowledge and whose lives it is meant to improve.</p>
-                  <p>Sub-Saharan Africa carries a disproportionate share of the world's disease burden. It is also severely underrepresented in the rooms where global health policy is shaped and global health evidence is generated. This is not a complaint. It is a structural observation — and a call to action.</p>
-                  <h3>Why It Matters Who Does the Research</h3>
-                  <p>It matters who asks the research questions. It matters who designs the instruments, chooses the datasets, frames the findings. An African researcher studying catastrophic health expenditure in Ghana brings a different set of questions — and a different kind of accountability — than a researcher studying the same phenomenon from outside. That difference is not a matter of bias; it is a matter of proximity, stakes, and motivation.</p>
-                  <p>African health economists exist. There are more of us than the conference rosters suggest. What we often lack is not capability, but access — to funding, to institutional support, to the networks that get you invited to present. That is what needs to change.</p>
-                  <h3>What I Am Trying to Do About It</h3>
-                  <p>Part of my work through the early-career research network I am building is to create some of those access points locally — for Ghanaian and Nigerian researchers who are doing serious work but navigating systems that were not designed with them in mind. Mentorship. Co-authorship. Grant writing support. Conference pathways. These are not glamorous interventions. But they compound over time.</p>
-                  <p>I am optimistic about where African health economics is heading. I saw enough at Bali — in conversations, in the poster hall, in the side sessions — to believe that the tide is shifting. Slowly. Not fast enough. But shifting. And I intend to keep pushing.</p>
-                </div>
+                <p class="blog-post__excerpt">At IHEA Bali, I sat in a room where less than 10% of the speakers were from Sub-Saharan Africa — yet our region carries the majority of the global disease burden. That gap between who produces health economics knowledge and whose lives that knowledge is supposed to improve is not accidental. It is structural. Here are my honest thoughts on what it takes to change it from within...</p>
                 <div class="blog-post__footer">
-                  <span class="blog-post__read" onclick="togglePost(this)" data-target="post-full-2">Read more &rarr;</span>
-                  <span class="blog-post__readtime">~5 min read</span>
+                  <span class="blog-post__read">Read more →</span>
+                  <span class="blog-post__readtime">~6 min read</span>
                 </div>
               </div>
             </article>
 
-            <!-- POST 3: Galamsey -->
             <article class="blog-post fade-up">
               <div class="blog-post__banner" style="height:8px; background:linear-gradient(90deg,#5b21b6,#7c3aed)"></div>
               <div class="blog-post__body">
@@ -1458,22 +1356,10 @@
                   <span class="blog-post__date">February 2026</span>
                 </div>
                 <h2 class="blog-post__title">Galamsey Is Not Just an Environmental Problem — It Is a Health Emergency</h2>
-                <p class="blog-post__excerpt">When people talk about illegal mining in Ghana, the conversation usually stops at the environmental destruction — the rivers turned brown, the farmland poisoned. But what I want to talk about are the communities downstream, the children drinking contaminated water, the public health infrastructure that isn't there to respond.</p>
-                <div class="blog-post__full" id="post-full-3">
-                  <p>The environmental case against galamsey is well documented. The images are striking: rivers choked with sediment, forest canopies stripped bare, communities surrounded by craters. Ghana has lost significant stretches of its most important water bodies and forest reserves to illegal artisanal mining. The advocacy around this has, rightly, intensified.</p>
-                  <p>But there is a health story inside this environmental story that does not get told enough. And as a health economist, it is the one I want to tell.</p>
-                  <h3>The Water Is Poisoned</h3>
-                  <p>When galamsey operations contaminate rivers and streams, those same water bodies supply drinking water, irrigation, and daily household needs for millions of Ghanaians. Mercury, arsenic, and other heavy metals released during illegal gold processing enter the water supply. These are not acute, dramatic poisons — they are slow, cumulative ones. They accumulate in bodies, particularly in children, where they affect neurological development, kidney function, and immune response.</p>
-                  <p>The communities most exposed are the same communities with the least access to alternative water sources, the least capacity to test their water, and the fewest health facilities nearby. The burden lands hardest on the most vulnerable.</p>
-                  <h3>The Health Infrastructure Isn't There</h3>
-                  <p>In many of the areas most affected by galamsey, health infrastructure was already thin before the mining expanded. CHPS compounds understaffed and under-supplied. District hospitals overwhelmed. When contamination-related illness rises — and it does — the system is not equipped to detect it, document it, or respond to it at scale.</p>
-                  <p>This is partly why the health crisis of galamsey remains largely invisible in aggregate data. We do not have the surveillance infrastructure to see what is happening in real time. And what you cannot see, you cannot address.</p>
-                  <h3>Evidence-Based Advocacy</h3>
-                  <p>Through Rewrite to Build Africa, our approach is to connect the environmental advocacy — which is already strong — with the health evidence base it needs to move decision-makers. Environmental governance and public health protection are not separate agendas. They are the same agenda. Stopping galamsey is a health intervention. Let us start saying so clearly, and backing it with the data to prove it.</p>
-                </div>
+                <p class="blog-post__excerpt">When people talk about illegal mining in Ghana, the conversation usually stops at the environmental destruction — the rivers turned brown, the farmland poisoned. But what I want to talk about are the communities downstream, the children drinking contaminated water, the public health infrastructure that isn't there to respond. This is a health crisis hiding inside an environmental one.</p>
                 <div class="blog-post__footer">
-                  <span class="blog-post__read" onclick="togglePost(this)" data-target="post-full-3">Read more &rarr;</span>
-                  <span class="blog-post__readtime">~7 min read</span>
+                  <span class="blog-post__read">Read more →</span>
+                  <span class="blog-post__readtime">~8 min read</span>
                 </div>
               </div>
             </article>
@@ -1531,14 +1417,7 @@
     <div class="container">
       <div class="footer__inner">
         <div>
-          <div class="footer__logo" style="display:flex;align-items:center;gap:10px;">
-          <svg width="28" height="28" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;opacity:0.85">
-            <circle cx="18" cy="18" r="18" fill="#0f1e3d"/>
-            <circle cx="18" cy="18" r="15" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.5"/>
-            <path d="M9 14 L14 14 L18 20 L22 14 L27 14 L27 22 L24.5 22 L24.5 17 L20.5 22.5 L18 22.5 L15.5 22.5 L11.5 17 L11.5 22 L9 22 Z" fill="#c9a84c"/>
-          </svg>
-          Michel <span>Amenah</span>
-        </div>
+          <div class="footer__logo">Michel <span>Amenah</span></div>
           <div class="footer__tagline">Health Economist · Development Economist · PhD Researcher · GBD Collaborator. Producing rigorous evidence for African health systems and development policy.</div>
         </div>
         <div>
@@ -1617,43 +1496,6 @@
     }
 
     window.addEventListener('load', observeAnimations);
-
-    // Research sub-nav scroll
-    function scrollToSection(id, btn) {
-      const page = document.getElementById('page-research');
-      if (!page.classList.contains('active')) return;
-      const target = document.getElementById(id);
-      if (!target) return;
-      document.querySelectorAll('.research-subnav__link').forEach(l => l.classList.remove('active'));
-      btn.classList.add('active');
-      const offset = target.getBoundingClientRect().top + window.scrollY - 130;
-      window.scrollTo({ top: offset, behavior: 'smooth' });
-    }
-
-    // Update research sub-nav on scroll
-    window.addEventListener('scroll', function() {
-      const page = document.getElementById('page-research');
-      if (!page || !page.classList.contains('active')) return;
-      const sections = ['published-papers', 'under-review', 'active-research'];
-      const links = document.querySelectorAll('.research-subnav__link');
-      let current = 0;
-      sections.forEach((id, i) => {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top < 160) current = i;
-      });
-      links.forEach((l, i) => l.classList.toggle('active', i === current));
-    });
-
-    // Blog post expand/collapse
-    function togglePost(btn) {
-      const targetId = btn.getAttribute('data-target');
-      const fullDiv = document.getElementById(targetId);
-      if (!fullDiv) return;
-      const isOpen = fullDiv.classList.contains('open');
-      fullDiv.classList.toggle('open', !isOpen);
-      btn.innerHTML = isOpen ? 'Read more &rarr;' : 'Collapse &uarr;';
-      btn.classList.toggle('active', !isOpen);
-    }
   </script>
 </body>
 </html>
