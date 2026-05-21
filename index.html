@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michel Adurayi Amenah | Health Economist &amp; Development Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:       #0f1e3d;
+      --navy-mid:   #1a2f5e;
+      --navy-light: #243b73;
+      --green:      #1b4d3e;
+      --green-mid:  #2d6a58;
+      --gold:       #c9a84c;
+      --gold-light: #e2c97e;
+      --white:      #ffffff;
+      --off-white:  #f8f7f4;
+      --gray-100:   #f1f0ed;
+      --gray-200:   #e2e0db;
+      --gray-500:   #8a8880;
+      --gray-700:   #4a4845;
+      --text:       #1c1a18;
+      --radius:     8px;
+      --radius-lg:  16px;
+      --shadow:     0 4px 24px rgba(15,30,61,0.10);
+      --shadow-lg:  0 12px 48px rgba(15,30,61,0.18);
+      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    p { line-height: 1.75; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .section--alt { background: var(--off-white); }
+    .section--dark { background: var(--navy); color: var(--white); }
+    .section--green { background: var(--green); color: var(--white); }
+
+    .tag { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; white-space: nowrap; }
+    .tag--gold    { background: var(--gold); color: var(--navy); }
+    .tag--navy    { background: var(--navy); color: var(--white); }
+    .tag--green   { background: var(--green); color: var(--white); }
+    .tag--ongoing   { background: #dbeafe; color: #1d4ed8; }
+    .tag--revision  { background: #fef3c7; color: #92400e; }
+    .tag--submitted { background: #ede9fe; color: #5b21b6; }
+    .tag--published { background: #d1fae5; color: #065f46; }
+
+    .eyebrow { font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: block; }
+    .section-title { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; margin-bottom: 16px; }
+    .section-subtitle { font-size: 1.1rem; color: var(--gray-500); max-width: 600px; margin-bottom: 56px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: var(--radius); font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: var(--transition); border: none; font-family: 'Inter', sans-serif; }
+    .btn--gold { background: var(--gold); color: var(--navy); }
+    .btn--gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn--outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+    .btn--outline:hover { border-color: var(--gold); color: var(--gold); }
+    .btn--outline-dark { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+    .btn--outline-dark:hover { background: var(--navy); color: var(--white); }
+    .btn--navy { background: var(--navy); color: var(--white); }
+    .btn--navy:hover { background: var(--navy-mid); transform: translateY(-2px); }
+    .divider { width: 56px; height: 3px; background: var(--gold); border-radius: 2px; margin-bottom: 32px; }
+
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up-delay-1 { transition-delay: 0.12s; }
+    .fade-up-delay-2 { transition-delay: 0.24s; }
+    .fade-up-delay-3 { transition-delay: 0.36s; }
+    .fade-up-delay-4 { transition-delay: 0.48s; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(15,30,61,0.97); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(201,168,76,0.18); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav__logo { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--white); cursor: pointer; }
+    .nav__logo span { color: var(--gold); }
+    .nav__links { display: flex; gap: 4px; align-items: center; }
+    .nav__link { color: rgba(255,255,255,0.72); font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: var(--radius); cursor: pointer; transition: var(--transition); white-space: nowrap; }
+    .nav__link:hover, .nav__link.active { color: var(--gold); background: rgba(201,168,76,0.09); }
+    .nav__cta { background: var(--gold) !important; color: var(--navy) !important; border-radius: var(--radius) !important; font-weight: 600 !important; margin-left: 8px; }
+    .nav__cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav__hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+    .nav__mobile { display: none; flex-direction: column; gap: 4px; padding: 16px 24px 20px; background: var(--navy); border-top: 1px solid rgba(201,168,76,0.12); }
+    .nav__mobile.open { display: flex; }
+
+    /* PAGE SYSTEM */
+    .page { display: none; padding-top: 68px; }
+    .page.active { display: block; }
+
+    /* HOME HERO */
+    .hero { min-height: calc(100vh - 68px); background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, #1a3d32 100%); display: flex; align-items: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -25%; right: -8%; width: 650px; height: 650px; background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%); pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -18%; left: -8%; width: 550px; height: 550px; background: radial-gradient(circle, rgba(45,106,88,0.14) 0%, transparent 70%); pointer-events: none; }
+    .hero__inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; padding: 72px 0; }
+    .hero__eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 20px; }
+    .hero__eyebrow::before { content: ''; display: block; width: 22px; height: 2px; background: var(--gold); }
+    .hero__name { font-size: clamp(2.4rem, 4.5vw, 3.8rem); font-weight: 700; color: var(--white); line-height: 1.08; margin-bottom: 16px; }
+    .hero__name span { color: var(--gold); display: block; }
+    .hero__title { font-size: 1rem; color: rgba(255,255,255,0.65); margin-bottom: 26px; font-style: italic; }
+    .hero__tagline { font-size: 1.15rem; color: rgba(255,255,255,0.9); font-family: 'Playfair Display', serif; font-style: italic; border-left: 3px solid var(--gold); padding-left: 20px; margin-bottom: 38px; line-height: 1.6; }
+    .hero__actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero__card { background: rgba(255,255,255,0.055); border: 1px solid rgba(201,168,76,0.22); border-radius: var(--radius-lg); padding: 30px; backdrop-filter: blur(8px); }
+    .hero__card-title { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .hero__affils { display: flex; flex-direction: column; gap: 15px; }
+    .hero__affil { display: flex; align-items: flex-start; gap: 13px; }
+    .hero__affil-icon { width: 34px; height: 34px; background: rgba(201,168,76,0.13); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.95rem; }
+    .hero__affil-text { color: rgba(255,255,255,0.82); font-size: 0.855rem; line-height: 1.5; }
+    .hero__affil-text strong { color: var(--white); display: block; font-size: 0.88rem; }
+
+    .home-stats { background: var(--navy); }
+    .home-stats__inner { display: grid; grid-template-columns: repeat(4,1fr); border-left: 1px solid rgba(255,255,255,0.05); }
+    .stat { padding: 44px 28px; border-right: 1px solid rgba(255,255,255,0.05); text-align: center; }
+    .stat__number { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+    .stat__label { color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+
+    .who-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .who__text p + p { margin-top: 18px; }
+    .who__pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .pillar { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 26px 22px; box-shadow: var(--shadow); transition: var(--transition); }
+    .pillar:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+    .pillar__icon { font-size: 1.7rem; margin-bottom: 11px; }
+    .pillar__title { font-family: 'Playfair Display', serif; font-size: 0.98rem; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
+    .pillar__desc { font-size: 0.835rem; color: var(--gray-500); line-height: 1.6; }
+
+    .impact-banner { background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%); color: var(--white); padding: 60px 0; }
+    .impact-banner__inner { display: grid; grid-template-columns: 1fr 2.2fr; gap: 48px; align-items: center; }
+    .impact-banner__label { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); }
+    .impact-banner__text { font-size: 1rem; line-height: 1.78; color: rgba(255,255,255,0.9); }
+
+    /* ABOUT */
+    .about-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); color: var(--white); padding: 72px 0 88px; }
+    .about-hero__inner { display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: start; }
+    .about-avatar { background: rgba(201,168,76,0.11); border: 2px solid rgba(201,168,76,0.28); border-radius: var(--radius-lg); aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; }
+    .about-avatar__initials { font-family: 'Playfair Display', serif; font-size: 3.6rem; color: var(--gold); font-weight: 700; }
+    .about-avatar__label { color: rgba(255,255,255,0.45); font-size: 0.75rem; letter-spacing: 0.1em; text-align: center; padding: 0 12px; }
+    .about-hero__name { font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--white); margin-bottom: 8px; }
+    .about-hero__roles { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 26px; }
+    .about-hero__role { background: rgba(201,168,76,0.14); color: var(--gold); font-size: 0.77rem; font-weight: 600; padding: 5px 13px; border-radius: 20px; letter-spacing: 0.05em; }
+    .about-hero__bio { font-size: 1rem; line-height: 1.82; color: rgba(255,255,255,0.84); }
+    .about-hero__bio p + p { margin-top: 16px; }
+
+    .about-affils { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .affil-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 26px 22px; box-shadow: var(--shadow); transition: var(--transition); }
+    .affil-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .affil-card__icon { font-size: 1.85rem; margin-bottom: 11px; }
+    .affil-card__org { font-family: 'Playfair Display', serif; font-size: 0.98rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .affil-card__role { font-size: 0.835rem; color: var(--gray-500); line-height: 1.55; }
+
+    .about-areas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .area-card { background: var(--navy); color: var(--white); border-radius: var(--radius-lg); padding: 34px 26px; position: relative; overflow: hidden; }
+    .area-card::before { content: ''; position: absolute; top: -18px; right: -18px; width: 90px; height: 90px; background: rgba(201,168,76,0.05); border-radius: 50%; }
+    .area-card__icon { font-size: 1.85rem; margin-bottom: 14px; }
+    .area-card__title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--gold); margin-bottom: 11px; }
+    .area-card__desc { font-size: 0.855rem; color: rgba(255,255,255,0.74); line-height: 1.7; }
+
+    .advocacy-block { background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%); border-radius: var(--radius-lg); padding: 46px; color: var(--white); display: grid; grid-template-columns: 1fr 2fr; gap: 38px; align-items: center; }
+    .advocacy-block__label { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--gold-light); line-height: 1.3; }
+    .advocacy-block__text { font-size: 0.93rem; line-height: 1.8; color: rgba(255,255,255,0.9); }
+    .advocacy-block__text p + p { margin-top: 13px; }
+
+    /* PHOTO GALLERY */
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .gallery-item { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--gray-200); box-shadow: var(--shadow); transition: var(--transition); background: var(--white); }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .gallery-item__img-wrap { position: relative; aspect-ratio: 4/3; background: var(--gray-100); overflow: hidden; }
+    .gallery-item__img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .gallery-item:hover .gallery-item__img-wrap img { transform: scale(1.04); }
+    .gallery-item__placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); color: rgba(255,255,255,0.5); font-size: 0.78rem; text-align: center; padding: 16px; }
+    .gallery-item__placeholder-icon { font-size: 2rem; opacity: 0.5; }
+    .gallery-item__caption { padding: 14px 16px; }
+    .gallery-item__caption strong { display: block; font-family: 'Playfair Display', serif; font-size: 0.9rem; color: var(--navy); margin-bottom: 3px; }
+    .gallery-item__caption span { font-size: 0.78rem; color: var(--gray-500); }
+    .gallery-note { background: var(--off-white); border: 1px solid var(--gray-200); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 16px 20px; font-size: 0.84rem; color: var(--gray-700); margin-bottom: 34px; }
+
+    /* RESEARCH */
+    .research-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); color: var(--white); padding: 72px 0 80px; }
+    .research-hero__intro { font-size: 1.02rem; color: rgba(255,255,255,0.8); line-height: 1.78; margin-bottom: 30px; max-width: 680px; }
+    .research-hero__gbd { display: inline-flex; align-items: center; gap: 14px; background: rgba(201,168,76,0.11); border: 1px solid rgba(201,168,76,0.28); border-radius: var(--radius); padding: 13px 18px; max-width: 620px; }
+    .research-hero__gbd-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .research-hero__gbd-text { font-size: 0.84rem; color: rgba(255,255,255,0.88); line-height: 1.5; }
+    .research-hero__gbd-text strong { color: var(--gold); display: block; }
+
+    .research-section-hd { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; margin-top: 56px; }
+    .research-section-hd:first-child { margin-top: 0; }
+    .research-section-hd h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); }
+    .research-section-hd__count { background: var(--navy); color: var(--white); font-size: 0.78rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+    .research-section-hd__line { flex: 1; height: 1px; background: var(--gray-200); }
+
+    .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+    .research-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 26px; box-shadow: var(--shadow); transition: var(--transition); border-left: 4px solid transparent; }
+    .research-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .research-card[data-status="Ongoing"]        { border-left-color: #1d4ed8; }
+    .research-card[data-status="Under Revision"] { border-left-color: #d97706; }
+    .research-card[data-status="Submitted"]      { border-left-color: #7c3aed; }
+    .research-card[data-status="Published"]      { border-left-color: #059669; }
+    .research-card.hidden { display: none; }
+    .research-card__header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+    .research-card__title { font-family: 'Playfair Display', serif; font-size: 0.98rem; font-weight: 700; color: var(--navy); line-height: 1.35; }
+    .research-card__meta { font-size: 0.79rem; color: var(--gray-500); margin-bottom: 8px; }
+    .research-card__desc { font-size: 0.85rem; color: var(--gray-700); line-height: 1.65; margin-bottom: 14px; }
+    .research-card__footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .research-card__topics { display: flex; gap: 5px; flex-wrap: wrap; }
+    .topic-tag { font-size: 0.7rem; background: var(--gray-100); color: var(--gray-700); padding: 3px 9px; border-radius: 10px; font-weight: 500; }
+    .research-card__link { font-size: 0.78rem; font-weight: 600; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
+    .research-card__link:hover { text-decoration: underline; }
+    .research-card__flagship { background: linear-gradient(135deg, rgba(201,168,76,0.08) 0%, rgba(201,168,76,0.03) 100%); border-color: var(--gray-200) !important; border-left-color: var(--gold) !important; }
+
+    /* Citation badge */
+    .cite-badge { display: inline-flex; align-items: center; gap: 3px; font-size: 0.69rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+    .cite-badge--zero { background: var(--gray-100); color: var(--gray-500); }
+    .cite-badge--low  { background: #d1fae5; color: #065f46; }
+    .cite-badge--mid  { background: #dbeafe; color: #1e40af; }
+    .cite-badge--high { background: var(--gold); color: var(--navy); }
+    .research-card__badges { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .why-card { background: var(--green); color: var(--white); border-radius: var(--radius-lg); padding: 30px 22px; }
+    .why-card__icon { font-size: 1.85rem; margin-bottom: 14px; }
+    .why-card__title { font-family: 'Playfair Display', serif; font-size: 1.02rem; color: var(--gold-light); margin-bottom: 9px; }
+    .why-card__text { font-size: 0.86rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+
+    /* CONSULTING */
+    .consulting-hero { background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%); color: var(--white); padding: 72px 0 80px; }
+    .consulting-services { display: grid; grid-template-columns: repeat(2,1fr); gap: 26px; }
+    .service-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 34px; box-shadow: var(--shadow); transition: var(--transition); }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+    .service-card__icon { font-size: 2rem; margin-bottom: 14px; }
+    .service-card__title { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy); margin-bottom: 5px; }
+    .service-card__org { font-size: 0.78rem; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; }
+    .service-card__desc { font-size: 0.88rem; color: var(--gray-700); line-height: 1.7; }
+    .service-card__tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 14px; }
+    .service-tag { font-size: 0.7rem; background: var(--gray-100); color: var(--navy); padding: 3px 11px; border-radius: 10px; font-weight: 500; }
+
+    .partners-bar { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; padding: 28px 32px; background: var(--off-white); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); }
+    .partners-bar__label { font-weight: 600; color: var(--gray-500); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .partner-pill { background: var(--white); border: 1px solid var(--gray-200); padding: 6px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 500; color: var(--navy); }
+
+    /* COMMUNITY */
+    .community-hero { background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 55%, #1a3d32 100%); color: var(--white); padding: 72px 0 80px; }
+    .community-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .community-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 30px 22px; box-shadow: var(--shadow); text-align: center; transition: var(--transition); }
+    .community-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .community-card__icon { font-size: 2.3rem; margin-bottom: 14px; }
+    .community-card__title { font-family: 'Playfair Display', serif; font-size: 1.02rem; color: var(--navy); margin-bottom: 9px; }
+    .community-card__text { font-size: 0.86rem; color: var(--gray-500); line-height: 1.65; }
+    .join-cta { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); border-radius: var(--radius-lg); padding: 54px 46px; text-align: center; }
+    .join-cta__title { font-size: clamp(1.7rem, 3vw, 2.2rem); color: var(--navy); margin-bottom: 14px; }
+    .join-cta__text { font-size: 0.98rem; color: var(--navy-mid); margin-bottom: 30px; max-width: 540px; margin-left: auto; margin-right: auto; }
+    .join-cta__actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .focus-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 15px; }
+    .focus-item { display: flex; align-items: flex-start; gap: 13px; padding: 18px; background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .focus-item__icon { font-size: 1.3rem; flex-shrink: 0; }
+    .focus-item__text { font-size: 0.86rem; color: var(--gray-700); line-height: 1.55; }
+    .focus-item__text strong { display: block; color: var(--navy); font-size: 0.88rem; margin-bottom: 3px; }
+
+    /* CONTACT */
+    .contact-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); color: var(--white); padding: 72px 0 80px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.65fr; gap: 52px; align-items: start; }
+    .contact-info { display: flex; flex-direction: column; gap: 22px; }
+    .contact-info-item { display: flex; align-items: flex-start; gap: 15px; }
+    .contact-info-item__icon { width: 42px; height: 42px; background: var(--off-white); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .contact-info-item__label { font-size: 0.76rem; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px; }
+    .contact-info-item__value { font-size: 0.92rem; color: var(--text); }
+    .contact-affils-list { display: flex; flex-direction: column; gap: 9px; }
+    .contact-affil { display: flex; align-items: center; gap: 9px; font-size: 0.86rem; color: var(--gray-700); }
+    .contact-affil::before { content: '\25B8'; color: var(--gold); font-size: 0.72rem; }
+    .contact-form { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 38px; box-shadow: var(--shadow); }
+    .form-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--navy); margin-bottom: 26px; }
+    .form-group { margin-bottom: 18px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .form-label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--gray-700); margin-bottom: 6px; letter-spacing: 0.02em; }
+    .form-input, .form-textarea, .form-select { width: 100%; padding: 11px 15px; border: 1.5px solid var(--gray-200); border-radius: var(--radius); font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--text); background: var(--off-white); transition: var(--transition); outline: none; }
+    .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--navy); background: var(--white); box-shadow: 0 0 0 3px rgba(15,30,61,0.07); }
+    .form-textarea { min-height: 134px; resize: vertical; }
+    .form-submit { width: 100%; padding: 14px; background: var(--navy); color: var(--white); border: none; border-radius: var(--radius); font-size: 0.98rem; font-weight: 600; cursor: pointer; transition: var(--transition); font-family: 'Inter', sans-serif; }
+    .form-submit:hover { background: var(--navy-mid); transform: translateY(-2px); box-shadow: var(--shadow); }
+    .form-success { display: none; text-align: center; padding: 30px; color: var(--green); }
+    .form-success__icon { font-size: 2.8rem; margin-bottom: 11px; }
+
+    /* BLOG */
+    .blog-hero { background: linear-gradient(135deg, var(--navy) 0%, #0d2244 55%, var(--green) 100%); color: var(--white); padding: 72px 0 80px; }
+    .blog-layout { display: grid; grid-template-columns: 1fr 320px; gap: 52px; align-items: start; }
+    .blog-post { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); margin-bottom: 28px; }
+    .blog-post:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .blog-post__banner { height: 8px; }
+    .blog-post__banner--research { background: linear-gradient(90deg, var(--navy), var(--navy-mid)); }
+    .blog-post__banner--policy   { background: linear-gradient(90deg, var(--green), var(--green-mid)); }
+    .blog-post__banner--reflect  { background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+    .blog-post__body { padding: 32px; }
+    .blog-post__meta { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+    .blog-post__cat { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 3px 10px; border-radius: 20px; }
+    .blog-post__cat--research { background: #dbeafe; color: #1e40af; }
+    .blog-post__cat--policy   { background: #d1fae5; color: #065f46; }
+    .blog-post__cat--reflect  { background: #fef3c7; color: #92400e; }
+    .blog-post__cat--opinion  { background: #ede9fe; color: #5b21b6; }
+    .blog-post__date { font-size: 0.78rem; color: var(--gray-500); }
+    .blog-post__title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 12px; line-height: 1.3; }
+    .blog-post__excerpt { font-size: 0.9rem; color: var(--gray-700); line-height: 1.75; margin-bottom: 20px; }
+    .blog-post__footer { display: flex; justify-content: space-between; align-items: center; }
+    .blog-post__read { font-size: 0.84rem; font-weight: 600; color: var(--gold); cursor: pointer; }
+    .blog-post__read:hover { text-decoration: underline; }
+    .blog-post__readtime { font-size: 0.78rem; color: var(--gray-500); }
+
+    .blog-sidebar__card { background: var(--off-white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 22px; }
+    .blog-sidebar__title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--navy); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--gray-200); }
+    .blog-category-list { display: flex; flex-direction: column; gap: 8px; }
+    .blog-category-item { display: flex; justify-content: space-between; align-items: center; font-size: 0.86rem; color: var(--gray-700); cursor: pointer; padding: 6px 0; border-bottom: 1px solid var(--gray-100); transition: var(--transition); }
+    .blog-category-item:hover { color: var(--navy); }
+    .blog-category-item span { background: var(--gray-200); color: var(--gray-700); font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .blog-about { text-align: center; }
+    .blog-about__avatar { width: 72px; height: 72px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold); font-weight: 700; }
+    .blog-about__name { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--navy); margin-bottom: 6px; }
+    .blog-about__bio { font-size: 0.82rem; color: var(--gray-500); line-height: 1.65; }
+    .blog-write-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); border-radius: var(--radius-lg); padding: 28px; color: var(--white); text-align: center; }
+    .blog-write-cta h4 { font-family: 'Playfair Display', serif; color: var(--gold); margin-bottom: 8px; }
+    .blog-write-cta p { font-size: 0.83rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 14px; }
+
+    /* FOOTER */
+    footer { background: #070e1c; color: rgba(255,255,255,0.5); padding: 48px 0 30px; }
+    .footer__inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 44px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 28px; }
+    .footer__logo { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--white); margin-bottom: 11px; }
+    .footer__logo span { color: var(--gold); }
+    .footer__tagline { font-size: 0.86rem; line-height: 1.68; max-width: 270px; }
+    .footer__col-title { color: var(--white); font-size: 0.82rem; font-weight: 600; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .footer__links { display: flex; flex-direction: column; gap: 8px; }
+    .footer__link { font-size: 0.84rem; color: rgba(255,255,255,0.5); cursor: pointer; transition: var(--transition); }
+    .footer__link:hover { color: var(--gold); }
+    .footer__bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; }
+    .footer__faith { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.35); }
+    .footer__faith span { color: var(--gold-light); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav__links { display: none; }
+      .nav__hamburger { display: flex; }
+      .hero__inner { grid-template-columns: 1fr; gap: 36px; padding: 52px 0; }
+      .home-stats__inner { grid-template-columns: repeat(2,1fr); }
+      .who-inner { grid-template-columns: 1fr; gap: 36px; }
+      .who__pillars { grid-template-columns: 1fr 1fr; }
+      .impact-banner__inner { grid-template-columns: 1fr; gap: 18px; }
+      .about-hero__inner { grid-template-columns: 1fr; }
+      .about-avatar { max-height: 220px; max-width: 170px; }
+      .about-affils { grid-template-columns: 1fr 1fr; }
+      .about-areas { grid-template-columns: 1fr; }
+      .advocacy-block { grid-template-columns: 1fr; gap: 20px; }
+      .gallery-grid { grid-template-columns: repeat(2,1fr); }
+      .research-grid { grid-template-columns: 1fr; }
+      .consulting-services { grid-template-columns: 1fr; }
+      .community-cards { grid-template-columns: 1fr; }
+      .focus-list { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .blog-layout { grid-template-columns: 1fr; }
+      .footer__inner { grid-template-columns: 1fr; gap: 28px; }
+      .footer__bottom { flex-direction: column; gap: 10px; text-align: center; }
+      .why-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .section { padding: 60px 0; }
+      .home-stats__inner { grid-template-columns: 1fr 1fr; }
+      .about-affils { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .who__pillars { grid-template-columns: 1fr; }
+      .hero__actions { flex-direction: column; }
+      .join-cta { padding: 34px 22px; }
+      .contact-form { padding: 26px 18px; }
+      .advocacy-block { padding: 28px 22px; }
+      .form-row { grid-template-columns: 1fr; }
+      .join-cta__actions { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <div class="nav__logo" onclick="showPage('home')">Michel <span>Amenah</span></div>
+        <div class="nav__links">
+          <a class="nav__link active" onclick="showPage('home')"       data-page="home">Home</a>
+          <a class="nav__link"        onclick="showPage('about')"      data-page="about">About</a>
+          <a class="nav__link"        onclick="showPage('research')"   data-page="research">Research</a>
+          <a class="nav__link"        onclick="showPage('consulting')" data-page="consulting">Consulting</a>
+          <a class="nav__link"        onclick="showPage('community')"  data-page="community">Community</a>
+          <a class="nav__link"        onclick="showPage('blog')"       data-page="blog">Blog</a>
+          <a class="nav__link nav__cta" onclick="showPage('contact')"  data-page="contact">Contact</a>
+        </div>
+        <button class="nav__hamburger" onclick="toggleMobile()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a class="nav__link" onclick="showPage('home');toggleMobile()">Home</a>
+      <a class="nav__link" onclick="showPage('about');toggleMobile()">About</a>
+      <a class="nav__link" onclick="showPage('research');toggleMobile()">Research</a>
+      <a class="nav__link" onclick="showPage('consulting');toggleMobile()">Consulting</a>
+      <a class="nav__link" onclick="showPage('community');toggleMobile()">Community</a>
+      <a class="nav__link" onclick="showPage('blog');toggleMobile()">Blog</a>
+      <a class="nav__link nav__cta" onclick="showPage('contact');toggleMobile()" style="margin-top:6px">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ============ HOME ============ -->
+  <div class="page active" id="page-home">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="fade-up">
+            <div class="hero__eyebrow">Health Economist · Development Economist · Researcher</div>
+            <h1 class="hero__name">Michel Adurayi <span>Amenah</span></h1>
+            <p class="hero__title">PhD Researcher, Lancaster University &nbsp;·&nbsp; Accra, Ghana</p>
+            <p class="hero__tagline">Producing rigorous evidence at the intersection of health systems, equity, and African development — translating research into policy that matters.</p>
+            <div class="hero__actions">
+              <button class="btn btn--gold" onclick="showPage('research')">View Research →</button>
+              <button class="btn btn--outline" onclick="showPage('about')">About Michel</button>
+            </div>
+          </div>
+          <div class="hero__card fade-up fade-up-delay-2">
+            <div class="hero__card-title">Affiliations &amp; Roles</div>
+            <div class="hero__affils">
+              <div class="hero__affil"><div class="hero__affil-icon">🌍</div><div class="hero__affil-text"><strong>GBD Collaborator — IHME</strong>Global Burden of Disease, Institute for Health Metrics and Evaluation</div></div>
+              <div class="hero__affil"><div class="hero__affil-icon">🎓</div><div class="hero__affil-text"><strong>PhD Scholar — Lancaster University</strong>NIHR Global Research Centre for NCD Control in West Africa</div></div>
+              <div class="hero__affil"><div class="hero__affil-icon">🌱</div><div class="hero__affil-text"><strong>Head of Research &amp; Policy</strong>Rewrite to Build Africa (Sustainability NGO)</div></div>
+              <div class="hero__affil"><div class="hero__affil-icon">🏥</div><div class="hero__affil-text"><strong>Health Economist</strong>Ghana College of Physicians &amp; Surgeons · STOP-NCD West Africa</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-stats">
+      <div class="home-stats__inner">
+        <div class="stat fade-up"><div class="stat__number">15</div><div class="stat__label">Peer-Reviewed Publications</div></div>
+        <div class="stat fade-up fade-up-delay-1"><div class="stat__number">£55K+</div><div class="stat__label">Research Grants Awarded</div></div>
+        <div class="stat fade-up fade-up-delay-2"><div class="stat__number">6+</div><div class="stat__label">Countries of Research Impact</div></div>
+        <div class="stat fade-up fade-up-delay-3"><div class="stat__number">5+</div><div class="stat__label">International Organizations</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="who-inner">
+          <div class="fade-up">
+            <span class="eyebrow">Who I Am</span>
+            <h2 class="section-title">Researcher. Practitioner. Advocate.</h2>
+            <div class="divider"></div>
+            <p>I am a doctoral researcher, health economist, and development economist based in Accra, Ghana, with deep expertise in health systems strengthening, health financing, and implementation research across Sub-Saharan Africa.</p>
+            <p style="margin-top:17px">My work sits at the intersection of rigorous quantitative analysis and real-world policy application — spanning non-communicable diseases, adolescent health, catastrophic health expenditure, environmental sustainability, and financial inclusion.</p>
+            <p style="margin-top:17px">I bring together academia, international organizations, and frontline practitioners to translate evidence into change that endures.</p>
+            <div style="margin-top:30px"><button class="btn btn--outline-dark" onclick="showPage('about')">Full Biography →</button></div>
+          </div>
+          <div class="who__pillars fade-up fade-up-delay-2">
+            <div class="pillar"><div class="pillar__icon">🏥</div><div class="pillar__title">Health Economics</div><div class="pillar__desc">Health financing, catastrophic expenditure, NCD policy, and primary healthcare systems.</div></div>
+            <div class="pillar"><div class="pillar__icon">📊</div><div class="pillar__title">Development Economics</div><div class="pillar__desc">Consumption inequality, financial inclusion, energy poverty, and human capital in LMICs.</div></div>
+            <div class="pillar"><div class="pillar__icon">🌿</div><div class="pillar__title">Environmental Policy</div><div class="pillar__desc">Climate resilience, carbon pricing, anti-galamsey advocacy, and sustainable development.</div></div>
+            <div class="pillar"><div class="pillar__icon">🤝</div><div class="pillar__title">Policy Translation</div><div class="pillar__desc">Bridging evidence and practice through stakeholder engagement, consulting, and advocacy.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-banner">
+      <div class="container">
+        <div class="impact-banner__inner fade-up">
+          <div class="impact-banner__label">Why This Work Matters</div>
+          <div class="impact-banner__text">Health systems in Sub-Saharan Africa face mounting pressure from non-communicable diseases, fragmented financing, and inequitable access. My research generates the evidence base that policymakers, international organizations, and health ministries need to build systems that are equitable, efficient, and built for the African context — not borrowed from elsewhere.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--off-white); padding:56px 0">
+      <div class="container" style="text-align:center">
+        <span class="eyebrow" style="text-align:center; display:block">Ready to connect?</span>
+        <h2 class="section-title" style="margin-bottom:22px">Let's collaborate on work that matters.</h2>
+        <button class="btn btn--gold" onclick="showPage('contact')" style="font-size:1rem; padding:15px 34px">Get in Touch →</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <div class="page" id="page-about">
+    <section class="about-hero">
+      <div class="container">
+        <div class="about-hero__inner">
+          <div class="about-avatar fade-up">
+            <div class="about-avatar__initials">MAA</div>
+            <div class="about-avatar__label">Michel Adurayi Amenah</div>
+          </div>
+          <div class="fade-up fade-up-delay-1">
+            <span class="eyebrow" style="color:var(--gold-light)">About</span>
+            <h1 class="about-hero__name">Michel Adurayi Amenah</h1>
+            <div class="about-hero__roles">
+              <span class="about-hero__role">Health Economist</span>
+              <span class="about-hero__role">Development Economist</span>
+              <span class="about-hero__role">PhD Researcher</span>
+              <span class="about-hero__role">GBD Collaborator</span>
+              <span class="about-hero__role">Policy Advocate</span>
+            </div>
+            <div class="about-hero__bio">
+              <p>I am a doctoral researcher, health economist, and development economist based in Accra, Ghana. My work is rooted in a conviction that rigorous evidence, when connected to the right people and institutions, can meaningfully reshape how African societies address disease, inequality, and underdevelopment.</p>
+              <p>Currently pursuing a PhD in Health Economics and Policy at Lancaster University under a full NIHR scholarship, I focus on primary healthcare, non-communicable diseases, and service delivery across West Africa. My research draws on quantitative methods — econometrics, health technology assessment, and efficiency analysis — applied to questions that matter for African governments and communities.</p>
+              <p>I am a collaborator with the Global Burden of Disease (GBD) project at the Institute for Health Metrics and Evaluation (IHME), one of the world's leading global health research bodies. This collaboration grounds my work in the highest standards of global health measurement and accountability.</p>
+              <p>Beyond research, I serve as Head of Research and Policy at Rewrite to Build Africa — a sustainability-focused NGO driving evidence-based advocacy on climate change, environmental governance, and sustainable development across Africa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Institutional Affiliations</span>
+        <h2 class="section-title">Where I Work &amp; Contribute</h2>
+        <div class="divider"></div>
+        <div class="about-affils">
+          <div class="affil-card fade-up"><div class="affil-card__icon">🌍</div><div class="affil-card__org">IHME — Global Burden of Disease</div><div class="affil-card__role">GBD Collaborator. Contributing to the world's most comprehensive global health research effort, covering disease burden across 200+ countries and territories.</div></div>
+          <div class="affil-card fade-up fade-up-delay-1"><div class="affil-card__icon">🎓</div><div class="affil-card__org">Lancaster University</div><div class="affil-card__role">PhD Researcher, Health Economics &amp; Policy. NIHR Global Research Centre for NCD Control in West Africa. Full scholarship recipient (£50,000).</div></div>
+          <div class="affil-card fade-up fade-up-delay-2"><div class="affil-card__icon">🌱</div><div class="affil-card__org">Rewrite to Build Africa</div><div class="affil-card__role">Head of Research &amp; Policy. Driving evidence-based advocacy on climate, environment, and African development.</div></div>
+          <div class="affil-card fade-up fade-up-delay-3"><div class="affil-card__icon">📊</div><div class="affil-card__org">AfHEA · iHEA · Econometric Society</div><div class="affil-card__role">Active member of leading professional networks in health economics and econometrics. Africa Convenor, iHEA Early Career Researchers Special Interest Group.</div></div>
+          <div class="affil-card fade-up fade-up-delay-1"><div class="affil-card__icon">🏥</div><div class="affil-card__org">Ghana College of Physicians &amp; Surgeons</div><div class="affil-card__role">Health Economist and Quantitative Researcher on the STOP-NCD in West Africa Project and Adolescent Reproductive and Mental Health Care studies.</div></div>
+          <div class="affil-card fade-up fade-up-delay-2"><div class="affil-card__icon">🔬</div><div class="affil-card__org">NIHR · Lancaster</div><div class="affil-card__role">NIHR Global Research Centre for NCD Control in West Africa — contributing to primary care strengthening and NCD intervention research across the region.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <span class="eyebrow">Research Identity</span>
+        <h2 class="section-title">Areas of Expertise</h2>
+        <div class="divider"></div>
+        <div class="about-areas">
+          <div class="area-card fade-up"><div class="area-card__icon">🏥</div><div class="area-card__title">Health Economics</div><div class="area-card__desc">Specialising in health systems strengthening, health financing mechanisms, catastrophic health expenditure, NCD burden analysis, and primary healthcare efficiency across Sub-Saharan Africa. Experienced in economic evaluation, cost-effectiveness analysis, and service availability assessments.</div></div>
+          <div class="area-card fade-up fade-up-delay-1"><div class="area-card__icon">📈</div><div class="area-card__title">Development Economics</div><div class="area-card__desc">Applying advanced econometric methods — difference-in-differences, RIF decomposition, multidimensional PCA, and DEA — to consumption inequality, financial inclusion, energy poverty, human capital, and socioeconomic determinants of health in low- and middle-income countries.</div></div>
+          <div class="area-card fade-up fade-up-delay-2"><div class="area-card__icon">🌿</div><div class="area-card__title">Environmental Sustainability</div><div class="area-card__desc">Researching and advocating on carbon pricing pathways, climate change and Africa's economic potential, sustainable food systems, and the future of African agriculture. Leading policy dialogues on environmental governance and climate resilience through Rewrite to Build Africa.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">In the Field &amp; Around the World</span>
+        <h2 class="section-title">Field Work &amp; Conferences</h2>
+        <div class="divider"></div>
+        <div class="gallery-note">
+          📁 <strong>Adding your photos:</strong> Place image files (JPG/PNG) into the <code>photos/</code> folder alongside this file. Name them as shown below each placeholder and they will appear automatically.
+        </div>
+        <div class="gallery-grid">
+
+          <div class="gallery-item fade-up">
+            <div class="gallery-item__img-wrap">
+              <img src="photos/ihea_bali_2025.jpg" alt="IHEA World Congress 2025, Bali" onerror="this.style.display='none'">
+              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/ihea_bali_2025.jpg</span></div>
+            </div>
+            <div class="gallery-item__caption"><strong>IHEA World Congress 2025</strong><span>Bali, Indonesia · July 2025</span></div>
+          </div>
+
+          <div class="gallery-item fade-up fade-up-delay-1">
+            <div class="gallery-item__img-wrap">
+              <img src="photos/hsg_nagasaki_2024.jpg" alt="Health Systems Global 2024, Nagasaki" onerror="this.style.display='none'">
+              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/hsg_nagasaki_2024.jpg</span></div>
+            </div>
+            <div class="gallery-item__caption"><strong>Health Systems Global 2024</strong><span>Nagasaki, Japan · 2024</span></div>
+          </div>
+
+          <div class="gallery-item fade-up fade-up-delay-2">
+            <div class="gallery-item__img-wrap">
+              <img src="photos/afhea_2025.jpg" alt="AfHEA Conference 2025" onerror="this.style.display='none'">
+              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/afhea_2025.jpg</span></div>
+            </div>
+            <div class="gallery-item__caption"><strong>AfHEA Conference 2025</strong><span>African Health Economics &amp; Policy Association</span></div>
+          </div>
+
+          <div class="gallery-item fade-up">
+            <div class="gallery-item__img-wrap">
+              <img src="photos/afhea_abuja.jpg" alt="AfHEA Abuja" onerror="this.style.display='none'">
+              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/afhea_abuja.jpg</span></div>
+            </div>
+            <div class="gallery-item__caption"><strong>AfHEA Conference</strong><span>Abuja, Nigeria</span></div>
+          </div>
+
+          <div class="gallery-item fade-up fade-up-delay-1">
+            <div class="gallery-item__img-wrap">
+              <img src="photos/lancaster_nihr.jpg" alt="Lancaster University, NIHR" onerror="this.style.display='none'">
+              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/lancaster_nihr.jpg</span></div>
+            </div>
+            <div class="gallery-item__caption"><strong>Lancaster University — NIHR</strong><span>Lancaster, United Kingdom</span></div>
+          </div>
+
+          <div class="gallery-item fade-up fade-up-delay-2">
+            <div class="gallery-item__img-wrap">
+              <img src="photos/who_ghana.jpg" alt="WHO Ghana" onerror="this.style.display='none'">
+              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/who_ghana.jpg</span></div>
+            </div>
+            <div class="gallery-item__caption"><strong>WHO Ghana</strong><span>World Health Organization, Accra</span></div>
+          </div>
+
+          <div class="gallery-item fade-up">
+            <div class="gallery-item__img-wrap">
+              <img src="photos/field_work_ghana.jpg" alt="Field work, Ghana" onerror="this.style.display='none'">
+              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/field_work_ghana.jpg</span></div>
+            </div>
+            <div class="gallery-item__caption"><strong>Community Health Field Work</strong><span>Ghana — Primary Care Research</span></div>
+          </div>
+
+          <div class="gallery-item fade-up fade-up-delay-1">
+            <div class="gallery-item__img-wrap">
+              <img src="photos/aphrc.jpg" alt="APHRC" onerror="this.style.display='none'">
+              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/aphrc.jpg</span></div>
+            </div>
+            <div class="gallery-item__caption"><strong>APHRC Research Meeting</strong><span>African Population &amp; Health Research Center</span></div>
+          </div>
+
+          <div class="gallery-item fade-up fade-up-delay-2">
+            <div class="gallery-item__img-wrap">
+              <img src="photos/field_trip_2.jpg" alt="Field trip" onerror="this.style.display='none'">
+              <div class="gallery-item__placeholder"><div class="gallery-item__placeholder-icon">📸</div><span>photos/field_trip_2.jpg</span></div>
+            </div>
+            <div class="gallery-item__caption"><strong>Research in the Field</strong><span>West Africa — Health Systems Fieldwork</span></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <span class="eyebrow">Advocacy</span>
+        <h2 class="section-title">Beyond Research</h2>
+        <div class="divider"></div>
+        <div class="advocacy-block fade-up">
+          <div class="advocacy-block__label">Environmental Integrity &amp; Anti-Galamsey Advocacy</div>
+          <div class="advocacy-block__text">
+            <p>Ghana's illegal artisanal mining crisis — known locally as <em>galamsey</em> — represents one of the most urgent environmental and public health challenges facing the country. Illegal mining pollutes water bodies, degrades arable land, and devastates communities that depend on natural resources for their livelihoods and health.</p>
+            <p>Through Rewrite to Build Africa, I advocate for evidence-based environmental governance, accountability in extractive industries, and policies that protect Ghana's ecological heritage while creating sustainable economic pathways. This work connects my research on environmental sustainability to frontline advocacy and community engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ RESEARCH ============ -->
+  <div class="page" id="page-research">
+    <section class="research-hero">
+      <div class="container">
+        <div class="fade-up">
+          <span class="eyebrow" style="color:var(--gold-light)">Research</span>
+          <h1 class="section-title" style="color:var(--white); margin-bottom:18px">Research Portfolio</h1>
+          <p class="research-hero__intro">My research agenda addresses some of the most pressing challenges in African health systems and development — producing evidence designed to inform policy, resource allocation, and service delivery reform across West Africa and beyond.</p>
+          <div class="research-hero__gbd">
+            <div class="research-hero__gbd-icon">🌍</div>
+            <div class="research-hero__gbd-text"><strong>GBD Collaborator — Institute for Health Metrics and Evaluation (IHME)</strong>Contributing to the Global Burden of Disease study: the world's most comprehensive systematic analysis of disease burden and risk factors across 200+ countries. The 2023 cardiovascular disease paper has accumulated 225+ citations.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- PUBLISHED -->
+        <div class="research-section-hd">
+          <h3>Published Papers</h3>
+          <div class="research-section-hd__count">15</div>
+          <div class="research-section-hd__line"></div>
+        </div>
+        <div class="research-grid" style="margin-bottom:0">
+
+          <!-- Flagship: GBD CVD 2023, JACC 2025, 225 citations -->
+          <div class="research-card research-card--flagship fade-up" data-status="Published" style="border-left-color:var(--gold); background:linear-gradient(135deg, rgba(201,168,76,0.06) 0%, rgba(255,255,255,1) 60%);">
+            <div class="research-card__header">
+              <div class="research-card__title">Global Burden of Cardiovascular Diseases and Risk Factors — GBD 2023</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--high">⭐ 225 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">Journal of the American College of Cardiology (JACC), 2025 · GBD 2023 Heart Disease Collaborators (incl. Amenah MA)</div>
+            <div class="research-card__desc">Comprehensive global analysis of cardiovascular disease burden and risk factors across 204 countries and territories. A landmark GBD 2023 output representing the collective work of the IHME Global Burden of Disease collaboration — one of the most-cited health research outputs of 2025.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Cardiovascular Disease</span><span class="topic-tag">GBD</span><span class="topic-tag">Global Health</span><span class="topic-tag">IHME</span></div>
+            </div>
+          </div>
+
+          <!-- BMJ Global Health, 10 citations -->
+          <div class="research-card fade-up fade-up-delay-1" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">Catastrophic Health Payments in Ghana Post-NHIS Implementation</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--mid">10 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">BMJ Global Health, 2025 · Akazili J, Amenah MA, Chola L, Ayanore MA, Ataguba JE</div>
+            <div class="research-card__desc">Analysis of service-specific health expenditures and catastrophic payment incidence following Ghana's National Health Insurance Scheme rollout, with equity implications for vulnerable households.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Health Financing</span><span class="topic-tag">NHIS</span><span class="topic-tag">Equity</span></div>
+              <a class="research-card__link" href="https://doi.org/10.1136/bmjgh-2024-018141" target="_blank">View →</a>
+            </div>
+          </div>
+
+          <!-- Child & Adolescent Psychiatry, 8 citations -->
+          <div class="research-card fade-up" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">Adolescent Mental Health Services in West Africa: Burkina Faso, Ghana &amp; Niger</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--mid">8 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">Child &amp; Adolescent Psychiatry and Mental Health, 2024 · Amenah MA, Ibrahim N, Tapsoba et al.</div>
+            <div class="research-card__desc">Comparative analysis of adolescent mental health service availability, readiness, and technical efficiency across three West African countries, with policy recommendations for regional health system strengthening.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Adolescent Health</span><span class="topic-tag">West Africa</span><span class="topic-tag">Mental Health</span></div>
+              <a class="research-card__link" href="https://doi.org/10.1186/s13034-024-00827-8" target="_blank">View →</a>
+            </div>
+          </div>
+
+          <!-- BMC Public Health, 3 citations -->
+          <div class="research-card fade-up fade-up-delay-1" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">Energy Poverty &amp; Health Outcomes in Ghana</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--low">3 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">BMC Public Health, 2025 · Nyame-Baafi K, Darmoe JA, Ohemeng W, Amenah MA et al.</div>
+            <div class="research-card__desc">Assessing the effect of energy poverty on health outcomes in Ghana, examining how limited access to reliable energy intersects with health service utilization, wellbeing, and household-level vulnerability.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Energy Poverty</span><span class="topic-tag">Health Outcomes</span><span class="topic-tag">Ghana</span></div>
+              <a class="research-card__link" href="https://doi.org/10.1186/s12889-025-23602-6" target="_blank">View →</a>
+            </div>
+          </div>
+
+          <!-- BMC HSR fractures, 2 citations -->
+          <div class="research-card fade-up" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">Catastrophic Expenditure Among Patients with Long Bone Fractures in Ghana</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--low">2 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">BMC Health Services Research, 2025 · Buunaaim, Amenah MA et al.</div>
+            <div class="research-card__desc">Hospital-based analysis of catastrophic health expenditure among patients with long bone fractures in Ghana's major teaching hospitals, with implications for surgical care financing policy.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Catastrophic Expenditure</span><span class="topic-tag">Surgical Care</span><span class="topic-tag">Ghana</span></div>
+              <a class="research-card__link" href="https://doi.org/10.1186/s12913-025-12250-6" target="_blank">View →</a>
+            </div>
+          </div>
+
+          <!-- PLOS ONE SRHR, 2 citations -->
+          <div class="research-card fade-up fade-up-delay-1" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">Technical Efficiency of Primary Healthcare for Adolescent SRHR in Ghana</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--low">2 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">PLOS ONE, 2025 · Amenah MA et al.</div>
+            <div class="research-card__desc">Data envelopment analysis of technical efficiency in primary healthcare delivery of adolescent sexual and reproductive health services across Ghana, with implications for resource allocation and facility management.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Technical Efficiency</span><span class="topic-tag">Adolescent SRHR</span><span class="topic-tag">DEA</span></div>
+            </div>
+          </div>
+
+          <!-- Scientific Reports, 1 citation -->
+          <div class="research-card fade-up" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">Depression Prevalence &amp; Socioeconomic Determinants in Ghana</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--low">1 citation</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">Scientific Reports, 2025 · Amenah MA, Fenny A, Akazili J, Mirzoev T, Agyepong IA, Mason T</div>
+            <div class="research-card__desc">Estimating the prevalence and socioeconomic determinants of depression in Ghana, exploring health-seeking behaviour and the structural drivers of mental health outcomes among Ghanaian youth and adults.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Mental Health</span><span class="topic-tag">Depression</span><span class="topic-tag">SES Determinants</span></div>
+              <a class="research-card__link" href="https://www.nature.com/articles/s41598-025-06134-2" target="_blank">View →</a>
+            </div>
+          </div>
+
+          <!-- Reproductive Health, 1 citation -->
+          <div class="research-card fade-up fade-up-delay-1" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">SRHR Service Readiness in Ghana's Primary Health Care System</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--low">1 citation</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">Reproductive Health, 2025 · Amenah MA et al.</div>
+            <div class="research-card__desc">Assessment of service availability and readiness for sexual and reproductive health and rights services across primary healthcare facilities in Ghana — benchmarking against WHO SARA standards and identifying critical gaps.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">SRHR</span><span class="topic-tag">Service Readiness</span><span class="topic-tag">Primary Healthcare</span></div>
+            </div>
+          </div>
+
+          <!-- SN Social Sciences, 1 citation -->
+          <div class="research-card fade-up" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">Youth Unemployment &amp; Socioeconomic Outcomes in Ghana</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--low">1 citation</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">SN Social Sciences, 2025 · Amenah MA et al.</div>
+            <div class="research-card__desc">Examining the determinants and socioeconomic consequences of youth unemployment in Ghana, with a focus on labour market transitions, skills mismatches, and policy implications for employment reform.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Youth Unemployment</span><span class="topic-tag">Labour Market</span><span class="topic-tag">Ghana</span></div>
+            </div>
+          </div>
+
+          <!-- BMC Primary Care NCD Ghana, 0 citations -->
+          <div class="research-card fade-up fade-up-delay-1" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">NCD Institutional Capacity in Ghana's Primary Health Care System</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--zero">New · 0 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">BMC Primary Care, 2026 · Amenah MA, Adjei-Banuah et al.</div>
+            <div class="research-card__desc">Multi-method study assessing institutional capacity for NCD care across primary healthcare facilities in Ghana, including service availability, readiness assessments, and systemic barriers to care delivery.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">NCDs</span><span class="topic-tag">Health Systems</span><span class="topic-tag">SARA</span></div>
+              <a class="research-card__link" href="https://doi.org/10.1186/s12875-026-03278-6" target="_blank">View →</a>
+            </div>
+          </div>
+
+          <!-- BMC Primary Care Burkina Faso, 0 citations -->
+          <div class="research-card fade-up" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">Technical Efficiency of Primary Healthcare in Burkina Faso</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--zero">New · 0 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">BMC Primary Care, 2026 · Amenah MA et al.</div>
+            <div class="research-card__desc">Analysis of technical efficiency in primary healthcare facilities in Burkina Faso using Data Envelopment Analysis, examining resource utilization patterns and the determinants of efficiency variation across facilities.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Technical Efficiency</span><span class="topic-tag">Primary Healthcare</span><span class="topic-tag">Burkina Faso</span></div>
+            </div>
+          </div>
+
+          <!-- BMC HSR NCD drivers, 0 citations -->
+          <div class="research-card fade-up fade-up-delay-1" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">Drivers of NCD Access in Ghana's Primary Health Care System</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--zero">New · 0 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">BMC Health Services Research, 2026 · Amenah MA et al.</div>
+            <div class="research-card__desc">Identifying and quantifying the individual, facility-level, and structural drivers of non-communicable disease care access in Ghana's primary health care system, using mixed-methods analysis.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">NCDs</span><span class="topic-tag">Access to Care</span><span class="topic-tag">Ghana</span></div>
+            </div>
+          </div>
+
+          <!-- Health Science Reports T2DM, 0 citations -->
+          <div class="research-card fade-up" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">Economic Burden of Type 2 Diabetes Mellitus in Ghana</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--zero">New · 0 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">Health Science Reports, 2026 · Amenah MA et al.</div>
+            <div class="research-card__desc">Estimating the direct and indirect economic burden of Type 2 diabetes mellitus on patients, households, and health systems in Ghana — providing the evidence base for cost-effective intervention prioritization and health insurance design.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Diabetes</span><span class="topic-tag">Economic Burden</span><span class="topic-tag">NCDs</span></div>
+            </div>
+          </div>
+
+          <!-- Frontiers COVID vaccine, 0 citations -->
+          <div class="research-card fade-up fade-up-delay-1" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">COVID-19 Vaccine Equity &amp; Uptake in Ghana</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--zero">New · 0 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">Frontiers in Public Health, 2026 · Amenah MA et al.</div>
+            <div class="research-card__desc">Analysis of equity dimensions in COVID-19 vaccine uptake across Ghana, examining socioeconomic, geographic, and demographic determinants of vaccination and implications for pandemic preparedness policy.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">COVID-19</span><span class="topic-tag">Vaccine Equity</span><span class="topic-tag">Ghana</span></div>
+            </div>
+          </div>
+
+          <!-- Discover Sustainability, 0 citations -->
+          <div class="research-card fade-up" data-status="Published">
+            <div class="research-card__header">
+              <div class="research-card__title">Financial Inclusion &amp; Energy Poverty in Ghana: Multidimensional PCA Approach</div>
+              <div class="research-card__badges"><span class="cite-badge cite-badge--zero">0 citations</span><span class="tag tag--published">Published</span></div>
+            </div>
+            <div class="research-card__meta">Discover Sustainability, 2025 · Kabutey-Ongor M, Amenah MA, Yorke FR</div>
+            <div class="research-card__desc">Constructing a multidimensional financial inclusion index via PCA to examine the relationship between financial inclusion and energy poverty in Ghana's informal sector, with equity implications for economic policy.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Financial Inclusion</span><span class="topic-tag">Energy Poverty</span><span class="topic-tag">PCA</span></div>
+              <a class="research-card__link" href="https://doi.org/10.1007/S43621-025-01689-6" target="_blank">View →</a>
+            </div>
+          </div>
+
+        </div><!-- end published grid -->
+
+        <!-- UNDER REVIEW / REVISION -->
+        <div class="research-section-hd">
+          <h3>Under Review &amp; Revision</h3>
+          <div class="research-section-hd__count">8</div>
+          <div class="research-section-hd__line"></div>
+        </div>
+        <div class="research-grid" style="margin-bottom:0">
+
+          <div class="research-card fade-up" data-status="Under Revision">
+            <div class="research-card__header">
+              <div class="research-card__title">Youth Unemployment, Happiness &amp; Life Satisfaction in Africa</div>
+              <div class="research-card__badges"><span class="tag tag--revision">Under Revision</span></div>
+            </div>
+            <div class="research-card__meta">Journal of Happiness Studies · Under Revision</div>
+            <div class="research-card__desc">Examining the relationship between youth unemployment, subjective wellbeing, happiness, and life satisfaction across African countries — with policy implications for employment-oriented social protection.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Youth</span><span class="topic-tag">Wellbeing</span><span class="topic-tag">Africa</span></div>
+            </div>
+          </div>
+
+          <div class="research-card fade-up fade-up-delay-1" data-status="Under Revision">
+            <div class="research-card__header">
+              <div class="research-card__title">COVID-19 Vaccine Delivery: Stakeholder Perspectives in Ghana</div>
+              <div class="research-card__badges"><span class="tag tag--revision">Under Revision</span></div>
+            </div>
+            <div class="research-card__meta">Discover Health Systems · Under Revision</div>
+            <div class="research-card__desc">Qualitative multi-stakeholder analysis of barriers and facilitators to COVID-19 vaccine delivery in Ghana — drawing on perspectives from health workers, community members, and policymakers.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">COVID-19</span><span class="topic-tag">Vaccine Delivery</span><span class="topic-tag">Stakeholders</span></div>
+            </div>
+          </div>
+
+          <div class="research-card fade-up" data-status="Under Revision">
+            <div class="research-card__header">
+              <div class="research-card__title">Drivers of Multidimensional Financial Inclusion in Ghana</div>
+              <div class="research-card__badges"><span class="tag tag--revision">Under Revision</span></div>
+            </div>
+            <div class="research-card__meta">Cogent Economics &amp; Finance · Under Revision</div>
+            <div class="research-card__desc">Identifying individual, household, and structural determinants of multidimensional financial inclusion in Ghana using composite index methodology, with implications for inclusive finance policy.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Financial Inclusion</span><span class="topic-tag">Ghana</span><span class="topic-tag">Development</span></div>
+            </div>
+          </div>
+
+          <div class="research-card fade-up fade-up-delay-1" data-status="Under Revision">
+            <div class="research-card__header">
+              <div class="research-card__title">PHC Availability &amp; Readiness for SRHR in Burkina Faso</div>
+              <div class="research-card__badges"><span class="tag tag--revision">Under Revision</span></div>
+            </div>
+            <div class="research-card__meta">BMC Health Services Research · Under Revision</div>
+            <div class="research-card__desc">Assessing the availability and readiness of primary healthcare facilities in Burkina Faso to deliver sexual and reproductive health and rights services — using WHO SARA methodology and mixed-methods analysis.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">SRHR</span><span class="topic-tag">Burkina Faso</span><span class="topic-tag">Primary Healthcare</span></div>
+            </div>
+          </div>
+
+          <div class="research-card fade-up" data-status="Under Revision">
+            <div class="research-card__header">
+              <div class="research-card__title">Adolescent SRHR Services in Niger: Availability &amp; Readiness</div>
+              <div class="research-card__badges"><span class="tag tag--revision">Under Revision</span></div>
+            </div>
+            <div class="research-card__meta">BMC Health Services Research · Under Revision</div>
+            <div class="research-card__desc">Analysis of the availability and readiness of primary healthcare facilities to provide adolescent sexual and reproductive health services in Niger, identifying critical gaps and policy priorities.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Adolescent SRHR</span><span class="topic-tag">Niger</span><span class="topic-tag">Service Readiness</span></div>
+            </div>
+          </div>
+
+          <div class="research-card fade-up fade-up-delay-1" data-status="Submitted">
+            <div class="research-card__header">
+              <div class="research-card__title">Socioeconomic Determinants of Overweight &amp; Obesity in Ghana</div>
+              <div class="research-card__badges"><span class="tag tag--submitted">Submitted</span></div>
+            </div>
+            <div class="research-card__meta">Scientific Reports · Submitted</div>
+            <div class="research-card__desc">Examining the socioeconomic, demographic, and environmental determinants of overweight and obesity in Ghana using nationally representative survey data — with implications for NCD prevention policy.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Obesity</span><span class="topic-tag">NCDs</span><span class="topic-tag">Ghana</span></div>
+            </div>
+          </div>
+
+          <div class="research-card fade-up" data-status="Submitted">
+            <div class="research-card__header">
+              <div class="research-card__title">Urbanization &amp; NCD Mortality in Sub-Saharan Africa</div>
+              <div class="research-card__badges"><span class="tag tag--submitted">Submitted</span></div>
+            </div>
+            <div class="research-card__meta">Population Health Metrics · Submitted</div>
+            <div class="research-card__desc">Cross-country panel analysis of the relationship between urbanization trajectories and non-communicable disease mortality across Sub-Saharan Africa, informing regional NCD policy and urban health planning.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Urbanization</span><span class="topic-tag">NCDs</span><span class="topic-tag">Sub-Saharan Africa</span></div>
+            </div>
+          </div>
+
+          <div class="research-card fade-up fade-up-delay-1" data-status="Submitted">
+            <div class="research-card__header">
+              <div class="research-card__title">Institutional &amp; Systemic Drivers of NCD Access in West Africa</div>
+              <div class="research-card__badges"><span class="tag tag--submitted">Submitted</span></div>
+            </div>
+            <div class="research-card__meta">Co-authored with Yasmin Jahan et al. · Submitted</div>
+            <div class="research-card__desc">Multi-country investigation of the institutional and systemic factors shaping access to non-communicable disease care across West African health systems — with policy implications for regional NCD governance.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">NCDs</span><span class="topic-tag">West Africa</span><span class="topic-tag">Health Systems</span></div>
+            </div>
+          </div>
+
+        </div><!-- end under-review grid -->
+
+        <!-- ACTIVE PROJECTS -->
+        <div class="research-section-hd">
+          <h3>Active Research Projects</h3>
+          <div class="research-section-hd__count">5</div>
+          <div class="research-section-hd__line"></div>
+        </div>
+        <div class="research-grid">
+
+          <div class="research-card fade-up" data-status="Ongoing">
+            <div class="research-card__header">
+              <div class="research-card__title">PhD Thesis: NCD Screening &amp; Referral Intervention Evaluation in Ghana</div>
+              <span class="tag tag--ongoing">Ongoing</span>
+            </div>
+            <div class="research-card__meta">Lancaster University · NIHR Global Research Centre · 2024–2028</div>
+            <div class="research-card__desc">Economic evaluation and efficiency analysis of co-produced interventions targeting NCD screening and referral pathways in Ghana's primary healthcare system, as part of the STOP-NCD in West Africa Project.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">NCDs</span><span class="topic-tag">Primary Healthcare</span><span class="topic-tag">Economic Evaluation</span></div>
+            </div>
+          </div>
+
+          <div class="research-card fade-up fade-up-delay-1" data-status="Ongoing">
+            <div class="research-card__header">
+              <div class="research-card__title">Consumption Inequality in Ghana: RIF Decomposition Analysis</div>
+              <span class="tag tag--ongoing">Ongoing</span>
+            </div>
+            <div class="research-card__meta">University of Ghana · Ongoing</div>
+            <div class="research-card__desc">Applying Recentered Influence Function (RIF) decomposition to understand the drivers of household consumption inequality across Ghana, examining contributions of education, employment, and geography along the full distribution.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Inequality</span><span class="topic-tag">RIF Decomposition</span><span class="topic-tag">Welfare</span></div>
+            </div>
+          </div>
+
+          <div class="research-card fade-up" data-status="Ongoing">
+            <div class="research-card__header">
+              <div class="research-card__title">Health Financing, Human Capital &amp; Development in Sub-Saharan Africa</div>
+              <span class="tag tag--ongoing">Ongoing</span>
+            </div>
+            <div class="research-card__meta">Cross-country panel analysis · Ongoing</div>
+            <div class="research-card__desc">Examining the relationship between health financing mechanisms, human capital accumulation, and long-run economic development across Sub-Saharan African countries, with implications for fiscal policy and health investment strategies.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">Health Financing</span><span class="topic-tag">Human Capital</span><span class="topic-tag">Sub-Saharan Africa</span></div>
+            </div>
+          </div>
+
+          <div class="research-card fade-up fade-up-delay-1" data-status="Ongoing">
+            <div class="research-card__header">
+              <div class="research-card__title">SSB Tax Evaluation: Impact on Prices &amp; Consumption (DiD)</div>
+              <span class="tag tag--ongoing">Ongoing</span>
+            </div>
+            <div class="research-card__meta">University of Ghana · Nov 2024 – Jul 2025</div>
+            <div class="research-card__desc">Evaluating Ghana's sugar-sweetened beverage (SSB) tax using difference-in-differences applied to Consumer Price Index data. Focuses on price effects and purchasing behaviour among low-income households in peri-urban Accra.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">SSB Tax</span><span class="topic-tag">DiD</span><span class="topic-tag">Nutrition Policy</span></div>
+            </div>
+          </div>
+
+          <div class="research-card fade-up" data-status="Ongoing">
+            <div class="research-card__header">
+              <div class="research-card__title">SRHR Budget &amp; Expenditure Analysis: South Sudan, Rwanda, DRC &amp; Madagascar</div>
+              <span class="tag tag--ongoing">Ongoing</span>
+            </div>
+            <div class="research-card__meta">AfHEA / UNFPA · Dec 2024 – Present</div>
+            <div class="research-card__desc">Multi-country analysis of SRHR budget allocations and expenditure in South Sudan, Rwanda, DRC, and Madagascar. Developed frameworks for situation analysis, data disaggregation, and stakeholder validation in collaboration with UNFPA country teams.</div>
+            <div class="research-card__footer">
+              <div class="research-card__topics"><span class="topic-tag">SRHR</span><span class="topic-tag">Health Financing</span><span class="topic-tag">Multi-country</span></div>
+            </div>
+          </div>
+
+        </div><!-- end active grid -->
+
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <span class="eyebrow">Research Impact</span>
+        <h2 class="section-title">Why This Work Matters</h2>
+        <div class="divider"></div>
+        <div class="why-grid">
+          <div class="why-card fade-up"><div class="why-card__icon">📋</div><div class="why-card__title">Policy Evidence</div><div class="why-card__text">Health ministries in West Africa need locally-generated, rigorously produced evidence to make financing and service delivery decisions — not models imported from high-income settings.</div></div>
+          <div class="why-card fade-up fade-up-delay-1"><div class="why-card__icon">⚖️</div><div class="why-card__title">Equity &amp; Access</div><div class="why-card__text">Catastrophic health expenditure pushes millions of households into poverty. My research quantifies these dynamics so that protection mechanisms can be designed to reach those who need them most.</div></div>
+          <div class="why-card fade-up fade-up-delay-2"><div class="why-card__icon">🔬</div><div class="why-card__title">Rigorous Methods</div><div class="why-card__text">From econometric decomposition to economic evaluation and efficiency analysis, every project applies methods appropriate to the African data environment — building a body of work that can be scrutinised and built upon.</div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ CONSULTING ============ -->
+  <div class="page" id="page-consulting">
+    <section class="consulting-hero">
+      <div class="container">
+        <div class="fade-up" style="max-width:680px">
+          <span class="eyebrow" style="color:var(--gold-light)">Consulting</span>
+          <h1 class="section-title" style="color:var(--white); margin-bottom:18px">Applied Expertise for Real-World Impact</h1>
+          <p style="font-size:1.02rem; color:rgba(255,255,255,0.88); line-height:1.78;">I work with international health organizations, governments, and NGOs to deliver evidence-based consulting across health economics, policy analysis, data management, and strategic research design.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Services</span>
+        <h2 class="section-title">Consulting Engagements</h2>
+        <div class="divider"></div>
+        <div class="consulting-services">
+
+          <div class="service-card fade-up">
+            <div class="service-card__icon">🌍</div>
+            <div class="service-card__title">SRHR Multi-Country Budget &amp; Expenditure Analysis</div>
+            <div class="service-card__org">UNFPA / African Health Economics Association (AfHEA)</div>
+            <div class="service-card__desc">Research consulting across South Sudan, Rwanda, DRC, and Madagascar — developing methodological frameworks for SRHR budget tracking, situation analysis, expenditure disaggregation, and policy-relevant reporting, including stakeholder validation workshops.</div>
+            <div class="service-card__tags"><span class="service-tag">SRHR</span><span class="service-tag">Budget Analysis</span><span class="service-tag">UNFPA</span><span class="service-tag">Multi-country</span></div>
+          </div>
+
+          <div class="service-card fade-up fade-up-delay-1">
+            <div class="service-card__icon">📊</div>
+            <div class="service-card__title">Skills Mismatch Survey</div>
+            <div class="service-card__org">Ghana Ministry of Labour &amp; Ghana Statistical Service</div>
+            <div class="service-card__desc">Collaborating with Ghana's Ministry of Labour and Ghana Statistical Service to design and implement a national skills mismatch survey — examining gaps between labour market demands and workforce capabilities, with data analysis and policy-facing reporting for employment reform.</div>
+            <div class="service-card__tags"><span class="service-tag">Labour Market</span><span class="service-tag">Survey Design</span><span class="service-tag">Government</span></div>
+          </div>
+
+          <div class="service-card fade-up">
+            <div class="service-card__icon">🏥</div>
+            <div class="service-card__title">Health Systems Strengthening &amp; Policy Advisory</div>
+            <div class="service-card__org">International Health Organizations · Governments</div>
+            <div class="service-card__desc">Strategic advisory on health systems strengthening, NCD policy design, and primary healthcare reform for government agencies, development partners, and international health organizations across West Africa.</div>
+            <div class="service-card__tags"><span class="service-tag">Policy Advisory</span><span class="service-tag">Health Systems</span><span class="service-tag">West Africa</span></div>
+          </div>
+
+          <div class="service-card fade-up fade-up-delay-1">
+            <div class="service-card__icon">📑</div>
+            <div class="service-card__title">Research Design &amp; Statistical Analysis</div>
+            <div class="service-card__org">International Organizations · Academic Institutions</div>
+            <div class="service-card__desc">End-to-end research support: study design, survey instrument development, data management and cleaning (GLSS, AHIES, GSPS, CPI, EHCVM datasets), STATA-based econometric analysis, and manuscript preparation for peer-reviewed publication.</div>
+            <div class="service-card__tags"><span class="service-tag">STATA</span><span class="service-tag">Econometrics</span><span class="service-tag">Data Management</span><span class="service-tag">Publication</span></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <span class="eyebrow">Past &amp; Current Partners</span>
+        <h2 class="section-title" style="margin-bottom:34px">Organizations I've Worked With</h2>
+        <div class="partners-bar fade-up">
+          <span class="partners-bar__label">Partners</span>
+          <span class="partner-pill">WHO</span>
+          <span class="partner-pill">UNICEF</span>
+          <span class="partner-pill">UNFPA</span>
+          <span class="partner-pill">UNESCO</span>
+          <span class="partner-pill">IHME / GBD</span>
+          <span class="partner-pill">AfHEA</span>
+          <span class="partner-pill">RSTMH / NIHR</span>
+          <span class="partner-pill">UC Berkeley</span>
+          <span class="partner-pill">Ghana Health Service</span>
+          <span class="partner-pill">Ghana Statistical Service</span>
+          <span class="partner-pill">Ghana College of Physicians</span>
+          <span class="partner-pill">Ministry of Labour</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ COMMUNITY ============ -->
+  <div class="page" id="page-community">
+    <section class="community-hero">
+      <div class="container">
+        <div class="fade-up" style="max-width:700px">
+          <span class="eyebrow" style="color:var(--gold-light)">Community</span>
+          <h1 class="section-title" style="color:var(--white); margin-bottom:18px">Building the Next Generation of African Health Economists</h1>
+          <p style="font-size:1.02rem; color:rgba(255,255,255,0.88); line-height:1.78;">I am building an early-career research network for Ghanaian and Nigerian researchers working at the frontiers of health financing, equity, and development economics — a community designed to accelerate impact and foster collaborative science.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">The Vision</span>
+        <h2 class="section-title">A Platform for Early-Career Researchers</h2>
+        <div class="divider"></div>
+        <div style="max-width:740px; margin-bottom:52px" class="fade-up">
+          <p>Despite the growing body of African health economics research, early-career researchers in Ghana, Nigeria, and across Sub-Saharan Africa often face structural barriers to collaboration, mentorship, funding access, and publication. The networks and resources that accelerate careers in high-income settings are simply not equally available.</p>
+          <p style="margin-top:17px">This planned research network is designed to change that — providing a structured community for rigorous, policy-relevant research in health financing, catastrophic health expenditure, equity, and the socioeconomic determinants of health. It is built on the conviction that African health challenges require African researchers, African data, and African solutions.</p>
+        </div>
+        <div class="community-cards">
+          <div class="community-card fade-up"><div class="community-card__icon">🤝</div><div class="community-card__title">Peer Collaboration</div><div class="community-card__text">Structured co-authorship opportunities, joint research proposals, and collaborative data analysis across institutions in Ghana and Nigeria.</div></div>
+          <div class="community-card fade-up fade-up-delay-1"><div class="community-card__icon">🎓</div><div class="community-card__title">Mentorship &amp; Capacity</div><div class="community-card__text">Research methodology training, grant writing support, and mentorship from established researchers and international collaborators.</div></div>
+          <div class="community-card fade-up fade-up-delay-2"><div class="community-card__icon">📣</div><div class="community-card__title">Policy Amplification</div><div class="community-card__text">Translating research into policy briefs, stakeholder engagement, and conference presentations that connect evidence to decision-makers.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <span class="eyebrow">Research Focus</span>
+        <h2 class="section-title">Network Research Priorities</h2>
+        <div class="divider"></div>
+        <div class="focus-list">
+          <div class="focus-item fade-up"><div class="focus-item__icon">💰</div><div class="focus-item__text"><strong>Health Financing</strong>Resource mobilization, insurance mechanisms, out-of-pocket payments, and fiscal space for health in Ghana and Nigeria.</div></div>
+          <div class="focus-item fade-up fade-up-delay-1"><div class="focus-item__icon">💸</div><div class="focus-item__text"><strong>Catastrophic Health Expenditure</strong>Measurement, drivers, and policy responses to financial hardship from illness across low- and middle-income settings.</div></div>
+          <div class="focus-item fade-up"><div class="focus-item__icon">⚖️</div><div class="focus-item__text"><strong>Health Equity</strong>Inequalities in health access, outcomes, and financing — and the policy levers that can reduce them.</div></div>
+          <div class="focus-item fade-up fade-up-delay-1"><div class="focus-item__icon">📈</div><div class="focus-item__text"><strong>Socioeconomic Determinants of Health</strong>Education, income, employment, housing, and the upstream drivers that shape population health trajectories.</div></div>
+          <div class="focus-item fade-up"><div class="focus-item__icon">🏥</div><div class="focus-item__text"><strong>Primary Healthcare Systems</strong>Service availability, readiness, efficiency, and the organizational factors shaping community-level health delivery.</div></div>
+          <div class="focus-item fade-up fade-up-delay-1"><div class="focus-item__icon">🌍</div><div class="focus-item__text"><strong>Regional &amp; Cross-Country Analysis</strong>Comparative research across West Africa generating regionally-relevant evidence for multilateral health policy.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="join-cta fade-up">
+          <h2 class="join-cta__title">Join the Network</h2>
+          <p class="join-cta__text">Are you an early-career health economist, development economist, or health researcher based in Ghana or Nigeria? We're building something meaningful — and your work belongs at the table.</p>
+          <div class="join-cta__actions">
+            <button class="btn btn--navy" onclick="showPage('contact')">Express Interest →</button>
+            <button class="btn btn--outline-dark" onclick="showPage('contact')">Collaborate with Michel</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ CONTACT ============ -->
+  <div class="page" id="page-contact">
+    <section class="contact-hero">
+      <div class="container">
+        <div class="fade-up" style="max-width:600px">
+          <span class="eyebrow" style="color:var(--gold-light)">Contact</span>
+          <h1 class="section-title" style="color:var(--white); margin-bottom:14px">Get in Touch</h1>
+          <p style="font-size:1.02rem; color:rgba(255,255,255,0.82); line-height:1.78;">Whether you're interested in research collaboration, consulting, the early-career network, or policy dialogue — I'd be glad to hear from you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info fade-up">
+            <div>
+              <span class="eyebrow">Location &amp; Contact</span>
+              <h3 style="font-size:1.3rem; color:var(--navy); margin-bottom:22px; font-family:'Playfair Display',serif">Michel Adurayi Amenah</h3>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">📍</div>
+              <div><div class="contact-info-item__label">Location</div><div class="contact-info-item__value">Accra, Ghana</div></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">📧</div>
+              <div><div class="contact-info-item__label">Email</div><div class="contact-info-item__value">michel.adurayi@gmail.com</div></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">🔗</div>
+              <div><div class="contact-info-item__label">LinkedIn</div><div class="contact-info-item__value">Michel Adurayi Amenah</div></div>
+            </div>
+            <div>
+              <div class="contact-info-item__label" style="font-size:0.76rem; font-weight:600; color:var(--gray-500); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:13px">Institutional Affiliations</div>
+              <div class="contact-affils-list">
+                <div class="contact-affil">Lancaster University — PhD Researcher</div>
+                <div class="contact-affil">IHME — GBD Collaborator</div>
+                <div class="contact-affil">Rewrite to Build Africa — Head of Research &amp; Policy</div>
+                <div class="contact-affil">AfHEA — Member</div>
+                <div class="contact-affil">iHEA — Member, Africa Convenor (ECR SIG)</div>
+              </div>
+            </div>
+            <div style="padding:18px; background:var(--off-white); border-radius:var(--radius); border-left:4px solid var(--gold)">
+              <div style="font-size:0.82rem; color:var(--gray-700); line-height:1.65;">
+                <strong style="display:block; color:var(--navy); margin-bottom:5px">Open to:</strong>
+                Research collaboration · Consulting engagements · Conference presentations · Policy advisory · Early-career network participation
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form fade-up fade-up-delay-2">
+            <div class="form-title">Send a Message</div>
+            <form id="contactForm" onsubmit="submitForm(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="fname">Name *</label>
+                  <input class="form-input" id="fname" type="text" placeholder="Your full name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="femail">Email *</label>
+                  <input class="form-input" id="femail" type="email" placeholder="your@email.com" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fsubject">Subject *</label>
+                <select class="form-select" id="fsubject" required>
+                  <option value="">Select a topic...</option>
+                  <option>Research Collaboration</option>
+                  <option>Consulting Enquiry</option>
+                  <option>Early-Career Network</option>
+                  <option>Speaking / Conference</option>
+                  <option>Media / Press</option>
+                  <option>General Enquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fmessage">Message *</label>
+                <textarea class="form-textarea" id="fmessage" placeholder="Tell me about your interest or enquiry..." required></textarea>
+              </div>
+              <button type="submit" class="form-submit">Send Message →</button>
+            </form>
+            <div class="form-success" id="formSuccess">
+              <div class="form-success__icon">&#x2705;</div>
+              <h3 style="font-family:'Playfair Display',serif; color:var(--navy); margin-bottom:8px">Message Sent</h3>
+              <p style="color:var(--gray-500); font-size:0.9rem">Thank you for reaching out. I'll be in touch shortly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ BLOG ============ -->
+  <div class="page" id="page-blog">
+    <section class="blog-hero">
+      <div class="container">
+        <div class="fade-up" style="max-width:640px">
+          <span class="eyebrow" style="color:var(--gold-light)">Blog</span>
+          <h1 class="section-title" style="color:var(--white); margin-bottom:14px">Thoughts on Health, Development &amp; Africa</h1>
+          <p style="font-size:1.02rem; color:rgba(255,255,255,0.82); line-height:1.78;">A space for honest reflection on research, policy, and the work of building a better Africa — written from the field, the conference room, and everywhere in between.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="blog-layout">
+
+          <!-- POSTS -->
+          <div id="blogPosts">
+
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner blog-post__banner--research"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat blog-post__cat--research">Research</span>
+                  <span class="blog-post__date">May 2026</span>
+                </div>
+                <h2 class="blog-post__title">What 225 Citations Taught Me About Global Health Research</h2>
+                <p class="blog-post__excerpt">When our GBD 2023 cardiovascular disease paper was published in JACC, I didn't expect the response it would get. Within months, 225 citations. It was a reminder that the most impactful work isn't always the most novel — sometimes it's the most rigorous assembly of what we already know, done with enough care and scale to matter globally. Here's what I learned from being part of that collaboration...</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read">Read more →</span>
+                  <span class="blog-post__readtime">~5 min read</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner blog-post__banner--policy"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat blog-post__cat--policy">Policy</span>
+                  <span class="blog-post__date">April 2026</span>
+                </div>
+                <h2 class="blog-post__title">Ghana's NHIS at a Crossroads: What the Data Actually Says</h2>
+                <p class="blog-post__excerpt">The National Health Insurance Scheme was supposed to end catastrophic health expenditure in Ghana. Our research shows the picture is more complicated. Yes, coverage has expanded. But certain service categories still push households to the financial brink — and the people most affected are not the ones with political voice. Here is what I found, and what I think should be done about it.</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read">Read more →</span>
+                  <span class="blog-post__readtime">~7 min read</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner blog-post__banner--reflect"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat blog-post__cat--reflect">Reflections</span>
+                  <span class="blog-post__date">March 2026</span>
+                </div>
+                <h2 class="blog-post__title">On Being an African Researcher in a Global System</h2>
+                <p class="blog-post__excerpt">At IHEA Bali, I sat in a room where less than 10% of the speakers were from Sub-Saharan Africa — yet our region carries the majority of the global disease burden. That gap between who produces health economics knowledge and whose lives that knowledge is supposed to improve is not accidental. It is structural. Here are my honest thoughts on what it takes to change it from within...</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read">Read more →</span>
+                  <span class="blog-post__readtime">~6 min read</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner" style="height:8px; background:linear-gradient(90deg,#5b21b6,#7c3aed)"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat blog-post__cat--opinion">Opinion</span>
+                  <span class="blog-post__date">February 2026</span>
+                </div>
+                <h2 class="blog-post__title">Galamsey Is Not Just an Environmental Problem — It Is a Health Emergency</h2>
+                <p class="blog-post__excerpt">When people talk about illegal mining in Ghana, the conversation usually stops at the environmental destruction — the rivers turned brown, the farmland poisoned. But what I want to talk about are the communities downstream, the children drinking contaminated water, the public health infrastructure that isn't there to respond. This is a health crisis hiding inside an environmental one.</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read">Read more →</span>
+                  <span class="blog-post__readtime">~8 min read</span>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- end blogPosts -->
+
+          <!-- SIDEBAR -->
+          <aside>
+
+            <div class="blog-sidebar__card blog-about">
+              <div class="blog-about__avatar">MA</div>
+              <div class="blog-about__name">Michel Adurayi Amenah</div>
+              <p class="blog-about__bio">PhD Researcher · Health Economist · GBD Collaborator. Writing from Accra, Ghana about evidence, equity, and African development.</p>
+            </div>
+
+            <div class="blog-sidebar__card">
+              <div class="blog-sidebar__title">Categories</div>
+              <div class="blog-category-list">
+                <div class="blog-category-item">Research <span>2</span></div>
+                <div class="blog-category-item">Policy <span>1</span></div>
+                <div class="blog-category-item">Reflections <span>1</span></div>
+                <div class="blog-category-item">Opinion <span>1</span></div>
+              </div>
+            </div>
+
+            <div class="blog-sidebar__card">
+              <div class="blog-sidebar__title">Topics I Write About</div>
+              <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:4px">
+                <span class="topic-tag" style="font-size:0.78rem; padding:5px 12px">Health Financing</span>
+                <span class="topic-tag" style="font-size:0.78rem; padding:5px 12px">NCDs</span>
+                <span class="topic-tag" style="font-size:0.78rem; padding:5px 12px">African Health Policy</span>
+                <span class="topic-tag" style="font-size:0.78rem; padding:5px 12px">Ghana</span>
+                <span class="topic-tag" style="font-size:0.78rem; padding:5px 12px">Development</span>
+                <span class="topic-tag" style="font-size:0.78rem; padding:5px 12px">Research Methods</span>
+                <span class="topic-tag" style="font-size:0.78rem; padding:5px 12px">Environment</span>
+                <span class="topic-tag" style="font-size:0.78rem; padding:5px 12px">Career</span>
+              </div>
+            </div>
+
+            <div class="blog-write-cta">
+              <h4>Want to Collaborate?</h4>
+              <p>I write to think out loud, share evidence, and start conversations. If a post resonates — or if you disagree — I'd love to hear from you.</p>
+              <button class="btn btn--gold" style="width:100%; justify-content:center; padding:12px" onclick="showPage('contact')">Get in Touch</button>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__logo">Michel <span>Amenah</span></div>
+          <div class="footer__tagline">Health Economist · Development Economist · PhD Researcher · GBD Collaborator. Producing rigorous evidence for African health systems and development policy.</div>
+        </div>
+        <div>
+          <div class="footer__col-title">Navigate</div>
+          <div class="footer__links">
+            <a class="footer__link" onclick="showPage('home')">Home</a>
+            <a class="footer__link" onclick="showPage('about')">About</a>
+            <a class="footer__link" onclick="showPage('research')">Research</a>
+            <a class="footer__link" onclick="showPage('consulting')">Consulting</a>
+            <a class="footer__link" onclick="showPage('community')">Community</a>
+            <a class="footer__link" onclick="showPage('blog')">Blog</a>
+            <a class="footer__link" onclick="showPage('contact')">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Affiliations</div>
+          <div class="footer__links">
+            <span class="footer__link">Lancaster University</span>
+            <span class="footer__link">IHME · GBD</span>
+            <span class="footer__link">Rewrite to Build Africa</span>
+            <span class="footer__link">AfHEA · iHEA</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Michel Adurayi Amenah &middot; Accra, Ghana</span>
+        <div class="footer__faith"><span>&#x271D;</span> Soli Deo Gloria</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav__link[data-page]').forEach(l => l.classList.remove('active'));
+      document.getElementById('page-' + id).classList.add('active');
+      const activeLink = document.querySelector('.nav__link[data-page="' + id + '"]');
+      if (activeLink) activeLink.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(observeAnimations, 60);
+    }
+
+    function toggleMobile() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    function observeAnimations() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.fade-up:not(.visible)').forEach(el => observer.observe(el));
+    }
+
+    // Gallery: show placeholder when image fails to load
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.gallery-item__img-wrap img').forEach(function(img) {
+        img.addEventListener('error', function() {
+          this.style.display = 'none';
+          var placeholder = this.nextElementSibling;
+          if (placeholder) placeholder.style.display = 'flex';
+        });
+        // Trigger error check for already-failed loads
+        if (img.complete && !img.naturalWidth) {
+          img.dispatchEvent(new Event('error'));
+        }
+      });
+    });
+
+    function submitForm(e) {
+      e.preventDefault();
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+
+    window.addEventListener('load', observeAnimations);
+  </script>
+</body>
+</html>
