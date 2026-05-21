@@ -109,7 +109,7 @@
     .hero__card-title { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .hero__affils { display: flex; flex-direction: column; gap: 15px; }
     .hero__affil { display: flex; align-items: flex-start; gap: 13px; }
-    .hero__affil-icon { width: 34px; height: 34px; background: rgba(201,168,76,0.13); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.95rem; }
+    .hero__affil-icon { width: 34px; height: 34px; background: rgba(255,255,255,0.12); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.95rem; overflow:hidden; }
     .hero__affil-text { color: rgba(255,255,255,0.82); font-size: 0.855rem; line-height: 1.5; }
     .hero__affil-text strong { color: var(--white); display: block; font-size: 0.88rem; }
 
@@ -481,10 +481,10 @@
           <div class="hero__card fade-up fade-up-delay-2">
             <div class="hero__card-title">Affiliations &amp; Roles</div>
             <div class="hero__affils">
-              <div class="hero__affil"><div class="hero__affil-icon">🌍</div><div class="hero__affil-text"><strong>GBD Collaborator — IHME</strong>Global Burden of Disease, Institute for Health Metrics and Evaluation</div></div>
-              <div class="hero__affil"><div class="hero__affil-icon">🎓</div><div class="hero__affil-text"><strong>PhD Scholar — Lancaster University</strong>NIHR Global Research Centre for NCD Control in West Africa</div></div>
-              <div class="hero__affil"><div class="hero__affil-icon">🌱</div><div class="hero__affil-text"><strong>Head of Research &amp; Policy</strong>Rewrite to Build Africa (Sustainability NGO)</div></div>
-              <div class="hero__affil"><div class="hero__affil-icon">🏥</div><div class="hero__affil-text"><strong>Health Economist</strong>Ghana College of Physicians &amp; Surgeons · STOP-NCD West Africa</div></div>
+              <div class="hero__affil"><div class="hero__affil-icon"><img src="photos/logo-ihme.png" alt="IHME" style="width:28px;height:28px;object-fit:contain;border-radius:4px;"></div><div class="hero__affil-text"><strong>GBD Collaborator — IHME</strong>Global Burden of Disease, Institute for Health Metrics and Evaluation</div></div>
+              <div class="hero__affil"><div class="hero__affil-icon"><img src="photos/logo-lancaster.png" alt="Lancaster University" style="width:28px;height:28px;object-fit:contain;"></div><div class="hero__affil-text"><strong>PhD Scholar — Lancaster University</strong>NIHR Global Research Centre for NCD Control in West Africa</div></div>
+              <div class="hero__affil"><div class="hero__affil-icon"><img src="photos/logo-rewire.png" alt="Rewire to Build Africa" style="width:28px;height:28px;object-fit:contain;"></div><div class="hero__affil-text"><strong>Head of Research &amp; Policy</strong>Rewire to Build Africa (Sustainability NGO)</div></div>
+              <div class="hero__affil"><div class="hero__affil-icon"><img src="photos/logo-gcps.png" alt="GCPS" style="width:28px;height:28px;object-fit:contain;"></div><div class="hero__affil-text"><strong>Health Economist</strong>Ghana College of Physicians &amp; Surgeons · STOP-NCD West Africa</div></div>
             </div>
           </div>
         </div>
@@ -607,9 +607,15 @@
           </div>
 
           <div class="affil-card fade-up">
+            <div class="affil-card__icon"><img src="photos/logo-ihea.png" alt="iHEA" style="height:52px;width:auto;object-fit:contain;"></div>
+            <div class="affil-card__org">iHEA — International Health Economics Association</div>
+            <div class="affil-card__role">Africa Co-Convenor, Early Career Researchers Special Interest Group. Representing African early-career health economists in the global iHEA community.</div>
+          </div>
+
+          <div class="affil-card fade-up fade-up-delay-1">
             <div class="affil-card__icon">📊</div>
-            <div class="affil-card__org">AfHEA · iHEA · Econometric Society</div>
-            <div class="affil-card__role">Active member of leading professional networks in health economics and econometrics. Africa Convenor, iHEA Early Career Researchers Special Interest Group.</div>
+            <div class="affil-card__org">AfHEA · Econometric Society</div>
+            <div class="affil-card__role">Active member of leading professional networks in health economics and econometrics across Africa and internationally.</div>
           </div>
 
         </div>
