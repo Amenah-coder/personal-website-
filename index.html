@@ -148,7 +148,7 @@
     .about-affils { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
     .affil-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 26px 22px; box-shadow: var(--shadow); transition: var(--transition); }
     .affil-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    .affil-card__icon { font-size: 1.85rem; margin-bottom: 11px; }
+    .affil-card__icon { font-size: 1.85rem; margin-bottom: 11px; min-height: 56px; display: flex; align-items: center; }
     .affil-card__org { font-family: 'Playfair Display', serif; font-size: 0.98rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
     .affil-card__role { font-size: 0.835rem; color: var(--gray-500); line-height: 1.55; }
 
@@ -581,14 +581,37 @@
         <h2 class="section-title">Where I Work &amp; Contribute</h2>
         <div class="divider"></div>
         <div class="about-affils">
-          <div class="affil-card fade-up"><div class="affil-card__icon">🌍</div><div class="affil-card__org">IHME — Global Burden of Disease</div><div class="affil-card__role">GBD Collaborator. Contributing to the world's most comprehensive global health research effort, covering disease burden across 200+ countries and territories.</div></div>
-          <div class="affil-card fade-up fade-up-delay-1"><div class="affil-card__icon">🎓</div><div class="affil-card__org">Lancaster University</div><div class="affil-card__role">PhD Researcher, Health Economics &amp; Policy. NIHR Global Research Centre for NCD Control in West Africa. Full scholarship recipient (£50,000).</div></div>
-          <div class="affil-card fade-up fade-up-delay-2"><div class="affil-card__icon">🌱</div><div class="affil-card__org">Rewrite to Build Africa</div><div class="affil-card__role">Head of Research &amp; Policy. Driving evidence-based advocacy on climate, environment, and African development.</div></div>
-          <div class="affil-card fade-up"><div class="affil-card__icon">🏥</div><div class="affil-card__org">Ghana College of Physicians &amp; Surgeons</div><div class="affil-card__role">Health Economist / Quantitative Researcher. STOP-NCD West Africa Project &mdash; economic evaluation and efficiency analysis of NCD interventions.</div></div>
-          <div class="affil-card fade-up fade-up-delay-1"><div class="affil-card__icon">🎓</div><div class="affil-card__org">Lancaster University, UK</div><div class="affil-card__role">Affiliated Researcher. Doctoral studies in Health Economics, collaborating on NIHR-funded research on health systems in Sub-Saharan Africa.</div></div>
-          <div class="affil-card fade-up fade-up-delay-3"><div class="affil-card__icon">📊</div><div class="affil-card__org">AfHEA · iHEA · Econometric Society</div><div class="affil-card__role">Active member of leading professional networks in health economics and econometrics. Africa Convenor, iHEA Early Career Researchers Special Interest Group.</div></div>
-          <div class="affil-card fade-up fade-up-delay-1"><div class="affil-card__icon">🏥</div><div class="affil-card__org">Ghana College of Physicians &amp; Surgeons</div><div class="affil-card__role">Health Economist and Quantitative Researcher on the STOP-NCD in West Africa Project and Adolescent Reproductive and Mental Health Care studies.</div></div>
-          <div class="affil-card fade-up fade-up-delay-2"><div class="affil-card__icon">🔬</div><div class="affil-card__org">NIHR · Lancaster</div><div class="affil-card__role">NIHR Global Research Centre for NCD Control in West Africa — contributing to primary care strengthening and NCD intervention research across the region.</div></div>
+
+          <div class="affil-card fade-up">
+            <div class="affil-card__icon"><img src="photos/logo-ihme.png" alt="IHME" style="height:52px;width:auto;object-fit:contain;"></div>
+            <div class="affil-card__org">IHME — Global Burden of Disease</div>
+            <div class="affil-card__role">GBD Collaborator. Contributing to the world's most comprehensive global health research effort, covering disease burden across 200+ countries and territories.</div>
+          </div>
+
+          <div class="affil-card fade-up fade-up-delay-1">
+            <div class="affil-card__icon"><img src="photos/logo-lancaster.png" alt="Lancaster University" style="height:52px;width:auto;object-fit:contain;"></div>
+            <div class="affil-card__org">Lancaster University</div>
+            <div class="affil-card__role">PhD Researcher, Health Economics &amp; Policy. NIHR Global Research Centre for NCD Control in West Africa. Full scholarship recipient (£50,000).</div>
+          </div>
+
+          <div class="affil-card fade-up fade-up-delay-2">
+            <div class="affil-card__icon"><img src="photos/logo-rewire.png" alt="Rewire to Build Africa" style="height:52px;width:auto;object-fit:contain;"></div>
+            <div class="affil-card__org">Rewire to Build Africa</div>
+            <div class="affil-card__role">Head of Research &amp; Policy. Driving evidence-based advocacy on climate, environment, and African development.</div>
+          </div>
+
+          <div class="affil-card fade-up fade-up-delay-3">
+            <div class="affil-card__icon"><img src="photos/logo-gcps.png" alt="Ghana College of Physicians and Surgeons" style="height:52px;width:auto;object-fit:contain;"></div>
+            <div class="affil-card__org">Ghana College of Physicians &amp; Surgeons</div>
+            <div class="affil-card__role">Health Economist &amp; Quantitative Researcher. STOP-NCD West Africa Project &mdash; economic evaluation and efficiency analysis of NCD interventions.</div>
+          </div>
+
+          <div class="affil-card fade-up">
+            <div class="affil-card__icon">📊</div>
+            <div class="affil-card__org">AfHEA · iHEA · Econometric Society</div>
+            <div class="affil-card__role">Active member of leading professional networks in health economics and econometrics. Africa Convenor, iHEA Early Career Researchers Special Interest Group.</div>
+          </div>
+
         </div>
       </div>
     </section>
