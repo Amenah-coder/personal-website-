@@ -30,7 +30,7 @@
       --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html { scroll-behavior: auto; font-size: 16px; }
     body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
     h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
     p { line-height: 1.75; }
@@ -1809,6 +1809,23 @@
               </div>
             </article>
 
+            <!-- POST 5: Dating Pool Paradox -->
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner" style="background:linear-gradient(135deg,#2a1a0e 0%,#4a1a2e 60%,#1a0e2a 100%);"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat" style="background:#fce7f3;color:#9d174d;">Personal Essay</span>
+                  <span class="blog-post__date">Jul 2026</span>
+                </div>
+                <h2 class="blog-post__title">The Dating Pool Paradox</h2>
+                <p class="blog-post__excerpt">A simple theoretical model of why her options and his options move in opposite directions as they both age — and what a chart makes obvious that a conversation never quite can.</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read" onclick="showPage('blog-post-5')">Read more &rarr;</span>
+                  <span class="blog-post__readtime">~5 min read</span>
+                </div>
+              </div>
+            </article>
+
             <!-- POST 4: Climate -->
             <article class="blog-post fade-up">
               <div class="blog-post__banner" style="background:linear-gradient(135deg,#1a3a4a 0%,#2B5876 50%,#6a2a0a 100%);"></div>
@@ -2562,6 +2579,219 @@
 
 
   <!-- ============ FOOTER ============ -->
+  <div class="page" id="page-blog-post-5">
+
+    <style>
+    /* Scoped variables and styles for blog-post-5 */
+    #page-blog-post-5 {
+      --bp5-paper:#EDEAE1; --bp5-paper-line:#D9D3C4;
+      --bp5-ink:#221F26;   --bp5-ink-soft:#5B5748;
+      --bp5-his:#2E5F45;   --bp5-his-fill:rgba(46,95,69,0.10);
+      --bp5-hers:#9C3B47;  --bp5-hers-fill:rgba(156,59,71,0.10);
+      --bp5-gold:#B4892F;
+      background:var(--bp5-paper);
+      color:var(--bp5-ink);
+      font-family:'Inter',sans-serif;
+      min-height:100vh;
+    }
+    .bp5-wrap { max-width:720px; margin:0 auto; padding:0 24px 80px; }
+    .bp5-back { background:none; border:none; cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--bp5-ink-soft); padding:24px 0 0; display:flex; align-items:center; gap:6px; transition:color .2s; }
+    .bp5-back:hover { color:var(--bp5-gold); }
+    .bp5-header { padding:28px 0 28px; border-bottom:2px solid var(--bp5-ink); }
+    .bp5-eyebrow { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--bp5-gold); display:flex; justify-content:space-between; margin-bottom:18px; }
+    .bp5-h1 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(32px,6vw,50px); line-height:1.05; margin:0 0 14px; letter-spacing:-.01em; color:var(--bp5-ink); }
+    .bp5-dek { font-family:'Fraunces',serif; font-style:italic; font-weight:500; font-size:18px; color:var(--bp5-ink-soft); max-width:52ch; margin:0; line-height:1.55; }
+    .bp5-note { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--bp5-gold); margin-top:12px; line-height:1.5; }
+    /* Chart */
+    .bp5-exhibit { margin:44px 0 8px; border:1px solid var(--bp5-paper-line); background:linear-gradient(var(--bp5-paper-line) 1px,transparent 1px) 0 0/100% 20%, linear-gradient(90deg,var(--bp5-paper-line) 1px,transparent 1px) 0 0/12.5% 100%, #F4F1E9; }
+    .bp5-exhibit-label { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--bp5-ink-soft); padding:10px 14px 0; }
+    .bp5-ticker { display:flex; justify-content:space-between; align-items:center; padding:14px; border-top:1px solid var(--bp5-paper-line); font-family:'IBM Plex Mono',monospace; font-size:12px; gap:12px; flex-wrap:wrap; }
+    .bp5-stat { display:flex; flex-direction:column; gap:2px; }
+    .bp5-stat.his { color:var(--bp5-his); }
+    .bp5-stat.hers { color:var(--bp5-hers); }
+    .bp5-stat .num { font-size:20px; font-weight:500; }
+    .bp5-stat .lbl { color:var(--bp5-ink-soft); font-size:10px; letter-spacing:.06em; text-transform:uppercase; }
+    .bp5-slider { flex:1 1 100%; order:5; -webkit-appearance:none; height:2px; background:var(--bp5-ink); margin:16px 2px 0; width:100%; cursor:pointer; }
+    .bp5-slider::-webkit-slider-thumb { -webkit-appearance:none; width:16px; height:16px; border-radius:50%; background:var(--bp5-gold); border:2px solid var(--bp5-ink); cursor:pointer; }
+    .bp5-slider::-moz-range-thumb { width:14px; height:14px; border-radius:50%; background:var(--bp5-gold); border:2px solid var(--bp5-ink); cursor:pointer; }
+    .bp5-chart-note { font-family:'Inter',sans-serif; font-size:14px; color:var(--bp5-ink-soft); padding:14px 14px 16px; margin:0; border-top:1px solid var(--bp5-paper-line); }
+    /* SVG lines */
+    .bp5-line-his  { fill:none; stroke:var(--bp5-his);  stroke-width:2.5; }
+    .bp5-line-hers { fill:none; stroke:var(--bp5-hers); stroke-width:2.5; }
+    .bp5-area-his  { fill:var(--bp5-his-fill); }
+    .bp5-area-hers { fill:var(--bp5-hers-fill); }
+    .bp5-dot-his   { fill:var(--bp5-his); }
+    .bp5-dot-hers  { fill:var(--bp5-hers); }
+    .bp5-axis-text { font-family:'IBM Plex Mono',monospace; font-size:10px; fill:var(--bp5-ink-soft); }
+    .bp5-cursor    { stroke:var(--bp5-ink); stroke-width:1; stroke-dasharray:3 3; opacity:.5; }
+    /* Article */
+    .bp5-article { margin-top:48px; font-size:17px; line-height:1.7; color:var(--bp5-ink); }
+    .bp5-article p { margin:0 0 18px; }
+    .bp5-h2-eyebrow { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--bp5-gold); letter-spacing:.1em; text-transform:uppercase; display:block; margin-bottom:4px; margin-top:44px; }
+    .bp5-h2 { font-family:'Fraunces',serif; font-weight:600; font-size:24px; margin:4px 0 16px; color:var(--bp5-ink); }
+    .bp5-lead::first-letter { font-family:'Fraunces',serif; font-size:56px; font-weight:600; float:left; line-height:.85; padding:4px 8px 0 0; color:var(--bp5-ink); }
+    .bp5-ul { margin:0 0 18px; padding-left:0; list-style:none; }
+    .bp5-ul li { padding-left:26px; position:relative; margin-bottom:14px; }
+    .bp5-ul li::before { content:"—"; position:absolute; left:0; top:0; color:var(--bp5-gold); }
+    .bp5-pullquote { font-family:'Fraunces',serif; font-style:italic; font-weight:500; font-size:22px; line-height:1.4; color:var(--bp5-ink); border-left:3px solid var(--bp5-gold); padding:4px 0 4px 22px; margin:36px 0; }
+    .bp5-disclosure { background:#F4F1E9; border:1px solid var(--bp5-paper-line); padding:20px 22px; margin:32px 0; }
+    .bp5-disclosure p { font-size:15px; margin-bottom:14px; }
+    .bp5-disclosure p:last-child { margin-bottom:0; }
+    .bp5-footer-note { margin-top:56px; padding-top:20px; border-top:2px solid var(--bp5-ink); font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--bp5-ink-soft); letter-spacing:.04em; }
+    </style>
+
+    <div class="bp5-wrap">
+      <button class="bp5-back" onclick="showPage('blog')">&larr; Back to Blog</button>
+
+      <div class="bp5-header">
+        <div class="bp5-eyebrow"><span>A FIELD MODEL</span><span>Jul 2026</span></div>
+        <h1 class="bp5-h1">The Dating&nbsp;Pool Paradox</h1>
+        <p class="bp5-dek">I've been thinking about this dating pool issue for men and women for a while now, mostly from conversations with friends, and I decided to put my thoughts into a simple model.</p>
+        <p class="bp5-note">Note: this is theoretical. I don&rsquo;t have real data. It&rsquo;s a predictive model built to test an idea, not a study.</p>
+      </div>
+
+      <div class="bp5-article">
+        <p class="bp5-lead">Here&rsquo;s the pattern that keeps coming up. Let me walk you through it. First for her. Then for him. A quick note before I start: none of this is built on real data. It&rsquo;s a theoretical model, my attempt to test whether an idea we all talk about actually holds up when you put numbers to it.</p>
+
+        <span class="bp5-h2-eyebrow">For Her</span>
+        <h2 class="bp5-h2">The rise, then the turn</h2>
+        <p>Picture a woman in her early twenties. In most African settings, she isn&rsquo;t short of options. Men in their twenties like her. Men in their thirties like her. Sometimes men in their forties too. Her pool is wide open. And it keeps growing, year after year, while she stays single.</p>
+        <p>Follow her to twenty-five. Then twenty-seven. The pool is still growing. She&rsquo;s still the obvious choice for a wide range of men. Weddings are everywhere at this stage, but she&rsquo;s not worried yet. If the story stopped here, you&rsquo;d think it only gets better with time.</p>
+        <p>But it doesn&rsquo;t stop there. Past thirty, something shifts. The men who liked her at twenty-five have mostly settled down by now. What&rsquo;s left starts to change. More married men. More men who still aren&rsquo;t ready to commit. The pool doesn&rsquo;t just stop growing. It shrinks. And this is usually around the time the aunties start asking questions at every family gathering.</p>
+        <p>This is what people call the &ldquo;sweet spot.&rdquo; A window, before thirty or so, when settling down is easiest. After that, it gets harder. Not because she&rsquo;s less desirable. Because the pool itself starts working against her.</p>
+
+        <span class="bp5-h2-eyebrow">For Him</span>
+        <h2 class="bp5-h2">The opposite direction</h2>
+        <p>Now follow a man from that same point, around thirty. His story runs the other way. As he moves into his thirties, his pool doesn&rsquo;t shrink. It grows. He&rsquo;s now seen as a fair match for a much wider range of ages than before. Nobody at the family house is pressuring him yet. He still has &ldquo;time,&rdquo; or so everyone keeps telling him.</p>
+        <p>His odds of settling down actually go up right when hers are supposedly closing. Same decade. Opposite direction.</p>
+        <p>People like to call all this &ldquo;just social norms.&rdquo; They say nobody should judge a woman for the timeline society hands her, while a man in his late thirties still gets called &ldquo;young&rdquo; at every wedding. Fair enough. But sit with the numbers, and you see it isn&rsquo;t only a story. Something real is happening underneath it. Here&rsquo;s what that looks like, drawn out.</p>
+      </div>
+
+      <!-- Interactive Chart -->
+      <div class="bp5-exhibit">
+        <div class="bp5-exhibit-label">The chart &mdash; drag the slider</div>
+        <svg id="bp5-chart" viewBox="0 0 700 340" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;height:auto;"></svg>
+        <div class="bp5-ticker">
+          <div class="bp5-stat his">
+            <span class="lbl">His pool &middot; age <span id="bp5-ageHis">30</span></span>
+            <span class="num" id="bp5-hisVal">&mdash;</span>
+          </div>
+          <div class="bp5-stat hers">
+            <span class="lbl">Her pool &middot; age <span id="bp5-ageHers">30</span></span>
+            <span class="num" id="bp5-hersVal">&mdash;</span>
+          </div>
+          <input type="range" id="bp5-slider" class="bp5-slider" min="21" max="45" value="30" step="1">
+        </div>
+        <p class="bp5-chart-note">
+          <span style="color:#2E5F45;font-weight:600;">Green</span> is his pool. <span style="color:#9C3B47;font-weight:600;">Red</span> is hers. When a line rises, that pool is growing &mdash; more realistic options at that age. When a line falls, that pool is shrinking. Where the two lines cross is the turn.
+        </p>
+      </div>
+
+      <div class="bp5-article">
+        <p style="margin-top:32px;">Drag the slider back to twenty-one. The two lines sit almost on top of each other. Nobody argues with that part. Now push it forward, past thirty. Watch them pull apart. Her line bends down. His keeps climbing. That&rsquo;s the turn everyone talks about at family gatherings, now drawn as a chart.</p>
+
+        <span class="bp5-h2-eyebrow">Why Her Line Bends</span>
+        <h2 class="bp5-h2">The pool gets thinner</h2>
+        <p>Think of her pool as everyone available. Now subtract everyone who&rsquo;s already married. Now subtract everyone outside the age range she&rsquo;d consider. What&rsquo;s left is her real pool.</p>
+        <p>The married-off group grows fastest through her late twenties and early thirties. A lot of the men who liked her at twenty-five are gone by thirty-three. Simply gone from the pool.</p>
+        <p>So her pool shrinks. Not because she&rsquo;s changed. Because the pool got thinned out while she wasn&rsquo;t looking.</p>
+
+        <span class="bp5-h2-eyebrow">Why His Line Climbs</span>
+        <h2 class="bp5-h2">The net gets wider</h2>
+        <p>His pool works differently. It&rsquo;s everyone younger, the same age, or older, who&rsquo;s now considered fair game for him. He doesn&rsquo;t get more options because he improved. He gets more options because the range society allows him keeps stretching.</p>
+        <p>At twenty-five, he was mostly picking from people a few years either side of him. By thirty-five, that range has widened a lot.</p>
+        <p>It&rsquo;s not a better pool. It&rsquo;s a wider net. And it was handed to him. Not earned.</p>
+
+        <div class="bp5-pullquote">The uncomfortable part isn&rsquo;t that the sweet spot exists. It&rsquo;s that they&rsquo;re running against clocks pointed in opposite directions. And only one of them was ever told to watch the time.</div>
+
+        <div class="bp5-disclosure">
+          <span class="bp5-h2-eyebrow" style="color:#9C3B47;">A Few Things Worth Knowing</span>
+          <p><strong>Her pool doesn&rsquo;t shrink forever.</strong> Divorce and widowhood keep reopening the market. By the late thirties, things aren&rsquo;t as bleak as the &ldquo;everyone&rsquo;s already taken&rdquo; idea suggests. Look at her line. It recovers a little, past age thirty-eight.</p>
+          <p><strong>A bigger pool for him isn&rsquo;t a better one.</strong> More people to choose from isn&rsquo;t the same as a better match. This chart only measures how many options exist. Not how good they are.</p>
+          <p><strong>The model leans on one big assumption.</strong> That men prefer same-age-or-younger. That women prefer same-age-or-older. That&rsquo;s common. But it&rsquo;s not universal. Change that assumption, and both lines move much closer together.</p>
+        </div>
+
+        <span class="bp5-h2-eyebrow">The Punchline</span>
+        <h2 class="bp5-h2">What the sweet spot actually is</h2>
+        <p>His advantage is social permission. It loosens the older he gets. Her disadvantage is a shrinking pool. It tightens the older she gets. Though not as permanently as the popular story makes it sound.</p>
+        <p>Drawn out honestly, it isn&rsquo;t two clean lines heading opposite ways. It&rsquo;s a noisy line for her, one that dips and then recovers. Crossing a slowly rising line for him. Right in the stretch of years everyone keeps arguing about.</p>
+        <p>So the sweet spot isn&rsquo;t superstition. And it isn&rsquo;t purely social pressure either. It&rsquo;s what a shrinking, changing pool looks like, once you put numbers on it. Sitting right next to a pool doing the exact opposite, for the person on the other side.</p>
+      </div>
+
+      <div class="bp5-footer-note">THEORETICAL MODEL &middot; INDEXED VALUES, NOT REAL DEMOGRAPHIC DATA &middot; FOR ILLUSTRATION ONLY</div>
+
+      <div style="margin-top:40px;">
+        <button class="btn btn--navy" onclick="showPage('blog')">&larr; Back to Blog</button>
+      </div>
+    </div><!-- end bp5-wrap -->
+
+    <script>
+    (function(){
+      var ages = [21,24,27,30,33,36,39,42,45];
+      var his  = [30,36,42,50,58,68,80,92,104];
+      var hers = [35,55,70,60,42,30,26,32,40];
+      var W=700,H=340,padL=44,padR=20,padT=16,padB=34;
+      var xMin=21,xMax=45,yMin=0,yMax=110;
+      function xP(a){ return padL+(a-xMin)/(xMax-xMin)*(W-padL-padR); }
+      function yP(v){ return H-padB-(v-yMin)/(yMax-yMin)*(H-padT-padB); }
+      function pathFor(arr){
+        return arr.map(function(v,i){ return (i===0?'M':'L')+xP(ages[i]).toFixed(1)+','+yP(v).toFixed(1); }).join(' ');
+      }
+      function areaFor(arr){
+        var d=pathFor(arr);
+        d+=' L'+xP(ages[ages.length-1]).toFixed(1)+','+yP(0).toFixed(1);
+        d+=' L'+xP(ages[0]).toFixed(1)+','+yP(0).toFixed(1)+' Z';
+        return d;
+      }
+      var svg = document.getElementById('bp5-chart');
+      var ticks='';
+      ages.forEach(function(a){ ticks+='<text class="bp5-axis-text" x="'+xP(a)+'" y="'+(H-12)+'" text-anchor="middle">'+a+'</text>'; });
+      for(var v=0;v<=100;v+=25){ ticks+='<text class="bp5-axis-text" x="'+(padL-8)+'" y="'+(yP(v)+3)+'" text-anchor="end">'+v+'</text>'; }
+      svg.innerHTML='<path class="bp5-area-his" d="'+areaFor(his)+'"></path>'
+        +'<path class="bp5-area-hers" d="'+areaFor(hers)+'"></path>'
+        +'<path class="bp5-line-his" id="bp5-pHis" d="'+pathFor(his)+'"></path>'
+        +'<path class="bp5-line-hers" id="bp5-pHers" d="'+pathFor(hers)+'"></path>'
+        +ticks
+        +'<line id="bp5-cursor" class="bp5-cursor" x1="0" y1="'+padT+'" x2="0" y2="'+(H-padB)+'"></line>'
+        +'<circle id="bp5-dHis" class="bp5-dot-his" r="5"></circle>'
+        +'<circle id="bp5-dHers" class="bp5-dot-hers" r="5"></circle>';
+      ['bp5-pHis','bp5-pHers'].forEach(function(id){
+        var p=document.getElementById(id); var len=p.getTotalLength();
+        p.style.strokeDasharray=len; p.style.strokeDashoffset=len;
+        p.getBoundingClientRect();
+        p.style.transition='stroke-dashoffset 1.1s ease';
+        requestAnimationFrame(function(){ p.style.strokeDashoffset=0; });
+      });
+      function interp(arr,a){
+        for(var i=0;i<ages.length-1;i++){
+          if(a>=ages[i]&&a<=ages[i+1]){
+            var t=(a-ages[i])/(ages[i+1]-ages[i]);
+            return arr[i]+t*(arr[i+1]-arr[i]);
+          }
+        }
+        return arr[arr.length-1];
+      }
+      var slider=document.getElementById('bp5-slider');
+      function update(){
+        var a=parseInt(slider.value,10);
+        var hv=interp(his,a), wv=interp(hers,a);
+        document.getElementById('bp5-cursor').setAttribute('x1',xP(a));
+        document.getElementById('bp5-cursor').setAttribute('x2',xP(a));
+        document.getElementById('bp5-dHis').setAttribute('cx',xP(a));
+        document.getElementById('bp5-dHis').setAttribute('cy',yP(hv));
+        document.getElementById('bp5-dHers').setAttribute('cx',xP(a));
+        document.getElementById('bp5-dHers').setAttribute('cy',yP(wv));
+        document.getElementById('bp5-ageHis').textContent=a;
+        document.getElementById('bp5-ageHers').textContent=a;
+        document.getElementById('bp5-hisVal').textContent=hv.toFixed(0);
+        document.getElementById('bp5-hersVal').textContent=wv.toFixed(0);
+      }
+      slider.addEventListener('input',update);
+      update();
+    })();
+    </script>
+
+  </div><!-- end page-blog-post-5 -->
   <footer>
     <div class="container">
       <div class="footer__inner">
@@ -2603,7 +2833,7 @@
 
   <!-- ============ SCRIPTS ============ -->
   <script>
-    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','contact'];
+    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','contact'];
 
     function showPage(id, pushState) {
       if (!VALID_PAGES.includes(id)) id = 'home';
@@ -2612,7 +2842,13 @@
       document.getElementById('page-' + id).classList.add('active');
       const activeLink = document.querySelector('.nav__link[data-page="' + id + '"]');
       if (activeLink) activeLink.classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      requestAnimationFrame(function() {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      });
       setTimeout(observeAnimations, 60);
       // Update URL hash so the page is shareable/bookmarkable
       if (pushState !== false) {
@@ -2696,6 +2932,8 @@
 
     // Blog posts open as dedicated pages via showPage()
   </script>
+
+  <!-- ============ BLOG POST 5: DATING POOL PARADOX ============ -->
 
 </body>
 </html>
