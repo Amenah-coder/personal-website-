@@ -2819,16 +2819,27 @@
     #page-blog-post-6 ::selection{ background:var(--w-gold); color:var(--w-ink); }
 
     /* progress thread */
-    .w-rail,.w-fill{ position:fixed; top:0; width:3px; left:calc(50% - 344px); height:100vh; z-index:3; pointer-events:none; }
+    .w-rail,.w-fill{ position:fixed; top:0; width:3px; left:calc(50% - 392px); height:100vh; z-index:3; pointer-events:none; }
     .w-rail{ background:var(--w-line); }
     .w-fill{ background:linear-gradient(180deg,var(--w-gold) 0%,var(--w-rust) 100%); transform:scaleY(0); transform-origin:top center; will-change:transform; }
 
-    .w-wrap{ max-width:680px; margin:0 auto; padding:0 32px 120px; position:relative; z-index:1; }
+    /* faint backdrop so the wide margins read as depth, not emptiness */
+    .w-bg{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+    .w-bg svg{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:1500px; height:1500px; opacity:.5; }
+    .w-bg circle{ fill:none; stroke:var(--w-gold); stroke-width:1; }
+    .w-bg .vig{ position:absolute; inset:0; background:radial-gradient(ellipse at center, transparent 30%, var(--w-ink) 78%); }
+
+    .w-wrap{ max-width:784px; margin:0 auto; padding:0 52px 120px; position:relative; z-index:1; box-sizing:border-box; }
 
     .w-back{ background:none; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--w-paper-dim); padding:26px 0 0; display:flex; align-items:center; gap:7px; transition:color .2s; }
     .w-back:hover{ color:var(--w-gold); }
 
     .w-hero{ min-height:84vh; display:flex; flex-direction:column; justify-content:center; position:relative; }
+    @media(min-width:1100px){
+      .w-hero{ width:118%; }
+      .w-hero .w-h1{ font-size:clamp(3.2rem,5.2vw,5rem); }
+      .w-hero .w-dek{ font-size:1.3rem; max-width:44ch; }
+    }
     .w-eyebrow{ font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--w-gold); margin-bottom:22px; }
     .w-h1{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.4rem,6vw,4.1rem); line-height:1.06; margin:0 0 28px; letter-spacing:-.01em; color:var(--w-paper); }
     .w-h1 em{ font-style:italic; font-weight:400; color:var(--w-rust); }
@@ -2840,8 +2851,12 @@
     .w-cue{ position:absolute; bottom:34px; left:0; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--w-paper-dim); display:flex; align-items:center; gap:10px; }
     .w-cue::before{ content:''; width:22px; height:1px; background:var(--w-paper-dim); }
 
-    #page-blog-post-6 section{ padding-top:74px; }
+    #page-blog-post-6 section{ padding-top:74px; position:relative; }
     .w-marker{ display:flex; align-items:baseline; gap:14px; margin-bottom:22px; }
+    @media(min-width:1240px){
+      .w-marker{ position:absolute; left:-186px; top:74px; width:150px; flex-direction:column; align-items:flex-end; text-align:right; gap:9px; margin:0; }
+      .w-marker .label{ line-height:1.4; }
+    }
     .w-marker .num{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--w-ink); background:var(--w-gold); padding:3px 8px; border-radius:2px; letter-spacing:.06em; }
     .w-marker .label{ font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--w-paper-dim); }
 
@@ -2867,12 +2882,31 @@
     .w-signoff{ font-family:'Fraunces',serif; font-style:italic; font-size:1.15rem !important; color:var(--w-paper-dim) !important; line-height:1.66; }
     .w-meta{ font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--w-paper-dim); margin-top:20px; }
 
-    @media(max-width:760px){
-      .w-rail,.w-fill{ left:24px; }
-      .w-wrap{ padding-left:60px; padding-right:24px; }
+    @media(max-width:860px){
+      .w-rail,.w-fill{ left:20px; }
+      .w-wrap{ padding-left:52px; padding-right:26px; }
+      .w-bg svg{ width:900px; height:900px; opacity:.35; }
+      .w-hero{ min-height:78vh; }
+    }
+    @media(max-width:520px){
+      .w-wrap{ padding-left:44px; padding-right:22px; }
+      #page-blog-post-6 p{ font-size:1.02rem; }
+      .w-pull{ font-size:1.25rem; padding-left:18px; }
+      .w-aside{ padding:20px 20px; }
+      .w-wing{ width:170px; }
     }
     </style>
 
+    <div class="w-bg" aria-hidden="true">
+      <svg viewBox="0 0 1500 1500">
+        <circle cx="750" cy="750" r="200" stroke-opacity=".07"/>
+        <circle cx="750" cy="750" r="320" stroke-opacity=".055"/>
+        <circle cx="750" cy="750" r="450" stroke-opacity=".045"/>
+        <circle cx="750" cy="750" r="580" stroke-opacity=".035"/>
+        <circle cx="750" cy="750" r="710" stroke-opacity=".025"/>
+      </svg>
+      <div class="vig"></div>
+    </div>
     <div class="w-rail"></div>
     <div class="w-fill" id="w-fill"></div>
 
