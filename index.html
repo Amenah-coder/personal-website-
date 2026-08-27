@@ -1804,7 +1804,7 @@
                 <p class="blog-post__excerpt">Ghana has just launched one of its most ambitious health commitments in recent memory &mdash; free primary healthcare for all citizens. And in a telling sign of intent, the rollout is beginning not in the cities, but in the most deprived rural communities.</p>
                 <div class="blog-post__footer">
                   <span class="blog-post__read" onclick="showPage('blog-post-1')">Read more &rarr;</span>
-                  <span class="blog-post__readtime">~6 min read</span>
+                  <span class="blog-post__readtime">~4 min read</span>
                 </div>
               </div>
             </article>
@@ -3094,6 +3094,10 @@
       .a-mark .l{ line-height:1.4; }
     }
 
+    .a-sechead{ margin:0 0 26px; }
+    .a-h2n{ display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#fff; background:var(--a-ink); padding:3px 9px; border-radius:2px; letter-spacing:.08em; margin-bottom:14px; }
+    .a-h2{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.6rem,3.6vw,2.05rem); line-height:1.18; letter-spacing:-.012em; margin:0; color:var(--a-ink); }
+
     .a-qs{ margin:0 0 22px; padding-left:20px; border-left:2px solid var(--a-accent); }
     .a-qs p{ margin:0 0 7px; font-family:'Fraunces',serif; font-size:1.12rem; color:var(--a-ink); }
     .a-qs p:last-child{ margin:0; }
@@ -3163,7 +3167,7 @@
             <div class="a-byname">Michel Adurayi Amenah</div>
             <div>Economist &middot; Writing from Accra</div>
           </div>
-          <div class="a-bytime">6 min read</div>
+          <div class="a-bytime">4 min read</div>
         </div>
 
         <p class="a-kicker">Essay &middot; Data</p>
@@ -3185,50 +3189,30 @@
       <div class="a-body">
 
         <section>
-          <div class="a-mark"><span class="n">01</span><span class="l">The question</span></div>
-          <p class="a-lede">Are you above the average Ghanaian?</p>
-          <p>What about the average Nigerian? The average African?</p>
-          <p>Before you answer too quickly, there is a problem with the question.</p>
+          <div class="a-sechead">
+            <span class="a-h2n">01</span>
+            <h2 class="a-h2">So, Are You Above Average?</h2>
+          </div>
+
+          <p class="a-lede">Are you above the average Ghanaian? What about the average Nigerian? The average African?</p>
+
+          <p>Before you answer, there is a small problem.</p>
+
           <div class="a-qs">
             <p>Above average in what?</p>
-            <p>Your height? Education? Income? Savings? Fitness? Career?</p>
+            <p>Height? Education? Income? Savings? Fitness? Career?</p>
             <p>Or, since we are being honest, your number of sexual partners?</p>
           </div>
-          <p>And there is an even better question. Is being above average always a good thing?</p>
-          <p>I have always been fascinated by averages. Not so much the arithmetic, but what an average allows you to do: locate yourself.</p>
-          <p>Let me explain.</p>
-        </section>
 
-        <section>
-          <div class="a-mark"><span class="n">02</span><span class="l">Three variables</span></div>
+          <p>And perhaps the more interesting question is this: is being above average always a good thing?</p>
 
-          <p><strong>Start with something you cannot really control.</strong></p>
+          <p>I have always been fascinated by averages. Not because of the arithmetic, but because an average gives you something surprisingly powerful: a place to locate yourself.</p>
 
-          <p>The average adult Ghanaian man is roughly 169 cm tall, about 5&rsquo;6&frac12;&quot;. For women, it is around 159 cm, or 5&rsquo;2&frac12;&quot;.</p>
+          <p>Take height. The average adult Ghanaian man is roughly 169 cm, about 5&rsquo;6&frac12;&quot;. If you are 5&rsquo;10&quot;, congratulations, you are above average. But you didn&rsquo;t exactly work hard for those extra inches.</p>
 
-          <p>So, if you are a Ghanaian man standing at 5&rsquo;10&quot;, congratulations. You are above average.</p>
+          <p>Now take education. Only about 13% of Ghanaian adults who had ever attended school reported tertiary education as their highest level of attainment in the 2021 Census. If you have a university degree, suddenly being &ldquo;above average&rdquo; feels more meaningful.</p>
 
-          <p>But you didn&rsquo;t exactly wake up at 5 a.m. every morning and work your way to 5&rsquo;10&quot;. Genetics, childhood nutrition and circumstances did most of the work.</p>
-
-          <p>So here, the average is interesting, but not particularly meaningful as an achievement.</p>
-
-          <p><strong>Now change the variable. What about education?</strong></p>
-
-          <p>According to Ghana&rsquo;s 2021 Population and Housing Census, among adults who had ever attended school, only about 13% had tertiary education as their highest level of attainment.</p>
-
-          <p>Now the comparison feels different.</p>
-
-          <p>If you have a bachelor&rsquo;s degree, master&rsquo;s or PhD, you belong to a relatively small educational group. Unlike height, this is something you probably invested years of effort, money and sleepless nights into.</p>
-
-          <p>Same idea. Above average. Completely different meaning.</p>
-
-          <p><strong>And now for the one nobody puts on LinkedIn.</strong></p>
-
-          <p>What is your body count?</p>
-
-          <p>Yes, there is data for that too.</p>
-
-          <p>The 2022 Ghana Demographic and Health Survey asks people about their lifetime sexual partners. Men and women report quite different numbers, and those figures themselves have an interesting measurement problem, because people do not necessarily report sexual behaviour perfectly.</p>
+          <p>And then there is the statistic nobody puts on LinkedIn: lifetime sexual partners. The 2022 Ghana Demographic and Health Survey reports very different averages for men and women.</p>
 
           <div class="a-strip">
             <div class="a-cell">
@@ -3244,109 +3228,73 @@
             <div class="a-cell">
               <div class="lab">Lifetime partners</div>
               <div class="num">5<span style="font-size:1.1rem;"> vs </span>2</div>
-              <div class="sub">As reported by men and women to the 2022 GDHS. Self-reports are imperfect.</div>
+              <div class="sub">Reported by men and women, 2022 GDHS. Self-reports are imperfect.</div>
             </div>
           </div>
 
-          <div class="a-note">
-            <span class="tag">If you want the methodological debate</span>
-            <p>The gap between what men report and what women report is one of the most studied puzzles in survey research. Some of it is structural, since the survey interviews men aged 15 to 59 and women aged 15 to 49, and partners outside the sampling frame do not cancel neatly. A good deal of it is simply reporting. Men round up, women round down, and both are answering a stranger with a clipboard.</p>
-          </div>
-
-          <p>But forget the methodological debate for a second.</p>
-
-          <p>Suppose you discover that your number is comfortably above average.</p>
+          <p>If you discover that you are comfortably above that average too...</p>
 
           <p>Congratulations?</p>
 
           <p>Maybe. Maybe not. &#128514;</p>
+
+          <p>And that is precisely the point.</p>
+
+          <div class="a-pull">Being above average tells you where you stand. It does not tell you whether that is a good place to stand.</div>
         </section>
 
         <section>
-          <div class="a-mark"><span class="n">03</span><span class="l">The rule</span></div>
+          <div class="a-sechead">
+            <span class="a-h2n">02</span>
+            <h2 class="a-h2">Sometimes You Should Want to Be Below Average</h2>
+          </div>
 
-          <p>And that is where my little obsession with averages gets interesting.</p>
-
-          <p>Being above average tells you where you stand. It doesn&rsquo;t tell you whether that is a good place to stand.</p>
-
-          <p>My personal rule, therefore, is simple.</p>
+          <p>My rule is simple.</p>
 
           <div class="a-statement">Know the average. Know where you stand. Then decide whether that is where you actually want to be.</div>
 
-          <p>You probably want to be above average in some things: savings, useful skills, physical activity, perhaps education.</p>
+          <p>You probably want to be above average in savings, useful skills, physical activity and perhaps education. You probably want to be below average in debt, unnecessary spending and preventable health risks.</p>
 
-          <p>You probably want to be below average in others: debt, unnecessary spending, sedentary time, preventable health risks.</p>
+          <p>But it gets more interesting when you stop comparing yourself with a country and start comparing yourself with the people around you.</p>
 
-          <p>And some averages? They are simply information.</p>
-
-          <p>Not every average is a competition.</p>
-        </section>
-
-        <section>
-          <div class="a-mark"><span class="n">04</span><span class="l">Your friends</span></div>
-
-          <p>But here is where I think this becomes much more personal.</p>
-
-          <p>Forget Ghana. Look at your friends.</p>
-
-          <p>Think about the five people you spend the most time with. Now ask yourself where you sit in that group.</p>
+          <p>Think about your closest friends.</p>
 
           <div class="a-qs">
-            <p>Income. Savings. Career progression.</p>
-            <p>Fitness. Reading. Learning.</p>
-            <p>Debt. Discipline. Ambition.</p>
+            <p>Income. Career. Savings.</p>
+            <p>Fitness. Reading. Discipline. Ambition.</p>
+            <p>Where do you sit?</p>
           </div>
 
-          <p>Are you usually above the group average? Or below it?</p>
+          <p>Suppose you realise that you are below average. Your friends are learning more, exercising more, taking bigger opportunities and generally pushing themselves harder than you are.</p>
 
-          <p>Suppose your closest friends are constantly learning, saving, investing, building businesses, exercising, taking opportunities and pushing themselves, and you realise that, on most of those things, you are below average.</p>
+          <p>That sounds terrible.</p>
 
-          <p>That might sound like bad news.</p>
+          <p>I think it might be excellent news. You may be in exactly the right room.</p>
 
-          <p>I think it could be excellent news. You may be in exactly the right room.</p>
+          <p>Sometimes being below average means everybody around you has something to teach you. Their normal becomes the standard pulling you upward.</p>
 
-          <p>There are times when being below average is precisely where you should want to be.</p>
+          <p>The opposite should make us think too. If you are always the most ambitious, most disciplined, most informed or most accomplished person in the room, being above average may feel good. But perhaps the better question is: am I still being stretched?</p>
 
-          <ul class="a-list">
-            <li>If everybody around you knows something you don&rsquo;t, you have something to learn.</li>
-            <li>If everybody around you is more disciplined, you have a standard to rise towards.</li>
-            <li>If everybody around you is doing things you once thought were impossible, those things slowly start looking possible.</li>
-          </ul>
+          <p>This isn&rsquo;t about ranking your friends by salaries or qualifications. Human beings are obviously worth more than that. It is about recognising something quieter.</p>
 
-          <div class="a-pull">Sometimes being the least accomplished person in the room is more valuable than being the most accomplished person in a room that no longer stretches you.</div>
-
-          <p>Now reverse it.</p>
-
-          <p>Suppose you are always the one saving. Always the one exercising. Always the one reading. Always the one introducing new ideas. Always the one talking about what comes next.</p>
-
-          <p>It feels good to be above average.</p>
-
-          <p>But perhaps you should occasionally ask yourself: am I still being stretched?</p>
-
-          <p>This is not about abandoning friends because they earn less than you or don&rsquo;t have your qualifications. Friendship is not a ranking system, and a person&rsquo;s value cannot be reduced to degrees, money or job titles.</p>
-
-          <p>The point is subtler than that. The people around us quietly influence what we consider normal.</p>
-
-          <ul class="a-list">
-            <li>If everybody around you spends everything they earn, saving starts looking unusual.</li>
-            <li>If everybody exercises, not exercising starts looking unusual.</li>
-            <li>If your friends talk about books, opportunities and ideas, learning becomes normal.</li>
-            <li>If everyone around you has stopped trying, standing still can start feeling normal too.</li>
-          </ul>
+          <div class="a-pull">The people around us help determine what we consider normal.</div>
         </section>
 
         <section>
-          <div class="a-mark"><span class="n">05</span><span class="l">You changed rooms</span></div>
+          <div class="a-sechead">
+            <span class="a-h2n">03</span>
+            <h2 class="a-h2">Sometimes, You Just Need to Change Rooms</h2>
+          </div>
 
-          <p>And that brings me to perhaps my favourite thing about averages. You can change your average without changing yourself.</p>
+          <p>Here is my favourite thing about averages. You can change your average without changing anything about yourself.</p>
 
           <p>Imagine you have a master&rsquo;s degree.</p>
 
-          <p>Walk into a random room representing Ghana&rsquo;s adult population and, educationally, you are relatively unusual.</p>
+          <p>Put yourself in a random room representing Ghana&rsquo;s adult population and, educationally, you are relatively unusual.</p>
 
-          <p>Now leave that room. Walk into a room full of master&rsquo;s graduates. Nothing about you has changed, but suddenly you look rather ordinary.</p>
+          <p>Now walk into a room full of master&rsquo;s graduates. Same person. Same degree. Suddenly, you are ordinary.</p>
 
-          <p>Now walk into a room filled with PhD students and professors. Same person. Same master&rsquo;s degree. Same afternoon. But now you might be below average.</p>
+          <p>Now enter a room filled with PhD students and professors. Same person. Same degree. Same afternoon. But now you might be below average.</p>
 
           <p>What happened? You changed rooms.</p>
 
@@ -3375,58 +3323,44 @@
             <div class="a-verdict" id="a-verdict"></div>
           </div>
 
-          <p>And sometimes changing rooms is exactly what progress requires.</p>
+          <p>I think there is something powerful about deliberately entering rooms where your achievements stop being impressive.</p>
 
-          <p>You can be one of the strongest people in your workplace and then attend an international conference where almost everyone has achieved something you haven&rsquo;t.</p>
+          <p>You can be one of the strongest people in your workplace and then attend a conference where almost everybody has achieved something you haven&rsquo;t. You leave thinking: wow, I&rsquo;m behind.</p>
 
-          <p>That can be intimidating. You might leave thinking, I&rsquo;m not doing enough.</p>
+          <p>Maybe. Or perhaps you just discovered a new average worth chasing.</p>
 
-          <p>Maybe. But another interpretation is possible: you just found a new average worth chasing.</p>
-
-          <p>There is something powerful about occasionally entering rooms where your achievements stop being extraordinary. They remind you how much more is possible.</p>
+          <div class="a-pull">Sometimes progress doesn&rsquo;t begin with becoming better. Sometimes it begins with changing the room against which you measure yourself.</div>
         </section>
 
         <section>
-          <div class="a-mark"><span class="n">06</span><span class="l">The trap</span></div>
+          <div class="a-sechead">
+            <span class="a-h2n">04</span>
+            <h2 class="a-h2">But Choose Your Average Carefully</h2>
+          </div>
 
-          <p>But there is a trap. Choose the wrong average and comparison becomes poisonous.</p>
+          <p>There is, of course, a trap. Choose the wrong comparison group and averages become poisonous.</p>
 
-          <p>Social media is brilliant at doing this.</p>
-
-          <p>You can be doing extremely well relative to people of your age, background, training and circumstances and still feel hopelessly behind, because the fifty people you follow online are CEOs, professors, millionaires, founders and people who somehow announce a major achievement every Tuesday.</p>
+          <p>Social media does this brilliantly. You can be doing extremely well relative to people of your age, background and circumstances, yet feel hopelessly behind because the fifty people appearing on your screen are CEOs, professors, millionaires, founders and people who somehow announce a major achievement every Tuesday.</p>
 
           <div class="a-statement">Nothing about your life changed while you were scrolling. Your comparison group did.</div>
 
-          <p>So the answer isn&rsquo;t to compare yourself endlessly. It is to choose your benchmark intelligently.</p>
+          <p>So perhaps the lesson isn&rsquo;t that we should constantly try to be above average. It is that we should choose our averages intelligently.</p>
 
-          <p>Compare yourself nationally when you want perspective. Compare yourself professionally when you want to understand your career. Look at your friends when you want to understand what your environment is normalising.</p>
+          <p>Compare yourself nationally when you need perspective. Compare yourself professionally when you want to know where your career stands. Look at the people around you when you want to understand what your environment is making normal.</p>
 
-          <p>And sometimes forget everybody else and compare yourself with the person you were five years ago.</p>
-        </section>
+          <p>And every now and then, forget everybody else and compare yourself with the person you were five years ago.</p>
 
-        <section>
-          <div class="a-mark"><span class="n">07</span><span class="l">A mirror</span></div>
+          <p>Because averages are useful mirrors. But they are terrible measures of human worth. Being below average doesn&rsquo;t mean you are failing. Being above average doesn&rsquo;t mean you are succeeding.</p>
 
-          <p>Because averages are useful mirrors. But they make terrible measures of human worth.</p>
-
-          <p>Being below average doesn&rsquo;t mean you are failing. Being above average doesn&rsquo;t mean you are succeeding. And being above average certainly doesn&rsquo;t mean you have reached your potential.</p>
-
-          <div class="a-pull">The average tells you where other people are. It does not tell you how far you can go.</div>
-
-          <p>So, every once in a while, ask yourself:</p>
+          <p>So perhaps the question isn&rsquo;t simply: am I above average?</p>
 
           <div class="a-qs">
-            <p>Where do I stand?</p>
             <p>Compared with whom?</p>
-            <p>Is this something I can change?</p>
-            <p>And most importantly, is this even an average worth beating?</p>
+            <p>In what?</p>
+            <p>And is this even an average worth beating?</p>
           </div>
 
-          <p>If you are below the average in a room that challenges you, learn. If you are above it, don&rsquo;t become too comfortable.</p>
-
-          <p>And if you don&rsquo;t like the direction in which the average around you is pulling you, perhaps you don&rsquo;t need to change your friends. Perhaps you simply need to enter more rooms.</p>
-
-          <div class="a-statement">Because maybe the goal was never to spend your life trying to be above average. Maybe the goal is to make sure you are comparing yourself with the right one.</div>
+          <div class="a-statement">Because maybe the goal isn&rsquo;t to spend your life trying to be above average. Maybe the goal is to make sure you are comparing yourself with the right one.</div>
         </section>
 
         <div class="a-end">
