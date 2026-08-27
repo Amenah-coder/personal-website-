@@ -1809,6 +1809,24 @@
               </div>
             </article>
 
+            <!-- POST 7: Are You Above Average -->
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner" style="background:linear-gradient(135deg,#1b1e24 0%,#3E6B62 55%,#C2703D 100%);"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat" style="background:#fef3c7;color:#92400e;">Essay</span>
+                  <span class="blog-post__cat" style="background:#d1fae5;color:#065f46;margin-left:6px;">Data</span>
+                  <span class="blog-post__date">Aug 2026</span>
+                </div>
+                <h2 class="blog-post__title">Are You Above Average?</h2>
+                <p class="blog-post__excerpt">Above average in what? Height, education, savings, debt? And should you even want to be? On benchmarks, the rooms we choose to stand in, and why the same person can be above average and below average on the same afternoon.</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read" onclick="showPage('blog-post-7')">Read more &rarr;</span>
+                  <span class="blog-post__readtime">~8 min read</span>
+                </div>
+              </div>
+            </article>
+
             <!-- POST 6: The Weight of a Wingbeat -->
             <article class="blog-post fade-up">
               <div class="blog-post__banner" style="background:linear-gradient(135deg,#1b2b3a 0%,#2f4858 45%,#7d5a3c 100%);"></div>
@@ -3020,6 +3038,331 @@
 
   </div><!-- end page-blog-post-6 -->
 
+  <div class="page" id="page-blog-post-7">
+
+    <style>
+    #page-blog-post-7{
+      --a-paper:#F4F1E8; --a-paper-2:#EBE6DA; --a-rule:#D5CCBA;
+      --a-ink:#16181D; --a-soft:#5C574E;
+      --a-accent:#B4552B; --a-teal:#2F5D54;
+      background:var(--a-paper); color:var(--a-ink);
+      font-family:'Inter',sans-serif; line-height:1.75; min-height:100vh;
+      -webkit-font-smoothing:antialiased;
+    }
+    #page-blog-post-7 ::selection{ background:var(--a-accent); color:#fff; }
+
+    .a-wrap{ max-width:772px; margin:0 auto; padding:0 46px 110px; box-sizing:border-box; position:relative; z-index:1; }
+    .a-back{ background:none; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--a-soft); padding:26px 0 0; display:flex; align-items:center; gap:7px; transition:color .2s; }
+    .a-back:hover{ color:var(--a-accent); }
+
+    /* ── HERO ───────────────────────────────── */
+    .a-hero{ padding:40px 0 0; }
+    .a-kicker{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--a-accent); margin:0 0 20px; display:flex; gap:10px; align-items:center; }
+    .a-kicker::after{ content:''; flex:1; height:1px; background:var(--a-rule); }
+    .a-h1{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.7rem,7.4vw,4.7rem); line-height:.99; letter-spacing:-.022em; margin:0 0 24px; }
+    .a-h1 em{ font-style:italic; color:var(--a-accent); font-weight:500; }
+    .a-dek{ font-family:'Fraunces',serif; font-style:italic; font-size:1.26rem; line-height:1.58; color:var(--a-soft); max-width:42ch; margin:0 0 34px; }
+
+    /* hero curve */
+    .a-herofig{ margin:0 0 4px; }
+    .a-curve-svg{ display:block; width:100%; height:auto; overflow:visible; }
+    .a-c-area{ fill:rgba(180,85,43,0.10); }
+    .a-c-line{ fill:none; stroke:var(--a-accent); stroke-width:2; stroke-linecap:round;
+               stroke-dasharray:2600; stroke-dashoffset:2600; transition:stroke-dashoffset 2.2s cubic-bezier(.4,0,.2,1); }
+    .a-herofig.drawn .a-c-line{ stroke-dashoffset:0; }
+    .a-c-base{ stroke:var(--a-rule); stroke-width:1; }
+    .a-c-mean{ stroke:var(--a-ink); stroke-width:1; stroke-dasharray:3 4; opacity:.5; }
+    .a-c-cap{ display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.09em; text-transform:uppercase; color:var(--a-soft); margin-top:9px; }
+
+    .a-byline{ display:flex; align-items:center; gap:13px; font-size:.82rem; color:var(--a-soft); border-bottom:1px solid var(--a-rule); padding-bottom:20px; margin-bottom:26px; }
+    .a-av{ width:40px; height:40px; border-radius:50%; background:var(--a-paper-2); border:1px solid var(--a-rule); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:600; color:var(--a-accent); font-size:.9rem; flex-shrink:0; }
+    .a-byname{ font-weight:600; color:var(--a-ink); font-size:.88rem; }
+    .a-bytime{ margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:.74rem; letter-spacing:.05em; }
+
+    /* ── BODY ───────────────────────────────── */
+    .a-body{ font-size:1.07rem; }
+    #page-blog-post-7 section{ padding-top:58px; position:relative; }
+    #page-blog-post-7 p{ margin:0 0 20px; color:#2A2D33; }
+    .a-lede{ font-size:1.22rem; line-height:1.68; color:var(--a-ink); }
+    .a-lede::first-letter{ font-family:'Fraunces',serif; font-size:62px; font-weight:600; float:left; line-height:.8; padding:7px 12px 0 0; color:var(--a-accent); }
+
+    .a-mark{ display:flex; align-items:baseline; gap:12px; margin-bottom:20px; }
+    .a-mark .n{ font-family:'JetBrains Mono',monospace; font-size:11px; color:#fff; background:var(--a-ink); padding:3px 8px; border-radius:2px; letter-spacing:.06em; }
+    .a-mark .l{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--a-soft); }
+    @media(min-width:1250px){
+      .a-mark{ position:absolute; left:-182px; top:58px; width:148px; flex-direction:column; align-items:flex-end; text-align:right; gap:8px; margin:0; }
+      .a-mark .l{ line-height:1.4; }
+    }
+
+    .a-qs{ margin:0 0 22px; padding-left:20px; border-left:2px solid var(--a-accent); }
+    .a-qs p{ margin:0 0 7px; font-family:'Fraunces',serif; font-size:1.12rem; color:var(--a-ink); }
+    .a-qs p:last-child{ margin:0; }
+
+    /* stat strip */
+    .a-strip{ display:grid; grid-template-columns:repeat(3,1fr); border-top:2px solid var(--a-ink); border-bottom:1px solid var(--a-rule); margin:36px 0; }
+    .a-cell{ padding:22px 18px 20px; border-right:1px solid var(--a-rule); }
+    .a-cell:last-child{ border-right:none; }
+    .a-cell .lab{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--a-soft); margin-bottom:12px; }
+    .a-cell .num{ font-family:'Fraunces',serif; font-size:2.1rem; font-weight:600; color:var(--a-accent); line-height:1; margin-bottom:9px; letter-spacing:-.01em; }
+    .a-cell .sub{ font-size:.79rem; color:var(--a-soft); line-height:1.5; }
+    @media(max-width:620px){ .a-strip{ grid-template-columns:1fr; } .a-cell{ border-right:none; border-bottom:1px solid var(--a-rule); } .a-cell:last-child{ border-bottom:none; } }
+
+    .a-note{ background:var(--a-paper-2); border-left:2px solid var(--a-teal); padding:20px 24px; margin:32px 0; }
+    .a-note p{ margin:0; font-size:.97rem; color:#3A372F; line-height:1.72; }
+    .a-note .tag{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--a-teal); display:block; margin-bottom:10px; }
+
+    .a-statement{ background:rgba(180,85,43,0.075); border:1px solid rgba(180,85,43,0.30); border-radius:4px; padding:34px 36px; margin:44px 0; text-align:center; font-family:'Fraunces',serif; font-style:italic; font-size:1.38rem; line-height:1.5; color:var(--a-ink); position:relative; }
+    .a-statement::before{ content:''; position:absolute; top:-1px; left:50%; transform:translateX(-50%); width:54px; height:2px; background:var(--a-accent); }
+
+    .a-pull{ font-family:'Fraunces',serif; font-style:italic; font-size:1.44rem; line-height:1.45; color:var(--a-teal); border-left:2px solid var(--a-teal); padding-left:24px; margin:42px 0; }
+
+    .a-list{ list-style:none; padding:0; margin:0 0 24px; }
+    .a-list li{ position:relative; padding-left:24px; margin-bottom:11px; color:#2A2D33; }
+    .a-list li::before{ content:''; position:absolute; left:0; top:12px; width:10px; height:1px; background:var(--a-accent); }
+
+    /* ── ROOM WIDGET ────────────────────────── */
+    .a-room{ background:var(--a-paper-2); border:1px solid var(--a-rule); border-radius:5px; padding:26px 26px 22px; margin:40px 0; }
+    .a-room-head{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:18px; }
+    .a-room-lab{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--a-soft); }
+    .a-badge{ font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; background:var(--a-ink); color:#fff; padding:4px 10px; border-radius:2px; }
+    .a-room-btns{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:22px; }
+    .a-rb{ font-family:'Inter',sans-serif; font-size:.79rem; font-weight:500; padding:8px 13px; border:1px solid var(--a-rule); background:transparent; color:var(--a-soft); border-radius:3px; cursor:pointer; transition:all .18s; }
+    .a-rb:hover{ border-color:var(--a-accent); color:var(--a-accent); }
+    .a-rb.on{ background:var(--a-ink); border-color:var(--a-ink); color:#fff; }
+    .a-plot{ position:relative; }
+    .a-plot svg{ display:block; width:100%; height:auto; overflow:visible; }
+    .a-r-area{ fill:rgba(22,24,29,0.07); }
+    .a-r-fill{ fill:rgba(180,85,43,0.26); }
+    .a-r-line{ fill:none; stroke:var(--a-ink); stroke-width:1.6; opacity:.55; }
+    .a-r-you{ stroke:var(--a-accent); stroke-width:2; }
+    .a-r-dot{ fill:var(--a-accent); }
+    .a-r-base{ stroke:var(--a-rule); stroke-width:1; }
+    .a-r-ends{ display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--a-soft); margin:10px 0 18px; }
+    .a-verdict{ font-family:'Fraunces',serif; font-size:1.08rem; color:var(--a-ink); min-height:3em; line-height:1.6; }
+    .a-verdict b{ color:var(--a-accent); font-weight:600; font-style:italic; }
+
+    .a-end{ margin-top:56px; padding-top:22px; border-top:2px solid var(--a-ink); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--a-soft); }
+    .a-src{ margin-top:16px; font-size:.78rem; color:var(--a-soft); line-height:1.65; }
+
+    @media(max-width:640px){
+      .a-wrap{ padding:0 22px 80px; }
+      .a-body{ font-size:1.02rem; }
+      .a-statement{ font-size:1.15rem; padding:26px 20px; }
+      .a-pull{ font-size:1.2rem; padding-left:18px; }
+      .a-room{ padding:20px 18px 18px; }
+    }
+    </style>
+
+    <div class="a-wrap">
+      <button class="a-back" onclick="showPage('blog')">&larr; Back to Blog</button>
+
+      <div class="a-hero">
+        <div class="a-byline">
+          <div class="a-av">MA</div>
+          <div>
+            <div class="a-byname">Michel Adurayi Amenah</div>
+            <div>Economist &middot; Writing from Accra</div>
+          </div>
+          <div class="a-bytime">8 min read</div>
+        </div>
+
+        <p class="a-kicker">Essay &middot; Data</p>
+        <h1 class="a-h1">Are You <em>Above Average?</em></h1>
+        <p class="a-dek">Above average in what? And, more to the point, should you even want to be?</p>
+
+        <div class="a-herofig" id="a-herofig">
+          <svg class="a-curve-svg" viewBox="0 0 1000 210" preserveAspectRatio="none" aria-hidden="true" style="height:150px;">
+            <path class="a-c-area" d="M0.0,197.2 L6.2,197.1 L12.5,196.9 L18.8,196.8 L25.0,196.6 L31.2,196.4 L37.5,196.2 L43.8,196.0 L50.0,195.7 L56.2,195.4 L62.5,195.1 L68.8,194.8 L75.0,194.4 L81.2,193.9 L87.5,193.4 L93.8,192.9 L100.0,192.3 L106.2,191.6 L112.5,190.9 L118.8,190.2 L125.0,189.3 L131.2,188.4 L137.5,187.4 L143.8,186.3 L150.0,185.1 L156.2,183.8 L162.5,182.4 L168.8,181.0 L175.0,179.4 L181.2,177.7 L187.5,175.8 L193.8,173.9 L200.0,171.8 L206.2,169.6 L212.5,167.3 L218.8,164.8 L225.0,162.2 L231.2,159.4 L237.5,156.5 L243.8,153.5 L250.0,150.3 L256.2,147.0 L262.5,143.6 L268.8,140.0 L275.0,136.2 L281.2,132.4 L287.5,128.4 L293.8,124.4 L300.0,120.2 L306.2,115.9 L312.5,111.5 L318.8,107.1 L325.0,102.5 L331.2,98.0 L337.5,93.4 L343.8,88.7 L350.0,84.1 L356.2,79.4 L362.5,74.8 L368.8,70.2 L375.0,65.7 L381.2,61.2 L387.5,56.8 L393.8,52.5 L400.0,48.4 L406.2,44.4 L412.5,40.6 L418.8,36.9 L425.0,33.4 L431.2,30.2 L437.5,27.2 L443.8,24.4 L450.0,21.9 L456.2,19.6 L462.5,17.6 L468.8,15.9 L475.0,14.5 L481.2,13.4 L487.5,12.6 L493.8,12.2 L500.0,12.0 L506.2,12.2 L512.5,12.6 L518.8,13.4 L525.0,14.5 L531.2,15.9 L537.5,17.6 L543.8,19.6 L550.0,21.9 L556.2,24.4 L562.5,27.2 L568.8,30.2 L575.0,33.4 L581.2,36.9 L587.5,40.6 L593.8,44.4 L600.0,48.4 L606.2,52.5 L612.5,56.8 L618.8,61.2 L625.0,65.7 L631.2,70.2 L637.5,74.8 L643.8,79.4 L650.0,84.1 L656.2,88.7 L662.5,93.4 L668.8,98.0 L675.0,102.5 L681.2,107.1 L687.5,111.5 L693.8,115.9 L700.0,120.2 L706.2,124.4 L712.5,128.4 L718.8,132.4 L725.0,136.2 L731.2,140.0 L737.5,143.6 L743.8,147.0 L750.0,150.3 L756.2,153.5 L762.5,156.5 L768.8,159.4 L775.0,162.2 L781.2,164.8 L787.5,167.3 L793.8,169.6 L800.0,171.8 L806.2,173.9 L812.5,175.8 L818.8,177.7 L825.0,179.4 L831.2,181.0 L837.5,182.4 L843.8,183.8 L850.0,185.1 L856.2,186.3 L862.5,187.4 L868.8,188.4 L875.0,189.3 L881.2,190.2 L887.5,190.9 L893.8,191.6 L900.0,192.3 L906.2,192.9 L912.5,193.4 L918.8,193.9 L925.0,194.4 L931.2,194.8 L937.5,195.1 L943.8,195.4 L950.0,195.7 L956.2,196.0 L962.5,196.2 L968.8,196.4 L975.0,196.6 L981.2,196.8 L987.5,196.9 L993.8,197.1 L1000.0,197.2 L1000.0,198.0 L0.0,198.0 Z"/>
+            <line class="a-c-base" x1="0" y1="198" x2="1000" y2="198"/>
+            <line class="a-c-mean" x1="500" y1="14" x2="500" y2="198"/>
+            <path class="a-c-line" d="M0.0,197.2 L6.2,197.1 L12.5,196.9 L18.8,196.8 L25.0,196.6 L31.2,196.4 L37.5,196.2 L43.8,196.0 L50.0,195.7 L56.2,195.4 L62.5,195.1 L68.8,194.8 L75.0,194.4 L81.2,193.9 L87.5,193.4 L93.8,192.9 L100.0,192.3 L106.2,191.6 L112.5,190.9 L118.8,190.2 L125.0,189.3 L131.2,188.4 L137.5,187.4 L143.8,186.3 L150.0,185.1 L156.2,183.8 L162.5,182.4 L168.8,181.0 L175.0,179.4 L181.2,177.7 L187.5,175.8 L193.8,173.9 L200.0,171.8 L206.2,169.6 L212.5,167.3 L218.8,164.8 L225.0,162.2 L231.2,159.4 L237.5,156.5 L243.8,153.5 L250.0,150.3 L256.2,147.0 L262.5,143.6 L268.8,140.0 L275.0,136.2 L281.2,132.4 L287.5,128.4 L293.8,124.4 L300.0,120.2 L306.2,115.9 L312.5,111.5 L318.8,107.1 L325.0,102.5 L331.2,98.0 L337.5,93.4 L343.8,88.7 L350.0,84.1 L356.2,79.4 L362.5,74.8 L368.8,70.2 L375.0,65.7 L381.2,61.2 L387.5,56.8 L393.8,52.5 L400.0,48.4 L406.2,44.4 L412.5,40.6 L418.8,36.9 L425.0,33.4 L431.2,30.2 L437.5,27.2 L443.8,24.4 L450.0,21.9 L456.2,19.6 L462.5,17.6 L468.8,15.9 L475.0,14.5 L481.2,13.4 L487.5,12.6 L493.8,12.2 L500.0,12.0 L506.2,12.2 L512.5,12.6 L518.8,13.4 L525.0,14.5 L531.2,15.9 L537.5,17.6 L543.8,19.6 L550.0,21.9 L556.2,24.4 L562.5,27.2 L568.8,30.2 L575.0,33.4 L581.2,36.9 L587.5,40.6 L593.8,44.4 L600.0,48.4 L606.2,52.5 L612.5,56.8 L618.8,61.2 L625.0,65.7 L631.2,70.2 L637.5,74.8 L643.8,79.4 L650.0,84.1 L656.2,88.7 L662.5,93.4 L668.8,98.0 L675.0,102.5 L681.2,107.1 L687.5,111.5 L693.8,115.9 L700.0,120.2 L706.2,124.4 L712.5,128.4 L718.8,132.4 L725.0,136.2 L731.2,140.0 L737.5,143.6 L743.8,147.0 L750.0,150.3 L756.2,153.5 L762.5,156.5 L768.8,159.4 L775.0,162.2 L781.2,164.8 L787.5,167.3 L793.8,169.6 L800.0,171.8 L806.2,173.9 L812.5,175.8 L818.8,177.7 L825.0,179.4 L831.2,181.0 L837.5,182.4 L843.8,183.8 L850.0,185.1 L856.2,186.3 L862.5,187.4 L868.8,188.4 L875.0,189.3 L881.2,190.2 L887.5,190.9 L893.8,191.6 L900.0,192.3 L906.2,192.9 L912.5,193.4 L918.8,193.9 L925.0,194.4 L931.2,194.8 L937.5,195.1 L943.8,195.4 L950.0,195.7 L956.2,196.0 L962.5,196.2 L968.8,196.4 L975.0,196.6 L981.2,196.8 L987.5,196.9 L993.8,197.1 L1000.0,197.2"/>
+          </svg>
+          <div class="a-c-cap"><span>Below average</span><span>The average</span><span>Above average</span></div>
+        </div>
+
+      </div>
+
+      <div class="a-body">
+
+        <section>
+          <div class="a-mark"><span class="n">01</span><span class="l">The question</span></div>
+          <p class="a-lede">Are you above the average Ghanaian? The average Nigerian? The average African?</p>
+          <p>Before you answer, there is another question hiding inside that one. Above average in what?</p>
+          <div class="a-qs">
+            <p>Height? Education? Income? Savings?</p>
+            <p>Fitness? Debt? Career progress?</p>
+            <p>And should you even want to be?</p>
+          </div>
+          <p>I have always been fascinated by averages. Not because I particularly enjoy calculating them, but because they give us something genuinely useful: a reference point. A place to stand and look around from.</p>
+        </section>
+
+        <section>
+          <div class="a-mark"><span class="n">02</span><span class="l">Three averages</span></div>
+
+          <p>Start with height. Ghana&rsquo;s national health survey puts the average adult man at roughly 169 cm, about 5&rsquo;6&frac12;&quot;, and the average woman at roughly 159 cm, about 5&rsquo;2&frac12;&quot;.</p>
+
+          <p>If you are a Ghanaian man standing at 5&rsquo;10&quot;, congratulations. You are above average. But is that an achievement? Not really. You did not work for those extra inches. Genetics and childhood nutrition did most of the work before you had any say in it.</p>
+
+          <p>Now take education. Ghana&rsquo;s 2021 Population and Housing Census found that among adults who have ever attended school, only 13 percent have tertiary education as their highest level of attainment.</p>
+
+          <p>If you hold a bachelor&rsquo;s, a master&rsquo;s or a PhD, you are in a small slice of the country. Suddenly &ldquo;above average&rdquo; means something quite different. This one you did work for.</p>
+
+          <div class="a-strip">
+            <div class="a-cell">
+              <div class="lab">Height &middot; men</div>
+              <div class="num">169<span style="font-size:1.1rem;"> cm</span></div>
+              <div class="sub">About 5&rsquo;6&frac12;&quot;. Women average roughly 159 cm.</div>
+            </div>
+            <div class="a-cell">
+              <div class="lab">Tertiary education</div>
+              <div class="num">13%</div>
+              <div class="sub">Of adults who ever attended school. 2021 Census.</div>
+            </div>
+            <div class="a-cell">
+              <div class="lab">Lifetime partners</div>
+              <div class="num">5<span style="font-size:1.1rem;"> vs </span>2</div>
+              <div class="sub">Men and women respectively, as reported to the 2022 GDHS.</div>
+            </div>
+          </div>
+
+          <p>Then, to make things slightly uncomfortable, take the one nobody puts on a CV. The 2022 Ghana Demographic and Health Survey asks about lifetime sexual partners. Men reported more than five on average. Women reported more than two.</p>
+
+          <p>Suppose you discover yours is above average. Congratulations again? Well, maybe not.</p>
+
+          <div class="a-note">
+            <span class="tag">A note from the day job</span>
+            <p>That gap between five and two is one of the most studied puzzles in survey research. Part of it is structural: the two figures do not describe identical populations, since the survey interviews men aged 15 to 59 and women aged 15 to 49, and partners outside the sampling frame or outside the country do not cancel neatly. But a good deal of it is reporting. Men tend to round up, women tend to round down, and both are answering a stranger with a clipboard. A useful reminder that an average is only ever as honest as the people who fed it.</p>
+          </div>
+
+          <p>And that is precisely the point. Being above average is not automatically good news. It depends entirely on what is being measured.</p>
+        </section>
+
+        <section>
+          <div class="a-mark"><span class="n">03</span><span class="l">My rule</span></div>
+
+          <div class="a-statement">Know the average. Know where you stand. Then decide whether that is where you actually want to be.</div>
+
+          <p>For some things, being above average is real progress: education, savings, physical activity, skills. For others you should want to be well below: debt, unnecessary spending, sedentary hours, preventable health risks.</p>
+
+          <p>And for things like height, the comparison is simply interesting information. Not every average is a competition.</p>
+        </section>
+
+        <section>
+          <div class="a-mark"><span class="n">04</span><span class="l">Your friends</span></div>
+
+          <p>Here is where averages get more interesting. Forget Ghana for a moment. Forget Nigeria, forget Africa. Pick your closest group of friends and ask where you fall inside that group.</p>
+
+          <ul class="a-list">
+            <li>Income and savings</li>
+            <li>Career progression</li>
+            <li>Fitness and health</li>
+            <li>Reading and learning</li>
+            <li>Debt and spending</li>
+            <li>Discipline and ambition</li>
+          </ul>
+
+          <p>The answers may be uncomfortable. They are also more useful than any national statistic, because these are the people whose behaviour you actually see every week.</p>
+
+          <p>Suppose five of your closest friends are constantly learning, building, saving, investing, taking their health seriously, and you realise you sit below the average of that group. Is that bad?</p>
+
+          <p>Maybe not. You might be in exactly the right room.</p>
+
+          <div class="a-pull">Sometimes being the least accomplished person in the room is worth more than being the most accomplished person in a room that no longer stretches you.</div>
+
+          <p>Being below average is not the problem. Standing in a room that no longer asks anything of you is. And the position is never permanent: the person who is least experienced in a room of founders might be the most disciplined saver in their family, or the only one in their circle still reading.</p>
+
+          <p>Now reverse it. What if you are consistently the most disciplined person in your circle? The only one saving. The only one exercising. The only one thinking seriously about the next five years. Being above average may feel good. But it is worth asking whether your environment is still challenging you.</p>
+
+          <p>This does not mean abandoning friends because they earn less or have fewer degrees. Friendship is not a league table, and no one&rsquo;s worth reduces to income or qualifications. But our environments quietly set what feels normal.</p>
+
+          <ul class="a-list">
+            <li>If everyone around you spends everything they earn, saving starts to look extreme.</li>
+            <li>If everyone around you exercises, skipping it starts to feel strange.</li>
+            <li>If your friends discuss ideas and books, learning becomes ordinary.</li>
+            <li>If everyone is comfortable staying exactly where they are, ambition starts to feel unnecessary.</li>
+          </ul>
+
+          <p>That is why the circle matters. Not for status. Because the average behaviour of the rooms you keep entering slowly resets your own definition of normal.</p>
+        </section>
+
+        <section>
+          <div class="a-mark"><span class="n">05</span><span class="l">The room</span></div>
+
+          <p>This also explains something odd about progress. You can be above average today and below average tomorrow without changing anything about yourself.</p>
+
+          <p>Say you have a master&rsquo;s degree. Against the general population your attainment sits high. Walk into a room of PhD students and you may be below the average in that room. Did you become less educated on the walk over? Of course not. You changed rooms.</p>
+
+          <div class="a-room">
+            <div class="a-room-head">
+              <div class="a-room-lab">Same person, same degree &middot; change the room</div>
+              <div class="a-badge" id="a-badge">Among the 13%</div>
+            </div>
+            <div class="a-room-btns">
+              <button class="a-rb on" data-r="0">All Ghanaian adults</button>
+              <button class="a-rb" data-r="1">Your degree cohort</button>
+              <button class="a-rb" data-r="2">A room of PhD students</button>
+            </div>
+            <div class="a-plot">
+              <svg viewBox="0 0 1000 210" preserveAspectRatio="none" aria-hidden="true" style="height:168px;">
+                <defs><clipPath id="a-clip"><rect id="a-cliprect" x="0" y="0" width="880" height="210"/></clipPath></defs>
+                <path class="a-r-area" d="M0.0,197.2 L6.2,197.1 L12.5,196.9 L18.8,196.8 L25.0,196.6 L31.2,196.4 L37.5,196.2 L43.8,196.0 L50.0,195.7 L56.2,195.4 L62.5,195.1 L68.8,194.8 L75.0,194.4 L81.2,193.9 L87.5,193.4 L93.8,192.9 L100.0,192.3 L106.2,191.6 L112.5,190.9 L118.8,190.2 L125.0,189.3 L131.2,188.4 L137.5,187.4 L143.8,186.3 L150.0,185.1 L156.2,183.8 L162.5,182.4 L168.8,181.0 L175.0,179.4 L181.2,177.7 L187.5,175.8 L193.8,173.9 L200.0,171.8 L206.2,169.6 L212.5,167.3 L218.8,164.8 L225.0,162.2 L231.2,159.4 L237.5,156.5 L243.8,153.5 L250.0,150.3 L256.2,147.0 L262.5,143.6 L268.8,140.0 L275.0,136.2 L281.2,132.4 L287.5,128.4 L293.8,124.4 L300.0,120.2 L306.2,115.9 L312.5,111.5 L318.8,107.1 L325.0,102.5 L331.2,98.0 L337.5,93.4 L343.8,88.7 L350.0,84.1 L356.2,79.4 L362.5,74.8 L368.8,70.2 L375.0,65.7 L381.2,61.2 L387.5,56.8 L393.8,52.5 L400.0,48.4 L406.2,44.4 L412.5,40.6 L418.8,36.9 L425.0,33.4 L431.2,30.2 L437.5,27.2 L443.8,24.4 L450.0,21.9 L456.2,19.6 L462.5,17.6 L468.8,15.9 L475.0,14.5 L481.2,13.4 L487.5,12.6 L493.8,12.2 L500.0,12.0 L506.2,12.2 L512.5,12.6 L518.8,13.4 L525.0,14.5 L531.2,15.9 L537.5,17.6 L543.8,19.6 L550.0,21.9 L556.2,24.4 L562.5,27.2 L568.8,30.2 L575.0,33.4 L581.2,36.9 L587.5,40.6 L593.8,44.4 L600.0,48.4 L606.2,52.5 L612.5,56.8 L618.8,61.2 L625.0,65.7 L631.2,70.2 L637.5,74.8 L643.8,79.4 L650.0,84.1 L656.2,88.7 L662.5,93.4 L668.8,98.0 L675.0,102.5 L681.2,107.1 L687.5,111.5 L693.8,115.9 L700.0,120.2 L706.2,124.4 L712.5,128.4 L718.8,132.4 L725.0,136.2 L731.2,140.0 L737.5,143.6 L743.8,147.0 L750.0,150.3 L756.2,153.5 L762.5,156.5 L768.8,159.4 L775.0,162.2 L781.2,164.8 L787.5,167.3 L793.8,169.6 L800.0,171.8 L806.2,173.9 L812.5,175.8 L818.8,177.7 L825.0,179.4 L831.2,181.0 L837.5,182.4 L843.8,183.8 L850.0,185.1 L856.2,186.3 L862.5,187.4 L868.8,188.4 L875.0,189.3 L881.2,190.2 L887.5,190.9 L893.8,191.6 L900.0,192.3 L906.2,192.9 L912.5,193.4 L918.8,193.9 L925.0,194.4 L931.2,194.8 L937.5,195.1 L943.8,195.4 L950.0,195.7 L956.2,196.0 L962.5,196.2 L968.8,196.4 L975.0,196.6 L981.2,196.8 L987.5,196.9 L993.8,197.1 L1000.0,197.2 L1000.0,198.0 L0.0,198.0 Z"/>
+                <path class="a-r-fill" d="M0.0,197.2 L6.2,197.1 L12.5,196.9 L18.8,196.8 L25.0,196.6 L31.2,196.4 L37.5,196.2 L43.8,196.0 L50.0,195.7 L56.2,195.4 L62.5,195.1 L68.8,194.8 L75.0,194.4 L81.2,193.9 L87.5,193.4 L93.8,192.9 L100.0,192.3 L106.2,191.6 L112.5,190.9 L118.8,190.2 L125.0,189.3 L131.2,188.4 L137.5,187.4 L143.8,186.3 L150.0,185.1 L156.2,183.8 L162.5,182.4 L168.8,181.0 L175.0,179.4 L181.2,177.7 L187.5,175.8 L193.8,173.9 L200.0,171.8 L206.2,169.6 L212.5,167.3 L218.8,164.8 L225.0,162.2 L231.2,159.4 L237.5,156.5 L243.8,153.5 L250.0,150.3 L256.2,147.0 L262.5,143.6 L268.8,140.0 L275.0,136.2 L281.2,132.4 L287.5,128.4 L293.8,124.4 L300.0,120.2 L306.2,115.9 L312.5,111.5 L318.8,107.1 L325.0,102.5 L331.2,98.0 L337.5,93.4 L343.8,88.7 L350.0,84.1 L356.2,79.4 L362.5,74.8 L368.8,70.2 L375.0,65.7 L381.2,61.2 L387.5,56.8 L393.8,52.5 L400.0,48.4 L406.2,44.4 L412.5,40.6 L418.8,36.9 L425.0,33.4 L431.2,30.2 L437.5,27.2 L443.8,24.4 L450.0,21.9 L456.2,19.6 L462.5,17.6 L468.8,15.9 L475.0,14.5 L481.2,13.4 L487.5,12.6 L493.8,12.2 L500.0,12.0 L506.2,12.2 L512.5,12.6 L518.8,13.4 L525.0,14.5 L531.2,15.9 L537.5,17.6 L543.8,19.6 L550.0,21.9 L556.2,24.4 L562.5,27.2 L568.8,30.2 L575.0,33.4 L581.2,36.9 L587.5,40.6 L593.8,44.4 L600.0,48.4 L606.2,52.5 L612.5,56.8 L618.8,61.2 L625.0,65.7 L631.2,70.2 L637.5,74.8 L643.8,79.4 L650.0,84.1 L656.2,88.7 L662.5,93.4 L668.8,98.0 L675.0,102.5 L681.2,107.1 L687.5,111.5 L693.8,115.9 L700.0,120.2 L706.2,124.4 L712.5,128.4 L718.8,132.4 L725.0,136.2 L731.2,140.0 L737.5,143.6 L743.8,147.0 L750.0,150.3 L756.2,153.5 L762.5,156.5 L768.8,159.4 L775.0,162.2 L781.2,164.8 L787.5,167.3 L793.8,169.6 L800.0,171.8 L806.2,173.9 L812.5,175.8 L818.8,177.7 L825.0,179.4 L831.2,181.0 L837.5,182.4 L843.8,183.8 L850.0,185.1 L856.2,186.3 L862.5,187.4 L868.8,188.4 L875.0,189.3 L881.2,190.2 L887.5,190.9 L893.8,191.6 L900.0,192.3 L906.2,192.9 L912.5,193.4 L918.8,193.9 L925.0,194.4 L931.2,194.8 L937.5,195.1 L943.8,195.4 L950.0,195.7 L956.2,196.0 L962.5,196.2 L968.8,196.4 L975.0,196.6 L981.2,196.8 L987.5,196.9 L993.8,197.1 L1000.0,197.2 L1000.0,198.0 L0.0,198.0 Z" clip-path="url(#a-clip)"/>
+                <line class="a-r-base" x1="0" y1="198" x2="1000" y2="198"/>
+                <path class="a-r-line" d="M0.0,197.2 L6.2,197.1 L12.5,196.9 L18.8,196.8 L25.0,196.6 L31.2,196.4 L37.5,196.2 L43.8,196.0 L50.0,195.7 L56.2,195.4 L62.5,195.1 L68.8,194.8 L75.0,194.4 L81.2,193.9 L87.5,193.4 L93.8,192.9 L100.0,192.3 L106.2,191.6 L112.5,190.9 L118.8,190.2 L125.0,189.3 L131.2,188.4 L137.5,187.4 L143.8,186.3 L150.0,185.1 L156.2,183.8 L162.5,182.4 L168.8,181.0 L175.0,179.4 L181.2,177.7 L187.5,175.8 L193.8,173.9 L200.0,171.8 L206.2,169.6 L212.5,167.3 L218.8,164.8 L225.0,162.2 L231.2,159.4 L237.5,156.5 L243.8,153.5 L250.0,150.3 L256.2,147.0 L262.5,143.6 L268.8,140.0 L275.0,136.2 L281.2,132.4 L287.5,128.4 L293.8,124.4 L300.0,120.2 L306.2,115.9 L312.5,111.5 L318.8,107.1 L325.0,102.5 L331.2,98.0 L337.5,93.4 L343.8,88.7 L350.0,84.1 L356.2,79.4 L362.5,74.8 L368.8,70.2 L375.0,65.7 L381.2,61.2 L387.5,56.8 L393.8,52.5 L400.0,48.4 L406.2,44.4 L412.5,40.6 L418.8,36.9 L425.0,33.4 L431.2,30.2 L437.5,27.2 L443.8,24.4 L450.0,21.9 L456.2,19.6 L462.5,17.6 L468.8,15.9 L475.0,14.5 L481.2,13.4 L487.5,12.6 L493.8,12.2 L500.0,12.0 L506.2,12.2 L512.5,12.6 L518.8,13.4 L525.0,14.5 L531.2,15.9 L537.5,17.6 L543.8,19.6 L550.0,21.9 L556.2,24.4 L562.5,27.2 L568.8,30.2 L575.0,33.4 L581.2,36.9 L587.5,40.6 L593.8,44.4 L600.0,48.4 L606.2,52.5 L612.5,56.8 L618.8,61.2 L625.0,65.7 L631.2,70.2 L637.5,74.8 L643.8,79.4 L650.0,84.1 L656.2,88.7 L662.5,93.4 L668.8,98.0 L675.0,102.5 L681.2,107.1 L687.5,111.5 L693.8,115.9 L700.0,120.2 L706.2,124.4 L712.5,128.4 L718.8,132.4 L725.0,136.2 L731.2,140.0 L737.5,143.6 L743.8,147.0 L750.0,150.3 L756.2,153.5 L762.5,156.5 L768.8,159.4 L775.0,162.2 L781.2,164.8 L787.5,167.3 L793.8,169.6 L800.0,171.8 L806.2,173.9 L812.5,175.8 L818.8,177.7 L825.0,179.4 L831.2,181.0 L837.5,182.4 L843.8,183.8 L850.0,185.1 L856.2,186.3 L862.5,187.4 L868.8,188.4 L875.0,189.3 L881.2,190.2 L887.5,190.9 L893.8,191.6 L900.0,192.3 L906.2,192.9 L912.5,193.4 L918.8,193.9 L925.0,194.4 L931.2,194.8 L937.5,195.1 L943.8,195.4 L950.0,195.7 L956.2,196.0 L962.5,196.2 L968.8,196.4 L975.0,196.6 L981.2,196.8 L987.5,196.9 L993.8,197.1 L1000.0,197.2"/>
+                <line class="a-r-you" id="a-youline" x1="880" y1="8" x2="880" y2="198"/>
+                <circle class="a-r-dot" id="a-youdot" cx="880" cy="8" r="7"/>
+              </svg>
+            </div>
+            <div class="a-r-ends"><span>Below the room average</span><span>Above the room average</span></div>
+            <div class="a-verdict" id="a-verdict"></div>
+          </div>
+
+          <p>The same happens professionally. You can be one of the strongest people in your organisation, then attend an international conference where nearly everyone has done something you have not. That can make you feel small. But it may simply mean you have found a new average worth chasing. There is real value in deliberately entering rooms where you are not the most accomplished person present, because those rooms show you what is possible.</p>
+        </section>
+
+        <section>
+          <div class="a-mark"><span class="n">06</span><span class="l">The trap</span></div>
+
+          <p>There is a danger here too. You can choose an unrealistic reference group, and social media is extremely good at handing you one.</p>
+
+          <p>You might be doing well compared with people of similar age, training and circumstances, and still feel like a failure because the fifty people you follow are professors, founders and people announcing something every Tuesday.</p>
+
+          <div class="a-statement">Your life did not change. Your comparison group did.</div>
+
+          <p>So averages should give you perspective, not anxiety. The right benchmark is not the highest available one. It is a meaningful one. Sometimes compare nationally. Sometimes professionally. Sometimes against your friends. And sometimes the only comparison worth making is whether you are doing better than you were five years ago.</p>
+        </section>
+
+        <section>
+          <div class="a-mark"><span class="n">07</span><span class="l">A mirror</span></div>
+
+          <p>That is ultimately why I like averages. They help us locate ourselves. They should never determine our worth.</p>
+
+          <p>Being below average does not mean you are failing. Being above average does not mean you are succeeding, and it certainly does not mean you have reached your potential.</p>
+
+          <div class="a-pull">The average tells you where other people are. It does not tell you how far you can go.</div>
+
+          <p>So every once in a while, ask where you stand. Nationally. Professionally. And in the room you have deliberately chosen to stand in.</p>
+
+          <p>If you are below average there, ask what you can learn. If you are above average, ask whether you are still being challenged. And if you do not like the direction the average around you is pulling, it may be time to widen the rooms you enter.</p>
+
+          <p>Because the real rule of averages may not be about being above average at all. It is about knowing your benchmark, choosing your comparison carefully, and recognising which averages are worth beating, which are worth staying below, and which were never competitions in the first place.</p>
+
+          <div class="a-statement">Do not spend your life trying to be above average. Spend some of it making sure you are comparing yourself with the right average.</div>
+        </section>
+
+        <div class="a-end">
+          <span>Essay &middot; Accra</span>
+          <span>August 2026</span>
+        </div>
+        <p class="a-src">Sources: Ghana Statistical Service, 2021 Population and Housing Census (Volume 3D, Literacy and Education) &middot; Ghana Demographic and Health Survey 2022 &middot; Ghana STEPS Survey 2023. Height figures are rounded national averages and vary by age cohort. The curve above is an illustrative distribution, not fitted data.</p>
+
+        <div style="margin-top:34px;">
+          <button class="btn btn--navy" onclick="showPage('blog')">&larr; Back to Blog</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end page-blog-post-7 -->
   <footer>
     <div class="container">
       <div class="footer__inner">
@@ -3061,7 +3404,7 @@
 
   <!-- ============ SCRIPTS ============ -->
   <script>
-    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','contact'];
+    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','contact'];
 
     function showPage(id, pushState) {
       if (!VALID_PAGES.includes(id)) id = 'home';
@@ -3077,6 +3420,7 @@
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         if (window.w6Tick) window.w6Tick();
+        if (id === 'blog-post-7' && window.a7Init) window.a7Init();
       });
       setTimeout(observeAnimations, 60);
       // Update URL hash so the page is shareable/bookmarkable
@@ -3121,6 +3465,77 @@
         }
         tick();
       };
+    })();
+
+    // Blog post 7 distribution widget
+    (function(){
+      var W = 1000, TOP = 8, BASE = 198;
+      var ROOMS = [
+        { x:880, badge:'Among the 13%',
+          text:'Against <b>all Ghanaian adults</b>, a master\u2019s places you inside the tertiary-educated minority. Just 13% of adults who ever attended school hold any tertiary qualification, and that figure leaves out those who never attended at all.' },
+        { x:520, badge:'Middle of the pack',
+          text:'Among <b>people who finished the same degree</b>, you land near the middle. Nothing about you changed. The room did.' },
+        { x:190, badge:'Below the average',
+          text:'In <b>a room of PhD students</b>, you are now below the room average. Same person, same degree, same afternoon.' }
+      ];
+      var cur = 880, raf = null;
+
+      function curveY(x){
+        var t = x / W, z = (t - 0.5) * 6.6;
+        return BASE - Math.exp(-0.5*z*z) * (210 - 24);
+      }
+      function paint(x){
+        var rect = document.getElementById('a-cliprect');
+        var line = document.getElementById('a-youline');
+        var dot  = document.getElementById('a-youdot');
+        if(!rect || !line || !dot) return;
+        var y = curveY(x);
+        rect.setAttribute('width', Math.max(0, x));
+        line.setAttribute('x1', x); line.setAttribute('x2', x);
+        line.setAttribute('y1', y);
+        dot.setAttribute('cx', x); dot.setAttribute('cy', y);
+      }
+      function tween(to){
+        if(raf) cancelAnimationFrame(raf);
+        var from = cur, t0 = null, DUR = 520;
+        function step(ts){
+          if(t0 === null) t0 = ts;
+          var p = Math.min(1, (ts - t0) / DUR);
+          var e = p < 0.5 ? 4*p*p*p : 1 - Math.pow(-2*p+2, 3)/2;
+          cur = from + (to - from) * e;
+          paint(cur);
+          if(p < 1) raf = requestAnimationFrame(step); else raf = null;
+        }
+        raf = requestAnimationFrame(step);
+      }
+      function setRoom(i){
+        var r = ROOMS[i];
+        var badge = document.getElementById('a-badge');
+        var verdict = document.getElementById('a-verdict');
+        if(badge) badge.textContent = r.badge;
+        if(verdict) verdict.innerHTML = r.text;
+        var btns = document.querySelectorAll('#page-blog-post-7 .a-rb');
+        for(var k=0;k<btns.length;k++){ btns[k].classList.toggle('on', k===i); }
+        tween(r.x);
+      }
+      function wire(){
+        var btns = document.querySelectorAll('#page-blog-post-7 .a-rb');
+        if(!btns.length) return;
+        for(var k=0;k<btns.length;k++){
+          (function(b){
+            if(b.dataset.wired) return;
+            b.dataset.wired = '1';
+            b.addEventListener('click', function(){ setRoom(parseInt(b.dataset.r,10)); });
+          })(btns[k]);
+        }
+        cur = 880; paint(880); setRoom(0);
+        var fig = document.getElementById('a-herofig');
+        if(fig){ fig.classList.remove('drawn'); void fig.offsetWidth;
+                 setTimeout(function(){ fig.classList.add('drawn'); }, 200); }
+      }
+      window.a7Init = wire;
+      if(document.readyState !== 'loading') wire();
+      else document.addEventListener('DOMContentLoaded', wire);
     })();
 
     // Handle browser back/forward navigation
