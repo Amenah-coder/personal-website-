@@ -1809,6 +1809,24 @@
               </div>
             </article>
 
+            <!-- POST 8: Money Advice -->
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner" style="background:linear-gradient(135deg,#16191C 0%,#1D6B52 58%,#B3452F 100%);"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat" style="background:#d1fae5;color:#065f46;">Personal Finance</span>
+                  <span class="blog-post__cat" style="background:#fef3c7;color:#92400e;margin-left:6px;">Economics</span>
+                  <span class="blog-post__date">Aug 2026</span>
+                </div>
+                <h2 class="blog-post__title">What If the &ldquo;Right&rdquo; Money Advice Is Wrong for You?</h2>
+                <p class="blog-post__excerpt">Save before you spend. Avoid debt. Buy land before you buy a car. Sensible rules, all of them. But two people can face identical numbers and completely different realities, and the optimal choice can change with them.</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read" onclick="showPage('blog-post-8')">Read more &rarr;</span>
+                  <span class="blog-post__readtime">~5 min read</span>
+                </div>
+              </div>
+            </article>
+
             <!-- POST 7: Are You Above Average -->
             <article class="blog-post fade-up">
               <div class="blog-post__banner" style="background:linear-gradient(135deg,#1b1e24 0%,#3E6B62 55%,#C2703D 100%);"></div>
@@ -3376,6 +3394,288 @@
     </div>
 
   </div><!-- end page-blog-post-7 -->
+  <div class="page" id="page-blog-post-8">
+
+    <style>
+    #page-blog-post-8{
+      --m-paper:#F7F5F0; --m-paper2:#EDEAE2; --m-rule:#D9D3C6;
+      --m-ink:#16191C; --m-soft:#5D5A53;
+      --m-green:#1D6B52; --m-clay:#B3452F;
+      background:var(--m-paper); color:var(--m-ink);
+      font-family:'Inter',sans-serif; line-height:1.75; min-height:100vh;
+      -webkit-font-smoothing:antialiased;
+    }
+    #page-blog-post-8 ::selection{ background:var(--m-green); color:#fff; }
+
+    .m-wrap{ max-width:772px; margin:0 auto; padding:0 46px 110px; box-sizing:border-box; }
+    .m-back{ background:none; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--m-soft); padding:26px 0 0; display:flex; align-items:center; gap:7px; transition:color .2s; }
+    .m-back:hover{ color:var(--m-green); }
+
+    .m-hero{ padding:40px 0 0; }
+    .m-byline{ display:flex; align-items:center; gap:13px; font-size:.82rem; color:var(--m-soft); border-bottom:1px solid var(--m-rule); padding-bottom:20px; margin-bottom:26px; }
+    .m-av{ width:40px; height:40px; border-radius:50%; background:var(--m-paper2); border:1px solid var(--m-rule); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:600; color:var(--m-green); font-size:.9rem; flex-shrink:0; }
+    .m-byname{ font-weight:600; color:var(--m-ink); font-size:.88rem; }
+    .m-bytime{ margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:.74rem; letter-spacing:.05em; }
+    .m-kicker{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--m-green); margin:0 0 20px; display:flex; gap:10px; align-items:center; }
+    .m-kicker::after{ content:''; flex:1; height:1px; background:var(--m-rule); }
+    .m-h1{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.4rem,6.2vw,3.9rem); line-height:1.04; letter-spacing:-.02em; margin:0 0 22px; }
+    .m-h1 em{ font-style:italic; color:var(--m-clay); font-weight:500; }
+    .m-dek{ font-family:'Fraunces',serif; font-style:italic; font-size:1.24rem; line-height:1.58; color:var(--m-soft); max-width:44ch; margin:0 0 34px; }
+
+    /* ledger of rules */
+    .m-ledger{ border-top:2px solid var(--m-ink); border-bottom:2px solid var(--m-ink); margin:0 0 8px; }
+    .m-lrow{ display:flex; align-items:baseline; gap:14px; padding:11px 4px; border-bottom:1px solid var(--m-rule); }
+    .m-lrow:last-child{ border-bottom:none; }
+    .m-lrow .i{ font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--m-green); letter-spacing:.06em; flex-shrink:0; width:22px; }
+    .m-lrow .t{ font-family:'Fraunces',serif; font-size:1.06rem; color:var(--m-ink); }
+    .m-lcap{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--m-soft); text-align:right; margin-bottom:26px; }
+
+    /* body */
+    .m-body{ font-size:1.07rem; }
+    #page-blog-post-8 section{ padding-top:58px; }
+    #page-blog-post-8 p{ margin:0 0 20px; color:#2A2D31; }
+    .m-lede{ font-size:1.2rem; line-height:1.68; color:var(--m-ink); }
+    .m-lede::first-letter{ font-family:'Fraunces',serif; font-size:60px; font-weight:600; float:left; line-height:.82; padding:6px 12px 0 0; color:var(--m-clay); }
+
+    .m-sechead{ margin:0 0 26px; }
+    .m-h2n{ display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#fff; background:var(--m-ink); padding:3px 9px; border-radius:2px; letter-spacing:.08em; margin-bottom:14px; }
+    .m-h2{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.55rem,3.5vw,2rem); line-height:1.18; letter-spacing:-.012em; margin:0; }
+
+    .m-qs{ margin:0 0 22px; padding-left:20px; border-left:2px solid var(--m-clay); }
+    .m-qs p{ margin:0 0 7px; font-family:'Fraunces',serif; font-size:1.1rem; color:var(--m-ink); }
+    .m-qs p:last-child{ margin:0; }
+
+    .m-statement{ background:rgba(29,107,82,0.07); border:1px solid rgba(29,107,82,0.30); border-radius:4px; padding:32px 34px; margin:42px 0; text-align:center; font-family:'Fraunces',serif; font-style:italic; font-size:1.34rem; line-height:1.5; color:var(--m-ink); position:relative; }
+    .m-statement::before{ content:''; position:absolute; top:-1px; left:50%; transform:translateX(-50%); width:54px; height:2px; background:var(--m-green); }
+
+    .m-pull{ font-family:'Fraunces',serif; font-style:italic; font-size:1.4rem; line-height:1.45; color:var(--m-clay); border-left:2px solid var(--m-clay); padding-left:22px; margin:40px 0; }
+
+    /* two-person comparison */
+    .m-vs{ margin:38px 0; border:1px solid var(--m-rule); border-radius:5px; overflow:hidden; }
+    .m-vs-top{ background:var(--m-ink); color:#fff; padding:13px 18px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; text-align:center; }
+    .m-vs-grid{ display:grid; grid-template-columns:1fr 1fr; }
+    .m-vs-col{ padding:22px 20px; background:var(--m-paper2); }
+    .m-vs-col:first-child{ border-right:1px solid var(--m-rule); }
+    .m-vs-name{ font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--m-green); margin-bottom:14px; }
+    .m-vs-col ul{ list-style:none; padding:0; margin:0 0 18px; }
+    .m-vs-col li{ position:relative; padding-left:18px; margin-bottom:9px; font-size:.9rem; color:#3A3D41; line-height:1.55; }
+    .m-vs-col li::before{ content:''; position:absolute; left:0; top:10px; width:8px; height:1px; background:var(--m-clay); }
+    .m-vs-out{ border-top:1px solid var(--m-rule); padding-top:14px; font-family:'Fraunces',serif; font-size:1rem; line-height:1.5; color:var(--m-ink); }
+    .m-vs-out b{ color:var(--m-green); font-weight:600; }
+    @media(max-width:600px){ .m-vs-grid{ grid-template-columns:1fr; } .m-vs-col:first-child{ border-right:none; border-bottom:1px solid var(--m-rule); } }
+
+    /* closing definitions */
+    .m-def{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:40px 0 0; }
+    .m-defc{ border:1px solid var(--m-rule); border-radius:5px; padding:22px 20px; background:var(--m-paper2); }
+    .m-defc.j{ background:var(--m-ink); border-color:var(--m-ink); }
+    .m-defc .k{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--m-green); margin-bottom:10px; }
+    .m-defc.j .k{ color:#7FCFAE; }
+    .m-defc .v{ font-family:'Fraunces',serif; font-size:1.04rem; line-height:1.55; color:var(--m-ink); }
+    .m-defc.j .v{ color:#F2F0EA; }
+    @media(max-width:600px){ .m-def{ grid-template-columns:1fr; } }
+
+    .m-end{ margin-top:52px; padding-top:22px; border-top:2px solid var(--m-ink); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--m-soft); }
+
+    @media(max-width:640px){
+      .m-wrap{ padding:0 22px 80px; }
+      .m-body{ font-size:1.02rem; }
+      .m-statement{ font-size:1.14rem; padding:24px 20px; }
+      .m-pull{ font-size:1.18rem; padding-left:18px; }
+    }
+    </style>
+
+    <div class="m-wrap">
+      <button class="m-back" onclick="showPage('blog')">&larr; Back to Blog</button>
+
+      <div class="m-hero">
+        <div class="m-byline">
+          <div class="m-av">MA</div>
+          <div>
+            <div class="m-byname">Michel Adurayi Amenah</div>
+            <div>Economist &middot; Writing from Accra</div>
+          </div>
+          <div class="m-bytime">5 min read</div>
+        </div>
+
+        <p class="m-kicker">Personal Finance &middot; Economics</p>
+        <h1 class="m-h1">What If the &ldquo;Right&rdquo; Money Advice Is <em>Wrong for You?</em></h1>
+        <p class="m-dek">Knowing the rule is financial literacy. Knowing when it applies to you is something else.</p>
+
+        <div class="m-ledger">
+          <div class="m-lrow"><span class="i">01</span><span class="t">Save before you spend.</span></div>
+          <div class="m-lrow"><span class="i">02</span><span class="t">Avoid debt.</span></div>
+          <div class="m-lrow"><span class="i">03</span><span class="t">Build an emergency fund of three to six months.</span></div>
+          <div class="m-lrow"><span class="i">04</span><span class="t">Invest for the future.</span></div>
+          <div class="m-lrow"><span class="i">05</span><span class="t">Buy land and start building before you buy a car.</span></div>
+        </div>
+        <div class="m-lcap">The rules many of us grew up hearing</div>
+      </div>
+
+      <div class="m-body">
+
+        <section>
+          <div class="m-sechead">
+            <span class="m-h2n">01</span>
+            <h2 class="m-h2">Generally Sensible. Always Right?</h2>
+          </div>
+
+          <p class="m-lede">These are generally sensible rules. But lately, I have been wondering whether they are always right for everyone.</p>
+
+          <p>Take the popular advice about emergency funds. The conventional wisdom is that before investing seriously, you should have enough saved to cover several months of expenses. That way, when something unexpected happens, you do not have to borrow.</p>
+
+          <p>Makes perfect sense.</p>
+
+          <p>But consider someone who understands this rule perfectly and deliberately chooses another approach. Instead of keeping several months of expenses in cash, they invest most of the money and accept that, if an emergency comes, they may have to borrow temporarily or liquidate an investment.</p>
+
+          <p>Another person would never do that. They would rather sacrifice the potential return for the security of knowing the cash is there.</p>
+
+          <p>Which of them is financially literate?</p>
+
+          <p>Perhaps both. The difference may simply be their circumstances and their willingness, and capacity, to take risk.</p>
+        </section>
+
+        <section>
+          <div class="m-sechead">
+            <span class="m-h2n">02</span>
+            <h2 class="m-h2">What About the Car Before the Land?</h2>
+          </div>
+
+          <p>This is another interesting one. As a young person, one of the golden rules I heard was: don&rsquo;t rush to buy a car. Buy land. Build. Then think about a car.</p>
+
+          <p>Again, there is wisdom in this. If someone spends a huge proportion of their income on an expensive car purely for status, while having no savings or investments, questioning that decision is understandable. The car depreciates and demands maintenance, insurance and fuel, while land may appreciate.</p>
+
+          <p>But suppose the car is not primarily a luxury.</p>
+
+          <p>What if reliable transport saves you two or three hours every day? What if it lets you work more efficiently, pursue opportunities you previously could not, or significantly improves your quality of life?</p>
+
+          <p>Meanwhile, the plot of land you are being encouraged to buy may sit untouched for the next ten years.</p>
+
+          <p>Is buying the car first automatically a bad financial decision? I am not sure it is that simple.</p>
+        </section>
+
+        <section>
+          <div class="m-sechead">
+            <span class="m-h2n">03</span>
+            <h2 class="m-h2">Even &ldquo;Live Within Your Means&rdquo; Gets Complicated</h2>
+          </div>
+
+          <p>We tell people to live within their means, and rightly so. But what happens when your income stays relatively constant while rent, food, transport and electricity keep climbing?</p>
+
+          <div class="m-pull">You can become financially stretched without suddenly becoming financially irresponsible.</div>
+
+          <p>And in many African settings, an individual&rsquo;s income is rarely just about the individual. There may be parents to support, siblings who need help, school fees, medical bills, funerals, weddings and family responsibilities that arrive without warning. These do not fit neatly into the personal finance models we read about.</p>
+
+          <p>Then come the other choices.</p>
+
+          <div class="m-qs">
+            <p>Save the money, or pay for another degree that might raise your future income?</p>
+            <p>Buy a house, or keep renting and invest the difference?</p>
+            <p>Hold cash while inflation eats its purchasing power?</p>
+            <p>Start a business, or keep the security of a salary?</p>
+            <p>Invest every extra cedi, or is enjoying some of it today also legitimate?</p>
+          </div>
+
+          <p>The more I think about these questions, the less convinced I become that financial literacy should simply be about teaching people rules. Perhaps we need to talk more about financial judgment.</p>
+        </section>
+
+        <section>
+          <div class="m-sechead">
+            <span class="m-h2n">04</span>
+            <h2 class="m-h2">Knowing the Rule Is Not the Same as Knowing What to Do</h2>
+          </div>
+
+          <p>Financial literacy matters. We should understand interest, inflation, debt, diversification, compounding, liquidity and risk. But knowing these concepts does not automatically tell you what decision to make.</p>
+
+          <p>Economics gives us a useful way of thinking about this. We talk about making the optimal choice. But optimal according to what?</p>
+
+          <p>A decision is optimal given certain constraints, preferences, risks and information. Change those conditions and the optimal choice changes with them.</p>
+
+          <div class="m-vs">
+            <div class="m-vs-top">Same salary &middot; same age &middot; same city</div>
+            <div class="m-vs-grid">
+              <div class="m-vs-col">
+                <div class="m-vs-name">Person A</div>
+                <ul>
+                  <li>Stable salaried job</li>
+                  <li>Parents financially comfortable</li>
+                  <li>No dependants</li>
+                  <li>Family could cover an emergency</li>
+                </ul>
+                <div class="m-vs-out">Can hold a thin cash buffer and <b>invest aggressively</b>. If it goes wrong, there is a floor beneath them.</div>
+              </div>
+              <div class="m-vs-col">
+                <div class="m-vs-name">Person B</div>
+                <ul>
+                  <li>Same salary, same job</li>
+                  <li>Supports two parents</li>
+                  <li>Pays a sibling&rsquo;s school fees</li>
+                  <li>Is the family&rsquo;s emergency fund</li>
+                </ul>
+                <div class="m-vs-out">Needs <b>real cash on hand</b>. The same aggressive strategy would be a gamble with other people&rsquo;s security.</div>
+              </div>
+            </div>
+          </div>
+
+          <p>The numbers are identical. The financial realities are not.</p>
+
+          <p>That does not mean every decision can be defended with &ldquo;well, this works for me.&rdquo; Some decisions are simply reckless. Buying a luxury car you clearly cannot afford in order to impress people is difficult to describe as judgment. Borrowing constantly at very high interest to maintain a lifestyle beyond your income does not become a sophisticated strategy just because you can name the trade-off.</p>
+
+          <div class="m-statement">Financial judgment requires something more important: understanding what happens if you are wrong.</div>
+        </section>
+
+        <section>
+          <div class="m-sechead">
+            <span class="m-h2n">05</span>
+            <h2 class="m-h2">And Perhaps I Am Talking About Myself Too</h2>
+          </div>
+
+          <p>I have written all this almost in the third person, observing how people make financial decisions and questioning the rules we hand them. But I am probably in the same dilemma.</p>
+
+          <p>I ask myself these questions too.</p>
+
+          <div class="m-qs">
+            <p>Should I keep this money or invest it?</p>
+            <p>Should I buy this now or wait?</p>
+            <p>Am I being prudent, or simply too cautious?</p>
+            <p>Am I taking a calculated risk, or finding an intelligent explanation for something I already wanted to do?</p>
+          </div>
+
+          <p>That last question may be the most important one.</p>
+
+          <div class="m-pull">Sometimes what we call a financial strategy is just a preference dressed up in sophisticated language.</div>
+
+          <p>So this is not an argument against emergency funds. It is not an argument for borrowing to invest. And it certainly isn&rsquo;t an argument that every young person should buy a car before buying land.</p>
+
+          <p>It is a question about how we think about money. Perhaps financial rules should be treated as starting points rather than universal instructions.</p>
+
+          <p>Maybe the better question is not &ldquo;what is the right way to manage money?&rdquo; but this:</p>
+
+          <div class="m-statement">Given my circumstances, what am I trying to achieve, what am I giving up, what risk am I taking, and can I afford to be wrong?</div>
+
+          <div class="m-def">
+            <div class="m-defc">
+              <div class="k">Financial literacy</div>
+              <div class="v">Knowing the rule.</div>
+            </div>
+            <div class="m-defc j">
+              <div class="k">Financial judgment</div>
+              <div class="v">Knowing why the rule exists, when it applies to you, and when your circumstances justify a different choice.</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="m-end">
+          <span>Essay &middot; Accra</span>
+          <span>August 2026</span>
+        </div>
+
+        <div style="margin-top:34px;">
+          <button class="btn btn--navy" onclick="showPage('blog')">&larr; Back to Blog</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end page-blog-post-8 -->
   <footer>
     <div class="container">
       <div class="footer__inner">
@@ -3417,7 +3717,7 @@
 
   <!-- ============ SCRIPTS ============ -->
   <script>
-    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','contact'];
+    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','blog-post-8','contact'];
 
     function showPage(id, pushState) {
       if (!VALID_PAGES.includes(id)) id = 'home';
