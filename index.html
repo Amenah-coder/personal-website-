@@ -3782,12 +3782,9 @@
     .n-back{ background:none; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--n-dim); padding:26px 0 0; display:flex; align-items:center; gap:7px; transition:color .2s; }
     .n-back:hover{ color:var(--n-accent); }
 
-    .n-byline{ display:flex; align-items:center; gap:13px; font-size:.82rem; color:var(--n-dim); border-bottom:1px solid var(--n-line); padding-bottom:20px; margin:40px 0 26px; }
-    .n-av{ width:40px; height:40px; border-radius:50%; background:rgba(95,217,166,0.12); border:1px solid var(--n-line); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:600; color:var(--n-accent); font-size:.9rem; flex-shrink:0; }
-    .n-byname{ font-weight:600; color:var(--n-text); font-size:.88rem; }
-    .n-bytime{ margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:.74rem; letter-spacing:.05em; }
+    .n-byline{ font-family:'JetBrains Mono',monospace; font-size:.74rem; letter-spacing:.06em; color:var(--n-dim); text-transform:uppercase; margin:30px 0 0; padding-bottom:26px; border-bottom:1px solid var(--n-line); }
 
-    .n-kicker{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--n-accent); margin:0 0 22px; display:flex; gap:10px; align-items:center; }
+    .n-kicker{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--n-accent); margin:44px 0 22px; display:flex; gap:10px; align-items:center; }
     .n-kicker::after{ content:''; flex:1; height:1px; background:var(--n-line); }
     .n-h1{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.3rem,5.8vw,3.8rem); line-height:1.03; letter-spacing:-.022em; margin:0 0 24px; color:var(--n-text); }
     .n-h1 em{ font-style:italic; color:var(--n-accent); font-weight:500; }
@@ -3799,18 +3796,18 @@
     .n-lede{ font-size:1.22rem; line-height:1.62; color:var(--n-text); }
 
     .n-sechead{ margin:0 0 26px; }
-    .n-h2n{ display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--n-bg); background:var(--n-accent); padding:3px 9px; border-radius:2px; letter-spacing:.08em; margin-bottom:14px; font-weight:500; }
+    .n-h2n{ display:block; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--n-accent); opacity:.7; letter-spacing:.18em; margin-bottom:11px; }
     .n-h2{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.5rem,3.4vw,1.95rem); line-height:1.2; letter-spacing:-.012em; margin:0; color:var(--n-text); }
 
     /* prompt exchange */
-    .n-ex{ margin:34px 0; border:1px solid var(--n-line); border-radius:6px; overflow:hidden; background:var(--n-bg2); }
-    .n-exrow{ padding:16px 20px; border-bottom:1px solid var(--n-line); }
-    .n-exrow:last-child{ border-bottom:none; }
+    .n-ex{ margin:30px 0; border-left:1px solid var(--n-line); padding:2px 0 2px 22px; }
+    .n-exrow{ padding:0 0 15px; }
+    .n-exrow:last-child{ padding-bottom:0; }
     .n-exrow .q{ font-family:'JetBrains Mono',monospace; font-size:.8rem; letter-spacing:.03em; color:var(--n-dim); margin-bottom:7px; }
     .n-exrow .a{ font-family:'Fraunces',serif; font-size:1.12rem; color:var(--n-accent); }
 
     /* question list */
-    .n-qlist{ list-style:none; padding:0; margin:30px 0; border-left:2px solid var(--n-accent); padding-left:22px; }
+    .n-qlist{ list-style:none; padding:0; margin:30px 0; border-left:1px solid var(--n-line); padding-left:22px; }
     .n-qlist li{ margin-bottom:11px; font-family:'Fraunces',serif; font-size:1.08rem; color:var(--n-text); }
     .n-qlist li:last-child{ margin-bottom:0; }
 
@@ -3835,6 +3832,11 @@
     .n-cans li.no{ color:var(--n-text); }
 
     .n-aside{ font-size:.94rem; color:var(--n-dim); font-style:italic; border-left:2px solid var(--n-line); padding-left:16px; margin:26px 0; }
+
+    .n-tq{ font-family:'Fraunces',serif; font-style:italic; font-size:1.34rem; line-height:1.4; color:var(--n-accent); text-align:center; padding:26px 20px; margin:30px 0; border-top:1px solid var(--n-line); border-bottom:1px solid var(--n-line); }
+    @media(max-width:560px){ .n-tq{ font-size:1.14rem; padding:20px 12px; } }
+
+    .n-beat{ font-family:'Fraunces',serif; font-size:1.26rem; line-height:1.45; color:var(--n-text); margin:28px 0; }
 
     .n-pull{ font-family:'Fraunces',serif; font-style:italic; font-size:1.42rem; line-height:1.42; color:var(--n-accent); border-left:2px solid var(--n-accent); padding-left:24px; margin:40px 0; }
 
@@ -3871,31 +3873,35 @@
     <div class="n-wrap">
       <button class="n-back" onclick="showPage('blog')">&larr; Back to Blog</button>
 
-      <div class="n-byline">
-        <div class="n-av">MA</div>
-        <div>
-          <div class="n-byname">Michel Adurayi Amenah</div>
-          <div>Economist &middot; Writing from Accra</div>
-        </div>
-        <div class="n-bytime">5 min read</div>
-      </div>
-
       <p class="n-kicker">Opinion &middot; AI</p>
       <h1 class="n-h1">When Everyone Can Write, Who Will Still Know How to <em>Think?</em></h1>
       <p class="n-dek">Writing is becoming cheap. Thinking is not.</p>
+      <div class="n-byline">Michel Adurayi Amenah &nbsp;&middot;&nbsp; 5 min read</div>
 
       <div class="n-body">
 
         <section>
-          <p class="n-lede">There was a time when producing a good document was, by itself, impressive.</p>
+          <p class="n-lede">I must admit, when I first thought of this title, it did not entirely make sense to me.</p>
 
-          <p>A well-written report, policy document, proposal or academic paper suggested that someone had spent hours reading, thinking, drafting and refining.</p>
+          <div class="n-tq">&ldquo;When everyone can write, who will still know how to think?&rdquo;</div>
 
-          <p>That is changing very quickly. Today, give someone an idea and an AI tool, and within minutes they can produce something polished, structured and remarkably professional.</p>
+          <p>It almost sounds contradictory.</p>
 
-          <p>So perhaps we are entering an interesting period.</p>
+          <p>Because, traditionally, to write, and especially to write well, you first had to think. You had to understand something, organise your thoughts, decide what you wanted to say, struggle with the argument and eventually find the words to express it.</p>
 
-          <div class="n-pull">The ability to produce a document may no longer be the impressive part. The ability to critically interrogate one may be.</div>
+          <p>Writing was, in many ways, evidence of thinking.</p>
+
+          <p>But that relationship is changing.</p>
+
+          <p>Today, give someone an idea and an AI tool, and within minutes they can produce a polished report, proposal, policy brief, essay or academic-looking document. The writing can be excellent. The structure can be beautiful. The argument can even sound convincing.</p>
+
+          <p>And yet, the person behind it may not necessarily have done the same amount of thinking that producing such a document once required.</p>
+
+          <p>That is what makes the title make sense to me now.</p>
+
+          <p>For perhaps the first time, we are beginning to separate the ability to produce sophisticated writing from the intellectual effort traditionally required to produce it.</p>
+
+          <p>And if that is true, then perhaps the ability to produce a document may no longer be the impressive part. The ability to critically interrogate one may be.</p>
 
           <p>And for Africa, that raises an uncomfortable question.</p>
         </section>
@@ -3906,7 +3912,7 @@
             <h2 class="n-h2">We Already Had a Reading Problem. What Happens Now?</h2>
           </div>
 
-          <p>We often complain about our reading culture. Saying &ldquo;Africans do not read&rdquo; is of course too broad and unfair. But the underlying concern, about whether we read deeply enough rather than simply being literate, is worth thinking about.</p>
+          <p>We often complain about our reading culture. Of course, saying &ldquo;Africans do not read&rdquo; is too broad and unfair. But the underlying concern about whether we read deeply enough, beyond simply being literate, is worth thinking about.</p>
 
           <p>Then AI arrived.</p>
 
@@ -3939,7 +3945,7 @@
 
           <p class="n-aside">I&rsquo;m sorry, I just had to bring economics in somewhere.</p>
 
-          <p>Think about a government budget or policy document. Previously, how many ordinary citizens would sit down and interrogate hundreds of pages? How many journalists had time to compare allocations across several years? How many people could set a new policy beside the old one and spot the promises that quietly disappeared?</p>
+          <p>Think about a government budget or policy document. Previously, how many ordinary citizens would sit down and interrogate hundreds of pages? How many journalists had the time to compare allocations across several years? How many people could compare a new policy with the previous one and identify promises that quietly disappeared?</p>
 
           <p>That kind of scrutiny has always been expensive, in time, expertise and effort.</p>
 
@@ -3956,11 +3962,11 @@
 
           <p>Then you can return to the actual document and investigate the relevant sections yourself.</p>
 
-          <p>Suddenly, documents previously interrogated by a handful of specialists can face scrutiny from thousands of people. That could have enormous implications for governance.</p>
+          <p>Suddenly, documents previously interrogated by a handful of specialists can potentially face scrutiny from thousands of people. That could have enormous implications for governance.</p>
 
           <p>Governments may find it easier to produce impressive documents with AI. But citizens may also find it easier to scrutinise those documents with AI.</p>
 
-          <div class="n-pull">The same technology that makes producing convincing narratives cheaper can also make accountability cheaper.</div>
+          <p>The same technology that makes producing convincing narratives cheaper can also make accountability cheaper.</p>
         </section>
 
         <section>
@@ -3969,20 +3975,26 @@
             <h2 class="n-h2">When Writing Becomes Cheap, Judgment Becomes Expensive</h2>
           </div>
 
-          <p>The same thing applies to us as writers. If almost everyone can use AI to fix grammar, structure arguments and produce elegant prose, then good writing alone increasingly tells us less about the quality of someone&rsquo;s thinking.</p>
+          <p>This is where the separation between writing and thinking becomes important.</p>
 
-          <p>The questions become different.</p>
+          <p>Previously, if someone handed you an excellent 50-page report, you could reasonably assume that considerable intellectual work had gone into producing it.</p>
+
+          <p>Increasingly, we may not be able to make that assumption.</p>
+
+          <p>If almost everyone can use AI to improve grammar, organise arguments and produce elegant prose, then the quality of the writing alone tells us less about the quality of the thinking behind it.</p>
+
+          <p>So perhaps our questions need to change.</p>
 
           <ul class="n-qlist">
             <li>Can you recognise when an argument sounds convincing but is weak?</li>
             <li>Can you notice contradictions?</li>
-            <li>Can you tell when statistics are being used misleadingly?</li>
+            <li>Can you recognise when statistics are being used misleadingly?</li>
             <li>Can you distinguish correlation from causation?</li>
             <li>Can you look at a beautiful graph and question the conclusion?</li>
             <li>Can you recognise when AI itself is confidently giving you nonsense?</li>
           </ul>
 
-          <p>Those things require something more difficult than writing. They require judgment.</p>
+          <p>Those things require something more difficult than producing words. They require judgment.</p>
 
           <p>Imagine two people receiving the same 100-page report.</p>
 
@@ -4005,10 +4017,10 @@
 
           <p>Both used AI. Both saved time.</p>
 
-          <p>Perhaps that will become one of the important divides of the AI era. Not simply who has access to AI, but who knows how to think with it.</p>
+          <p>And perhaps that will become one of the important divides of the AI era. Not simply who has access to AI, but who knows how to think with it.</p>
         </section>
 
-        <section>
+    <section>
           <div class="n-sechead">
             <span class="n-h2n">04</span>
             <h2 class="n-h2">From an Era of Writing to an Era of Critical Thinking</h2>
@@ -4024,17 +4036,13 @@
 
           <p>The advantage may no longer belong simply to the person who can produce the most polished document. It may belong to the person who can look at that polished document and ask the best questions.</p>
 
-          <ul class="n-cans">
-            <li>AI can write.</li>
-            <li>It can summarise.</li>
-            <li>It can restructure.</li>
-            <li>It can even make weak ideas sound remarkably convincing.</li>
-            <li class="no">What it cannot do is remove our responsibility to think.</li>
-          </ul>
+          <p>Because AI can write. It can summarise. It can restructure. It can even make weak ideas sound remarkably convincing.</p>
+
+          <p class="n-beat">What it cannot do is remove our responsibility to think.</p>
 
           <p>So perhaps the great educational challenge of the AI age is not simply teaching people how to use AI. It is teaching people how to think with it, challenge it, interrogate what it produces, and know when not to believe it.</p>
 
-          <div class="n-pull">The future may belong less to those who can write the fastest and more to those who can think the deepest.</div>
+          <p>The future may belong less to those who can write the fastest and more to those who can think the deepest.</p>
 
           <div class="n-split">
             <div class="n-half a"><div class="w">Writing</div><div class="s">is becoming cheap</div></div>
@@ -4128,6 +4136,7 @@
         if (window.w6Tick) window.w6Tick();
         if (id === 'blog-post-7' && window.a7Init) window.a7Init();
         if (id.indexOf('blog-post-') === 0 && window.mountComments) window.mountComments(id);
+        if (window.trackPage) window.trackPage(id);
       });
       setTimeout(observeAnimations, 60);
       // Update URL hash so the page is shareable/bookmarkable
@@ -4372,6 +4381,42 @@
         loadSdk(function(){
           if (window.CUSDIS && window.CUSDIS.renderTo) window.CUSDIS.renderTo(t);
         });
+      };
+    })();
+  </script>
+
+
+  <!-- ============ ANALYTICS ============ -->
+  <script>
+    // Vercel Web Analytics. Turn it on in the Vercel dashboard:
+    // Project -> Analytics -> Enable. Nothing else to configure.
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    // Load the insights script only if it isn't already on the page, so a second
+    // copy (e.g. one added by Vercel's own agent) can never double-count views.
+    (function(){
+      if (document.querySelector('script[src*="/_vercel/insights/script.js"]')) return;
+      var s = document.createElement('script');
+      s.defer = true;
+      s.src = '/_vercel/insights/script.js';
+      document.head.appendChild(s);
+    })();
+  </script>
+  <script>
+    // Your posts live at #blog-post-N, and analytics tools ignore anything
+    // after the "#". This rewrites the path so each page is counted separately.
+    (function(){
+      var NAMES = {"home": "Home","about": "About","experience": "Experience","research": "Research","consulting": "Consulting","community": "Community","blog": "Blog","contact": "Contact","blog-post-1": "Ghana Free Primary Healthcare","blog-post-2": "Africa AI Revolution","blog-post-3": "The Research Assistant I Could Never Afford","blog-post-4": "The Rain Does Not Negotiate","blog-post-5": "The Dating Pool Paradox","blog-post-6": "The Weight of a Wingbeat","blog-post-7": "Are You Above Average","blog-post-8": "Money Advice","blog-post-9": "When Everyone Can Write"};
+      var last = null;
+      window.trackPage = function(id){
+        if (!id || id === last) return;
+        last = id;
+        var path  = (id === 'home') ? '/' : '/' + id;
+        var title = NAMES[id] || id;
+        try {
+          if (window.va) window.va('event', { name: 'pageview', path: path, title: title });
+          // keep the address bar honest for any analytics reading location
+          if (document.title !== title) document.title = title + ' | Michel Adurayi Amenah';
+        } catch (e) {}
       };
     })();
   </script>
