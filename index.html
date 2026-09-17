@@ -1809,6 +1809,23 @@
               </div>
             </article>
 
+            <!-- POST 10: The Details Tell the Truth -->
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner" style="background:linear-gradient(135deg,#2B3A44 0%,#41576B 55%,#C9A88A 100%);"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat" style="background:#e0e7ff;color:#3730a3;">Personal Essay</span>
+                  <span class="blog-post__date">Sep 2026</span>
+                </div>
+                <h2 class="blog-post__title">Be Intentional</h2>
+                <p class="blog-post__excerpt">The lives we want are rarely created by one big decision. They are built quietly through the small choices we make every day.</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read" onclick="showPage('blog-post-10')">Read more &rarr;</span>
+                  <span class="blog-post__readtime">~3 min read</span>
+                </div>
+              </div>
+            </article>
+
             <!-- POST 9: What Becomes Valuable Now -->
             <article class="blog-post fade-up">
               <div class="blog-post__banner" style="background:linear-gradient(135deg,#0E1116 0%,#1d4f45 55%,#5FD9A6 100%);"></div>
@@ -4077,6 +4094,210 @@
     </div>
 
   </div><!-- end page-blog-post-9 -->
+  <div class="page" id="page-blog-post-10">
+
+    <style>
+    #page-blog-post-10{
+      --i-paper:#FAF8F3; --i-paper2:#F1EDE3; --i-rule:#DFD8C9;
+      --i-ink:#1A1C1F; --i-soft:#605B52; --i-accent:#41576B; --i-warm:#B08560;
+      background:var(--i-paper); color:var(--i-ink);
+      font-family:'Inter',sans-serif; line-height:1.8; min-height:100vh;
+      -webkit-font-smoothing:antialiased;
+    }
+    #page-blog-post-10 ::selection{ background:var(--i-accent); color:#fff; }
+
+    .i-wrap{ max-width:720px; margin:0 auto; padding:0 46px 100px; box-sizing:border-box; }
+    .i-back{ background:none; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--i-soft); padding:26px 0 0; display:flex; align-items:center; gap:7px; transition:color .2s; }
+    .i-back:hover{ color:var(--i-accent); }
+
+    .i-kicker{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--i-accent); margin:46px 0 22px; display:flex; gap:10px; align-items:center; }
+    .i-kicker::after{ content:''; flex:1; height:1px; background:var(--i-rule); }
+    .i-h1{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.5rem,6.6vw,4.1rem); line-height:1.02; letter-spacing:-.022em; margin:0 0 24px; }
+    .i-h1 em{ font-style:italic; color:var(--i-accent); font-weight:500; }
+    .i-dek{ font-family:'Fraunces',serif; font-style:italic; font-size:1.22rem; line-height:1.56; color:var(--i-soft); max-width:42ch; margin:0; }
+    .i-byline{ font-family:'JetBrains Mono',monospace; font-size:.74rem; letter-spacing:.06em; color:var(--i-soft); text-transform:uppercase; margin:30px 0 0; padding-bottom:26px; border-bottom:1px solid var(--i-rule); }
+
+    .i-body{ font-size:1.09rem; }
+    #page-blog-post-10 section{ padding-top:54px; }
+    #page-blog-post-10 p{ margin:0 0 22px; color:#2C2E32; }
+    .i-lede{ font-size:1.2rem; line-height:1.7; color:var(--i-ink); }
+
+    .i-sechead{ margin:0 0 24px; }
+    .i-h2n{ display:block; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--i-accent); opacity:.7; letter-spacing:.18em; margin-bottom:11px; }
+    .i-h2{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.5rem,3.3vw,1.92rem); line-height:1.2; letter-spacing:-.012em; margin:0; }
+
+    .i-qs{ margin:0 0 24px; padding-left:22px; border-left:1px solid var(--i-rule); }
+    .i-qs p{ margin:0 0 8px; font-family:'Fraunces',serif; font-size:1.08rem; color:var(--i-ink); }
+    .i-qs p:last-child{ margin:0; }
+
+    /* motion vs direction */
+    .i-vs{ display:grid; grid-template-columns:1fr 1fr; margin:38px 0; border:1px solid var(--i-rule); border-radius:5px; overflow:hidden; }
+    .i-vs-col{ padding:26px 24px; }
+    .i-vs-col.a{ background:var(--i-paper2); border-right:1px solid var(--i-rule); }
+    .i-vs-col.b{ background:#fff; }
+    .i-vs-k{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--i-soft); margin-bottom:12px; }
+    .i-vs-w{ font-family:'Fraunces',serif; font-size:1.5rem; font-weight:600; line-height:1.15; margin-bottom:10px; }
+    .i-vs-col.a .i-vs-w{ color:var(--i-soft); }
+    .i-vs-col.b .i-vs-w{ color:var(--i-accent); }
+    .i-vs-s{ font-size:.92rem; color:#4A4842; line-height:1.6; }
+    @media(max-width:560px){ .i-vs{ grid-template-columns:1fr; } .i-vs-col.a{ border-right:none; border-bottom:1px solid var(--i-rule); } }
+
+    /* the details */
+    .i-det{ margin:34px 0; border-top:1px solid var(--i-rule); }
+    .i-detrow{ padding:20px 2px; border-bottom:1px solid var(--i-rule); }
+    .i-detk{ font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--i-accent); margin-bottom:9px; }
+    .i-detv{ font-family:'Fraunces',serif; font-size:1.08rem; line-height:1.6; color:var(--i-ink); }
+
+    .i-beat{ font-family:'Fraunces',serif; font-size:1.28rem; line-height:1.45; color:var(--i-ink); margin:30px 0; }
+
+    .i-close{ font-family:'Fraunces',serif; font-size:1.34rem; line-height:1.5; color:var(--i-ink); margin:34px 0 0; padding-top:28px; border-top:1px solid var(--i-rule); }
+
+
+    .i-rel{ margin-top:46px; padding:20px 22px; border:1px solid var(--i-rule); border-radius:5px; background:var(--i-paper2); }
+    .i-rel .k{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--i-soft); margin-bottom:9px; }
+    .i-rel a{ font-family:'Fraunces',serif; font-size:1.04rem; color:var(--i-accent); cursor:pointer; text-decoration:none; border-bottom:1px solid rgba(65,87,107,0.35); }
+    .i-rel a:hover{ border-bottom-color:var(--i-accent); }
+
+    .i-end{ margin-top:44px; padding-top:22px; border-top:1px solid var(--i-rule); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--i-soft); }
+
+    @media(max-width:640px){
+      .i-wrap{ padding:0 22px 76px; }
+      .i-body{ font-size:1.04rem; }
+      .i-close{ font-size:1.15rem; }
+      .i-beat{ font-size:1.14rem; }
+    }
+    </style>
+
+    <div class="i-wrap">
+      <button class="i-back" onclick="showPage('blog')">&larr; Back to Blog</button>
+
+      <p class="i-kicker">Personal Essay</p>
+      <h1 class="i-h1">Be <em>Intentional</em></h1>
+      <p class="i-dek">The lives we want are rarely created by one big decision. They are built quietly through the small choices we make every day.</p>
+      <div class="i-byline">Michel Adurayi Amenah &nbsp;&middot;&nbsp; 3 min read</div>
+
+      <div class="i-body">
+
+        <section>
+          <p class="i-lede">We often speak about the big things we want from life: a successful career, meaningful relationships, financial stability, good health, impact and happiness. We set goals around these things and imagine where we want to be in five or ten years.</p>
+
+          <p>But increasingly, I have been thinking that the quality of our lives may depend less on these big ambitions and more on something much smaller: intentionality.</p>
+
+          <p>To be intentional is to refuse to live entirely on autopilot. It means asking why you are doing what you are doing.</p>
+
+          <div class="i-qs">
+            <p>Why am I pursuing this opportunity?</p>
+            <p>Why am I spending my time here?</p>
+            <p>Why am I maintaining this relationship?</p>
+            <p>Why am I saying yes?</p>
+            <p>And sometimes, more importantly, why am I afraid to say no?</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="i-sechead">
+            <span class="i-h2n">01</span>
+            <h2 class="i-h2">Busy Is Not the Same as Intentional</h2>
+          </div>
+
+          <p>You can have a full calendar and still have no direction. You can respond to every email, attend every meeting, accept every opportunity and work from morning until night, yet make surprisingly little progress towards the things that genuinely matter to you.</p>
+
+          <div class="i-vs">
+            <div class="i-vs-col a">
+              <div class="i-vs-k">Busy</div>
+              <div class="i-vs-w">Motion</div>
+              <div class="i-vs-s">A full calendar. Every email answered. Every opportunity accepted. Morning until night.</div>
+            </div>
+            <div class="i-vs-col b">
+              <div class="i-vs-k">Intentional</div>
+              <div class="i-vs-w">Direction</div>
+              <div class="i-vs-s">Daily actions connected to a larger purpose. Fewer things, chosen deliberately.</div>
+            </div>
+          </div>
+
+          <p>Intentionality requires us to connect our daily actions to a larger purpose.</p>
+        </section>
+
+        <section>
+          <div class="i-sechead">
+            <span class="i-h2n">02</span>
+            <h2 class="i-h2">Intentionality Is Revealed in the Details</h2>
+          </div>
+
+          <p class="i-beat">It is easy to say that something matters to us. The details tell the truth.</p>
+
+          <div class="i-det">
+            <div class="i-detrow">
+              <div class="i-detk">If your work matters</div>
+              <div class="i-detv">It appears in how carefully you prepare, whether you check the small things, and whether you give your best even when nobody is watching.</div>
+            </div>
+            <div class="i-detrow">
+              <div class="i-detk">If people matter to you</div>
+              <div class="i-detv">It appears in whether you remember the little things they tell you, whether you make time for them, and whether you are fully present when you are together.</div>
+            </div>
+            <div class="i-detrow">
+              <div class="i-detk">If your health matters</div>
+              <div class="i-detv">It appears not only in the dramatic decision to &ldquo;get healthy&rdquo;, but in what you repeatedly eat, how you move, how you rest, and the habits you maintain when motivation disappears.</div>
+            </div>
+          </div>
+
+          <p>Our lives are ultimately made up of these seemingly insignificant decisions.</p>
+
+          <p>And perhaps this is why intentionality is difficult. It demands attention. It requires us to occasionally stop moving long enough to ask whether all this movement is actually taking us somewhere we want to go.</p>
+        </section>
+
+        <section>
+          <div class="i-sechead">
+            <span class="i-h2n">03</span>
+            <h2 class="i-h2">Every Yes Costs Something</h2>
+          </div>
+
+          <p>Intentionality also requires saying no.</p>
+
+          <p>Every yes costs something: time, attention, energy or money. Being intentional therefore means accepting that we cannot pursue every opportunity, maintain every connection or solve every problem.</p>
+
+          <p class="i-beat">Some things may be good and still not be right for us at a particular moment.</p>
+
+          <p>I am learning that intentionality does not mean having every aspect of life perfectly planned. Life will always contain uncertainty, surprises and mistakes. It simply means participating actively in the direction of your own life.</p>
+
+          <div class="i-qs">
+            <p>Know what matters.</p>
+            <p>Pay attention to the details.</p>
+            <p>Choose deliberately.</p>
+            <p>Review your choices.</p>
+            <p>Change direction when necessary.</p>
+          </div>
+
+          <p>Because years from now, the life we find ourselves living will probably not be the product of one enormous decision. It will be the accumulation of thousands of small ones.</p>
+
+          <p class="i-close">The big picture gives us direction. But the life itself is built in the details.</p>
+        </section>
+
+        <div class="i-rel">
+          <div class="k">Related</div>
+          <a onclick="showPage('blog-post-6')">The Weight of a Wingbeat &rarr;</a>
+        </div>
+
+        <div class="i-end">
+          <span>Personal Essay &middot; Accra</span>
+          <span>September 2026</span>
+        </div>
+
+        <div style="margin-top:32px;">
+          <button class="btn btn--navy" onclick="showPage('blog')">&larr; Back to Blog</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cmt-wrap">
+      <div class="cmt-inner">
+        <h2 class="cmt-title">Comments</h2>
+        <p class="cmt-sub">Thoughts, disagreements and corrections are all welcome. No account needed, just a name.</p>
+        <div class="cmt-thread" id="cmt-blog-post-10" data-title="Be Intentional"></div>
+      </div>
+    </div>
+
+  </div><!-- end page-blog-post-10 -->
   <footer>
     <div class="container">
       <div class="footer__inner">
@@ -4118,7 +4339,7 @@
 
   <!-- ============ SCRIPTS ============ -->
   <script>
-    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','blog-post-8','blog-post-9','contact'];
+    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','blog-post-8','blog-post-9','blog-post-10','contact'];
 
     function showPage(id, pushState) {
       if (!VALID_PAGES.includes(id)) id = 'home';
