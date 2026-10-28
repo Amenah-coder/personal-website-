@@ -1809,6 +1809,23 @@
               </div>
             </article>
 
+            <!-- POST 11: Timshel -->
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner" style="background:linear-gradient(135deg,#241F1A 0%,#6B4A3A 50%,#9C3B2E 100%);"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat" style="background:#fee2e2;color:#991b1b;">Personal Essay</span>
+                  <span class="blog-post__date">Oct 2026</span>
+                </div>
+                <h2 class="blog-post__title">Timshel: Thou Mayest</h2>
+                <p class="blog-post__excerpt">Are we destined to become our parents? A single word from Steinbeck&rsquo;s East of Eden, and what it says about inheritance, mistakes, and whether our past gets the final word.</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read" onclick="showPage('blog-post-11')">Read more &rarr;</span>
+                  <span class="blog-post__readtime">~5 min read</span>
+                </div>
+              </div>
+            </article>
+
             <!-- POST 10: The Details Tell the Truth -->
             <article class="blog-post fade-up">
               <div class="blog-post__banner" style="background:linear-gradient(135deg,#2B3A44 0%,#41576B 55%,#C9A88A 100%);"></div>
@@ -4298,6 +4315,250 @@
     </div>
 
   </div><!-- end page-blog-post-10 -->
+  <div class="page" id="page-blog-post-11">
+
+    <style>
+    #page-blog-post-11{
+      --t-paper:#F3EEE2; --t-paper2:#E9E1CF; --t-rule:#D5CAB3;
+      --t-ink:#241F1A; --t-soft:#6B6153; --t-accent:#9C3B2E; --t-gold:#A3823C;
+      background:var(--t-paper); color:var(--t-ink);
+      font-family:'Inter',sans-serif; line-height:1.8; min-height:100vh;
+      -webkit-font-smoothing:antialiased;
+    }
+    #page-blog-post-11 ::selection{ background:var(--t-accent); color:#fff; }
+
+    .t-wrap{ max-width:730px; margin:0 auto; padding:0 46px 100px; box-sizing:border-box; }
+    .t-back{ background:none; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--t-soft); padding:26px 0 0; display:flex; align-items:center; gap:7px; transition:color .2s; }
+    .t-back:hover{ color:var(--t-accent); }
+
+    .t-kicker{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--t-accent); margin:46px 0 22px; display:flex; gap:10px; align-items:center; }
+    .t-kicker::after{ content:''; flex:1; height:1px; background:var(--t-rule); }
+    .t-h1{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.6rem,7vw,4.4rem); line-height:1.0; letter-spacing:-.022em; margin:0 0 18px; }
+    .t-h1 em{ font-style:italic; color:var(--t-accent); font-weight:500; display:block; font-size:.62em; margin-top:10px; letter-spacing:-.01em; }
+    .t-dek{ font-family:'Fraunces',serif; font-style:italic; font-size:1.22rem; line-height:1.56; color:var(--t-soft); max-width:42ch; margin:0; }
+    .t-byline{ font-family:'JetBrains Mono',monospace; font-size:.74rem; letter-spacing:.06em; color:var(--t-soft); text-transform:uppercase; margin:30px 0 0; padding-bottom:26px; border-bottom:1px solid var(--t-rule); }
+
+    .t-body{ font-size:1.09rem; }
+    #page-blog-post-11 section{ padding-top:54px; }
+    #page-blog-post-11 p{ margin:0 0 22px; color:#30291F; }
+    .t-lede{ font-size:1.2rem; line-height:1.7; color:var(--t-ink); }
+
+    .t-sechead{ margin:0 0 24px; }
+    .t-h2n{ display:block; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--t-accent); opacity:.75; letter-spacing:.18em; margin-bottom:11px; }
+    .t-h2{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.5rem,3.3vw,1.92rem); line-height:1.2; letter-spacing:-.012em; margin:0; }
+
+    .t-qs{ margin:0 0 24px; padding-left:22px; border-left:1px solid var(--t-rule); }
+    .t-qs p{ margin:0 0 9px; font-family:'Fraunces',serif; font-size:1.08rem; color:var(--t-ink); }
+    .t-qs p:last-child{ margin:0; }
+
+    /* three translations */
+    .t-tr{ margin:36px 0; border-top:2px solid var(--t-ink); }
+    .t-trrow{ display:grid; grid-template-columns:150px 1fr auto; gap:18px; align-items:baseline; padding:18px 4px; border-bottom:1px solid var(--t-rule); }
+    .t-trrow.key{ background:rgba(156,59,46,0.06); border-bottom:2px solid var(--t-accent); padding-left:12px; padding-right:12px; margin:0 -12px; }
+    .t-trsrc{ font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--t-soft); }
+    .t-trrow.key .t-trsrc{ color:var(--t-accent); }
+    .t-trtext{ font-family:'Fraunces',serif; font-size:1.14rem; color:var(--t-ink); line-height:1.4; }
+    .t-trrow.key .t-trtext{ font-style:italic; font-weight:600; }
+    .t-trmean{ font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--t-soft); white-space:nowrap; }
+    .t-trrow.key .t-trmean{ color:var(--t-accent); }
+    @media(max-width:620px){
+      .t-trrow{ grid-template-columns:1fr; gap:7px; }
+      .t-trmean{ white-space:normal; }
+    }
+
+    .t-note{ background:var(--t-paper2); border-left:2px solid var(--t-gold); padding:18px 22px; margin:30px 0; }
+    .t-note p{ margin:0; font-size:.95rem; color:#4A4238; line-height:1.7; }
+    .t-note .tag{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--t-gold); display:block; margin-bottom:9px; }
+
+    .t-statement{ background:rgba(156,59,46,0.07); border:1px solid rgba(156,59,46,0.3); border-radius:4px; padding:32px 34px; margin:42px 0; text-align:center; font-family:'Fraunces',serif; font-style:italic; font-size:1.3rem; line-height:1.5; color:var(--t-ink); position:relative; }
+    .t-statement::before{ content:''; position:absolute; top:-1px; left:50%; transform:translateX(-50%); width:54px; height:2px; background:var(--t-accent); }
+
+    .t-beat{ font-family:'Fraunces',serif; font-size:1.26rem; line-height:1.45; color:var(--t-ink); margin:30px 0; }
+
+    .t-word{ text-align:center; margin:52px 0; padding:38px 20px; border-top:1px solid var(--t-rule); border-bottom:1px solid var(--t-rule); }
+    .t-word .w{ font-family:'Fraunces',serif; font-size:clamp(2.2rem,6vw,3.2rem); font-weight:600; font-style:italic; color:var(--t-accent); line-height:1; letter-spacing:-.015em; }
+    .t-word .s{ font-family:'Fraunces',serif; font-size:1.3rem; color:var(--t-ink); margin-top:14px; font-style:italic; }
+
+    .t-close{ font-family:'Fraunces',serif; font-size:1.3rem; line-height:1.5; color:var(--t-ink); margin:0; }
+
+    .t-rel{ margin-top:46px; padding:20px 22px; border:1px solid var(--t-rule); border-radius:5px; background:var(--t-paper2); }
+    .t-rel .k{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--t-soft); margin-bottom:9px; }
+    .t-rel a{ font-family:'Fraunces',serif; font-size:1.04rem; color:var(--t-accent); cursor:pointer; text-decoration:none; border-bottom:1px solid rgba(156,59,46,0.35); }
+    .t-rel a:hover{ border-bottom-color:var(--t-accent); }
+
+    .t-end{ margin-top:44px; padding-top:22px; border-top:1px solid var(--t-rule); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--t-soft); }
+
+    @media(max-width:640px){
+      .t-wrap{ padding:0 22px 76px; }
+      .t-body{ font-size:1.04rem; }
+      .t-statement{ font-size:1.12rem; padding:24px 20px; }
+      .t-close,.t-beat{ font-size:1.14rem; }
+    }
+    </style>
+
+    <div class="t-wrap">
+      <button class="t-back" onclick="showPage('blog')">&larr; Back to Blog</button>
+
+      <p class="t-kicker">Personal Essay</p>
+      <h1 class="t-h1">Timshel<em>Thou Mayest</em></h1>
+      <p class="t-dek">Are we destined to become our past?</p>
+      <div class="t-byline">Michel Adurayi Amenah &nbsp;&middot;&nbsp; 5 min read</div>
+
+      <div class="t-body">
+
+        <section>
+          <p class="t-lede">Are we destined to become like our parents? And if we make mistakes, sometimes terrible ones, does that mean we are incapable of becoming better people?</p>
+
+          <p>These are questions I have been thinking about recently.</p>
+
+          <p>Over the past two months, I have watched two series, <em>Unabomber</em> and <em>East of Eden</em>, that have made me reflect deeply on parenting, childhood experiences and the circumstances that shape who we become.</p>
+
+          <p>But one particular idea from <em>East of Eden</em>, based on John Steinbeck&rsquo;s novel, has stayed with me.</p>
+
+          <p class="t-beat">Timshel. Thou mayest.</p>
+        </section>
+
+        <section>
+          <div class="t-sechead">
+            <span class="t-h2n">01</span>
+            <h2 class="t-h2">Cal</h2>
+          </div>
+
+          <p>If you haven&rsquo;t watched <em>East of Eden</em>, I would encourage you to. It is a fascinating story about family, love, jealousy, rejection and the complicated relationships between parents and their children.</p>
+
+          <p>Without going into the entire story, there is a character called Cal who struggles with his identity. He discovers some disturbing truths about his mother and begins to fear that he has inherited her capacity for cruelty. His relationship with his father is equally complicated, as he constantly feels less loved than his brother, Aron.</p>
+
+          <p>Things eventually take a tragic turn. Out of jealousy and resentment, Cal reveals a painful truth to his brother, setting in motion events that ultimately lead to Aron&rsquo;s death.</p>
+
+          <p>Cal did not kill his brother himself, but he knows his actions contributed to what happened. He is consumed by guilt and the fear that perhaps he really is the terrible person he always thought he might become.</p>
+
+          <p>And this is where the idea of Timshel becomes particularly powerful.</p>
+        </section>
+
+        <section>
+          <div class="t-sechead">
+            <span class="t-h2n">02</span>
+            <h2 class="t-h2">One Word, Three Readings</h2>
+          </div>
+
+          <p>Earlier in the story, Lee, who helps raise the children, discusses a passage from the Bible, Genesis 4:7, where God warns Cain about sin before Cain kills his brother Abel.</p>
+
+          <p>Lee explains that different translations of the passage suggest different things. One suggests that man shall overcome sin. Another presents it as a command that man must overcome sin. But Steinbeck&rsquo;s interpretation of the Hebrew word Timshel offers something different.</p>
+
+          <div class="t-tr">
+            <div class="t-trrow">
+              <div class="t-trsrc">King James</div>
+              <div class="t-trtext">&ldquo;Thou shalt rule over him&rdquo;</div>
+              <div class="t-trmean">A promise</div>
+            </div>
+            <div class="t-trrow">
+              <div class="t-trsrc">American Standard</div>
+              <div class="t-trtext">&ldquo;Do thou rule over him&rdquo;</div>
+              <div class="t-trmean">An order</div>
+            </div>
+            <div class="t-trrow key">
+              <div class="t-trsrc">Timshel</div>
+              <div class="t-trtext">&ldquo;Thou mayest rule over him&rdquo;</div>
+              <div class="t-trmean">A choice</div>
+            </div>
+          </div>
+
+          <p>Not that you certainly will. Not simply that you must. But that you may.</p>
+
+          <p class="t-beat">There is a choice.</p>
+
+          <div class="t-note">
+            <span class="tag">A note on the Hebrew</span>
+            <p>Scholars have long argued about this. The word in Genesis 4:7 is usually transliterated <em>timshol</em> rather than <em>timshel</em>, and some Hebrew readers say Steinbeck&rsquo;s rendering leans harder on the idea of permission than the grammar strictly allows. The debate is worth knowing about. But the idea he drew out of it is what has stayed with me.</p>
+          </div>
+
+          <p>And I think the significance goes far beyond the biblical story.</p>
+
+          <p>Cal cannot undo what happened to his brother. He cannot erase the consequences of his actions. But must that one terrible mistake determine everything he becomes afterwards? Must he spend the rest of his life believing that he is incapable of goodness?</p>
+        </section>
+
+        <section>
+          <div class="t-sechead">
+            <span class="t-h2n">03</span>
+            <h2 class="t-h2">What We Inherit</h2>
+          </div>
+
+          <p>And this got me thinking about our own lives, particularly our upbringing.</p>
+
+          <p>We inherit so much from our parents, often without realising it. The way we express love, handle anger, respond to disappointment and treat others can all be influenced by what we experienced growing up. Sometimes we carry these behaviours into adulthood and eventually pass them on to our own children.</p>
+
+          <p>But should we?</p>
+
+          <div class="t-qs">
+            <p>If you grew up in a household where anger was the usual response to disagreement, must that also become how you manage conflict?</p>
+            <p>If your parents struggled to express affection, must you struggle to express it too?</p>
+            <p>And if you experienced rejection, constant criticism or unhealthy relationships growing up, does that mean you cannot create something different for yourself or your children?</p>
+          </div>
+
+          <p>I don&rsquo;t think so.</p>
+
+          <p>Of course, this is not to suggest that changing our lives is simply a matter of making a decision. Childhood experiences, trauma, poverty and other circumstances can have lasting consequences. Not everyone has the same opportunities or support to overcome them.</p>
+
+          <p>But I think there is a difference between understanding how our past has shaped us and believing that we can never become anything different.</p>
+
+          <p class="t-beat">Our past may explain our behaviour, but it does not necessarily have to excuse or permanently define it.</p>
+
+          <p>And perhaps this is where personal responsibility comes in. We can love our parents and appreciate their sacrifices while recognising that there are things we would want to do differently. We can acknowledge the mistakes we have made without allowing those mistakes to become our entire identity. And we can recognise the pain we experienced without deliberately passing that pain on to others.</p>
+        </section>
+
+        <section>
+          <div class="t-sechead">
+            <span class="t-h2n">04</span>
+            <h2 class="t-h2">What Should End With Me</h2>
+          </div>
+
+          <p>Perhaps one of the most important questions we should ask ourselves is this:</p>
+
+          <div class="t-statement">What have I inherited from my past that is worth preserving, and what should end with me?</div>
+
+          <p>Because not everything we inherit is bad. There are beautiful things our parents pass on to us: kindness, discipline, resilience, generosity and sacrifice. But there may also be patterns we need to question. And perhaps part of becoming an adult is recognising the difference.</p>
+
+          <p>What makes Timshel so meaningful to me is that it is not simply about having the possibility of a better future. It is also about what we do after we have made mistakes, after we have hurt people, or after we have discovered things about ourselves that we wish were different.</p>
+
+          <p>It does not promise that change will be easy. It does not absolve us of responsibility. But it reminds us that our past does not necessarily have to have the final word.</p>
+
+          <p>We may not have chosen the circumstances that shaped us. We cannot undo everything that has happened, and some consequences will remain. But where the possibility exists, we can choose to do differently.</p>
+
+          <p>And perhaps that is why this one word has stayed with me.</p>
+
+          <div class="t-word">
+            <div class="w">Timshel</div>
+            <div class="s">Thou mayest.</div>
+          </div>
+
+          <p class="t-close">Our past may explain who we are today, but it does not necessarily have to determine who we become tomorrow.</p>
+        </section>
+
+        <div class="t-rel">
+          <div class="k">Related</div>
+          <a onclick="showPage('blog-post-6')">The Weight of a Wingbeat &rarr;</a>
+        </div>
+
+        <div class="t-end">
+          <span>Personal Essay &middot; Accra</span>
+          <span>October 2026</span>
+        </div>
+
+        <div style="margin-top:32px;">
+          <button class="btn btn--navy" onclick="showPage('blog')">&larr; Back to Blog</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cmt-wrap">
+      <div class="cmt-inner">
+        <h2 class="cmt-title">Comments</h2>
+        <p class="cmt-sub">Thoughts, disagreements and corrections are all welcome. No account needed, just a name.</p>
+        <div class="cmt-thread" id="cmt-blog-post-11" data-title="Timshel: Thou Mayest"></div>
+      </div>
+    </div>
+
+  </div><!-- end page-blog-post-11 -->
   <footer>
     <div class="container">
       <div class="footer__inner">
@@ -4339,7 +4600,7 @@
 
   <!-- ============ SCRIPTS ============ -->
   <script>
-    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','blog-post-8','blog-post-9','blog-post-10','contact'];
+    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','blog-post-8','blog-post-9','blog-post-10','blog-post-11','contact'];
 
     function showPage(id, pushState) {
       if (!VALID_PAGES.includes(id)) id = 'home';
