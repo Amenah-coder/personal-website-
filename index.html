@@ -1809,6 +1809,23 @@
               </div>
             </article>
 
+            <!-- POST 12: Another Year Around the Sun -->
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner" style="background:linear-gradient(135deg,#6B3F5B 0%,#C9733C 55%,#F0C27B 100%);"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat" style="background:#ffedd5;color:#9a3412;">Personal Essay</span>
+                  <span class="blog-post__date">Nov 2026</span>
+                </div>
+                <h2 class="blog-post__title">Another Year Around the Sun</h2>
+                <p class="blog-post__excerpt">Once a year we celebrate the passage of the one thing we cannot save, hold on to, or recover. On birthdays, the difference between reflection and putting yourself on trial, and a letter to my future self.</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read" onclick="showPage('blog-post-12')">Read more &rarr;</span>
+                  <span class="blog-post__readtime">~4 min read</span>
+                </div>
+              </div>
+            </article>
+
             <!-- POST 11: Timshel -->
             <article class="blog-post fade-up">
               <div class="blog-post__banner" style="background:linear-gradient(135deg,#241F1A 0%,#6B4A3A 50%,#9C3B2E 100%);"></div>
@@ -4559,6 +4576,238 @@
     </div>
 
   </div><!-- end page-blog-post-11 -->
+  <div class="page" id="page-blog-post-12">
+
+    <style>
+    #page-blog-post-12{
+      --s-paper:#FCF7ED; --s-paper2:#F5EDDD; --s-rule:#E0D3BC;
+      --s-ink:#211D18; --s-soft:#6A6054; --s-accent:#C9733C; --s-plum:#6B3F5B;
+      background:var(--s-paper); color:var(--s-ink);
+      font-family:'Inter',sans-serif; line-height:1.8; min-height:100vh;
+      -webkit-font-smoothing:antialiased;
+    }
+    #page-blog-post-12 ::selection{ background:var(--s-accent); color:#fff; }
+
+    .s-wrap{ max-width:730px; margin:0 auto; padding:0 46px 100px; box-sizing:border-box; }
+    .s-back{ background:none; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--s-soft); padding:26px 0 0; display:flex; align-items:center; gap:7px; transition:color .2s; }
+    .s-back:hover{ color:var(--s-accent); }
+
+    .s-kicker{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--s-accent); margin:46px 0 22px; display:flex; gap:10px; align-items:center; }
+    .s-kicker::after{ content:''; flex:1; height:1px; background:var(--s-rule); }
+    .s-h1{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.4rem,6.3vw,4rem); line-height:1.03; letter-spacing:-.022em; margin:0 0 20px; }
+    .s-h1 em{ font-style:italic; color:var(--s-accent); font-weight:500; }
+    .s-dek{ font-family:'Fraunces',serif; font-style:italic; font-size:1.22rem; line-height:1.56; color:var(--s-soft); max-width:42ch; margin:0; }
+    .s-byline{ font-family:'JetBrains Mono',monospace; font-size:.74rem; letter-spacing:.06em; color:var(--s-soft); text-transform:uppercase; margin:28px 0 0; padding-bottom:24px; border-bottom:1px solid var(--s-rule); }
+
+    .s-orbit{ display:block; margin:30px auto 0; width:160px; height:auto; opacity:.9; }
+    .s-orbit circle.path{ fill:none; stroke:var(--s-rule); stroke-width:1; }
+    .s-orbit circle.sun{ fill:var(--s-accent); }
+    .s-orbit circle.dot{ fill:var(--s-plum); }
+
+    .s-body{ font-size:1.09rem; }
+    #page-blog-post-12 section{ padding-top:54px; }
+    #page-blog-post-12 p{ margin:0 0 22px; color:#2E2922; }
+    .s-lede{ font-size:1.2rem; line-height:1.7; color:var(--s-ink); }
+
+    .s-sechead{ margin:0 0 24px; }
+    .s-h2n{ display:block; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--s-accent); opacity:.75; letter-spacing:.18em; margin-bottom:11px; }
+    .s-h2{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.5rem,3.3vw,1.92rem); line-height:1.2; letter-spacing:-.012em; margin:0; }
+
+    .s-qs{ margin:0 0 24px; padding-left:22px; border-left:1px solid var(--s-rule); }
+    .s-qs p{ margin:0 0 9px; font-family:'Fraunces',serif; font-size:1.08rem; color:var(--s-ink); }
+    .s-qs p:last-child{ margin:0; }
+
+    /* two perspectives */
+    .s-two{ display:grid; grid-template-columns:1fr 1fr; margin:36px 0; border:1px solid var(--s-rule); border-radius:5px; overflow:hidden; }
+    .s-col{ padding:26px 24px; }
+    .s-col.a{ background:var(--s-paper2); border-right:1px solid var(--s-rule); }
+    .s-col.b{ background:#fff; }
+    .s-colk{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--s-soft); margin-bottom:12px; }
+    .s-colw{ font-family:'Fraunces',serif; font-size:1.34rem; font-weight:600; line-height:1.2; margin-bottom:10px; }
+    .s-col.a .s-colw{ color:var(--s-accent); }
+    .s-col.b .s-colw{ color:var(--s-plum); }
+    .s-cols{ font-size:.92rem; color:#4C463C; line-height:1.6; }
+    @media(max-width:560px){ .s-two{ grid-template-columns:1fr; } .s-col.a{ border-right:none; border-bottom:1px solid var(--s-rule); } }
+
+    /* the letter */
+    .s-letter{ margin:40px 0; background:#fff; border:1px solid var(--s-rule); border-radius:5px; box-shadow:0 1px 0 var(--s-rule); overflow:hidden; }
+    .s-lhead{ background:var(--s-paper2); padding:13px 22px; border-bottom:1px solid var(--s-rule); font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--s-soft); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .s-lbody{ padding:28px 30px; font-family:'Fraunces',serif; font-size:1.1rem; line-height:1.72; color:var(--s-ink); }
+    .s-lbody p{ margin:0 0 16px; color:var(--s-ink) !important; font-family:'Fraunces',serif; }
+    .s-lbody p:last-child{ margin:0; }
+    .s-lbody .greet{ font-style:italic; color:var(--s-plum) !important; }
+    @media(max-width:560px){ .s-lbody{ padding:22px 20px; font-size:1.02rem; } }
+
+    .s-beat{ font-family:'Fraunces',serif; font-size:1.26rem; line-height:1.45; color:var(--s-ink); margin:30px 0; }
+
+    .s-close{ font-family:'Fraunces',serif; font-size:1.3rem; line-height:1.5; color:var(--s-ink); margin:34px 0 0; padding-top:28px; border-top:1px solid var(--s-rule); }
+
+    .s-rel{ margin-top:46px; padding:20px 22px; border:1px solid var(--s-rule); border-radius:5px; background:var(--s-paper2); }
+    .s-rel .k{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--s-soft); margin-bottom:9px; }
+    .s-rel a{ font-family:'Fraunces',serif; font-size:1.04rem; color:var(--s-accent); cursor:pointer; text-decoration:none; border-bottom:1px solid rgba(201,115,60,0.35); }
+    .s-rel a:hover{ border-bottom-color:var(--s-accent); }
+
+    .s-end{ margin-top:44px; padding-top:22px; border-top:1px solid var(--s-rule); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--s-soft); }
+
+    @media(max-width:640px){
+      .s-wrap{ padding:0 22px 76px; }
+      .s-body{ font-size:1.04rem; }
+      .s-close,.s-beat{ font-size:1.14rem; }
+    }
+    </style>
+
+    <div class="s-wrap">
+      <button class="s-back" onclick="showPage('blog')">&larr; Back to Blog</button>
+
+      <p class="s-kicker">Personal Essay</p>
+      <h1 class="s-h1">Another Year <em>Around the Sun</em></h1>
+      <p class="s-dek">What are we really celebrating?</p>
+      <div class="s-byline">Michel Adurayi Amenah &nbsp;&middot;&nbsp; 4 min read</div>
+
+      <svg class="s-orbit" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="path" cx="100" cy="100" r="74"/>
+        <circle class="sun" cx="100" cy="100" r="11"/>
+        <circle class="dot" cx="174" cy="100" r="5"/>
+      </svg>
+
+      <div class="s-body">
+
+        <section>
+          <p class="s-lede">There is something fascinating about birthdays.</p>
+
+          <p>Once every year, we celebrate the passage of time. And yet, time is perhaps the most precious thing we possess. We cannot hold on to it, save it for later, or recover what has already passed.</p>
+
+          <p>Perhaps that is precisely what makes it so valuable.</p>
+
+          <p>We gather with friends and family, exchange wishes, light candles, and celebrate another year gone by.</p>
+
+          <p class="s-beat">But what exactly are we celebrating?</p>
+
+          <p>The tradition itself has evolved over centuries. Across different civilisations, birthdays have been occasions for thanksgiving, feasting, and celebration. Over time, these customs have become the familiar rituals of cakes, candles, gifts, and birthday wishes.</p>
+
+          <p>And somewhere along the way, birthdays became something else: a way of measuring our lives.</p>
+
+          <p>As children, we could hardly wait to grow older. Every birthday brought us closer to independence, adulthood, and freedom. But as we grow older, the questions change.</p>
+
+          <div class="s-qs">
+            <p>Have I achieved enough?</p>
+            <p>Am I where I imagined I would be?</p>
+            <p>Have I made the right decisions?</p>
+            <p>Why does it sometimes feel as though everyone else is moving faster?</p>
+          </div>
+
+          <p>Somehow, we have turned the simple act of growing older into an examination of how well we have lived. And I wonder whether we sometimes miss the point.</p>
+        </section>
+
+        <section>
+          <div class="s-sechead">
+            <span class="s-h2n">01</span>
+            <h2 class="s-h2">Two Ways to Look at It</h2>
+          </div>
+
+          <p>I have come to think about birthdays from two perspectives.</p>
+
+          <div class="s-two">
+            <div class="s-col a">
+              <div class="s-colk">First</div>
+              <div class="s-colw">Being alive</div>
+              <div class="s-cols">Before the achievements and the expectations, the simple fact that we are here. Another year to learn, to laugh, to love, and to make a few mistakes.</div>
+            </div>
+            <div class="s-col b">
+              <div class="s-colk">Second</div>
+              <div class="s-colw">What we did with it</div>
+              <div class="s-cols">Whether we pursued meaningful ambitions and made progress. Reflection matters. But reflection is not the same as a verdict.</div>
+            </div>
+          </div>
+
+          <p>The first sounds almost too obvious, doesn&rsquo;t it? Yet it is something we easily overlook. We often speak of another birthday as though it were guaranteed. Yet another year of life is neither automatic nor promised.</p>
+
+          <p>And perhaps that alone is reason enough to celebrate.</p>
+
+          <p>As for the second, I believe reflection matters. There is nothing wrong with asking whether we have achieved our goals, pursued meaningful ambitions, or made progress over the past year.</p>
+
+          <p class="s-beat">But there is a difference between evaluating our progress and putting ourselves on trial.</p>
+
+          <p>Life is not a race with universally agreed checkpoints. There is no rule that says we must have achieved certain things by thirty, found love by thirty-five, or figured everything out by forty.</p>
+
+          <p>And perhaps achievement itself deserves a broader definition. Sometimes, our most meaningful progress cannot be captured in a CV, a bank account, or a collection of certificates. Perhaps we have become more patient, learnt to forgive, developed greater courage, or simply become more comfortable with who we are.</p>
+
+          <p>Surely, these count for something too.</p>
+
+          <p>Ambition matters. We should want to grow and make something meaningful of our lives. But ambition should inspire us, not make us feel that we are perpetually falling behind.</p>
+        </section>
+
+        <section>
+          <div class="s-sechead">
+            <span class="s-h2n">02</span>
+            <h2 class="s-h2">A Letter to My Future Self</h2>
+          </div>
+
+          <p>This brings me to an idea I have been considering. What if I wrote an email to my future self every birthday?</p>
+
+          <p>A letter about my hopes, ambitions, worries, and the things I am still trying to understand about life. Then, a year later, I would open it.</p>
+
+          <p>Perhaps some dreams would have materialised. Others might have changed entirely. Some plans might not have worked out at all.</p>
+
+          <p>But I imagine the first few lines would read:</p>
+
+          <div class="s-letter">
+            <div class="s-lhead"><span>To: me, one year from now</span><span>Sent: 1 November</span></div>
+            <div class="s-lbody">
+              <p class="greet">Dear me,</p>
+              <p>If you are reading this, congratulations. You made it through another year.</p>
+              <p>I hope you made progress, took chances, found reasons to laugh, and learnt something along the way.</p>
+              <p>And if life did not turn out quite as you imagined, I hope you remember that there is still life to be lived.</p>
+            </div>
+          </div>
+
+          <p>I find something comforting in that thought.</p>
+
+          <p>Perhaps birthdays should not only be about comparing who we are with who we hoped to become. They should also be about appreciating the person who has carried us this far.</p>
+        </section>
+
+        <section>
+          <div class="s-sechead">
+            <span class="s-h2n">03</span>
+            <h2 class="s-h2">November 1</h2>
+          </div>
+
+          <p>And so, as November 1 comes around again, I find myself reflecting on these two things: the privilege of being alive and the responsibility of making something meaningful out of that life.</p>
+
+          <p>To be grateful for the time I have been given, while remaining intentional about what I do with it. To pursue my ambitions without allowing them to become the sole measure of my worth.</p>
+
+          <p>And, of course, to enjoy the day itself. Because sometimes we become so occupied searching for deeper meaning that we forget the simple joy of celebrating.</p>
+
+          <p>Perhaps that is the beauty of birthdays. They invite us to look backwards with gratitude, forwards with hope, and around us with appreciation.</p>
+
+          <p class="s-close">After all, what matters is not only how many years we have lived, but what we have made of the years we were given. Here&rsquo;s to another year of figuring that out.</p>
+        </section>
+
+        <div class="s-rel">
+          <div class="k">Related</div>
+          <a onclick="showPage('blog-post-10')">Be Intentional &rarr;</a>
+        </div>
+
+        <div class="s-end">
+          <span>Personal Essay &middot; Accra</span>
+          <span>November 2026</span>
+        </div>
+
+        <div style="margin-top:32px;">
+          <button class="btn btn--navy" onclick="showPage('blog')">&larr; Back to Blog</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cmt-wrap">
+      <div class="cmt-inner">
+        <h2 class="cmt-title">Comments</h2>
+        <p class="cmt-sub">Thoughts, disagreements and corrections are all welcome. No account needed, just a name.</p>
+        <div class="cmt-thread" id="cmt-blog-post-12" data-title="Another Year Around the Sun"></div>
+      </div>
+    </div>
+
+  </div><!-- end page-blog-post-12 -->
   <footer>
     <div class="container">
       <div class="footer__inner">
@@ -4600,7 +4849,7 @@
 
   <!-- ============ SCRIPTS ============ -->
   <script>
-    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','blog-post-8','blog-post-9','blog-post-10','blog-post-11','contact'];
+    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','blog-post-8','blog-post-9','blog-post-10','blog-post-11','blog-post-12','contact'];
 
     function showPage(id, pushState) {
       if (!VALID_PAGES.includes(id)) id = 'home';
