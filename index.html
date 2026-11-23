@@ -1809,6 +1809,23 @@
               </div>
             </article>
 
+            <!-- POST 13: Stages of Friendship -->
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner" style="background:linear-gradient(135deg,#17202B 0%,#2F6B6E 55%,#D98E5A 100%);"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat" style="background:#ccfbf1;color:#115e59;">Essay</span>
+                  <span class="blog-post__date">Nov 2026</span>
+                </div>
+                <h2 class="blog-post__title">The Stages of Friendship</h2>
+                <p class="blog-post__excerpt">A few friends have told me lately that I don&rsquo;t check up, that we never meet anymore. They are right. So I went looking for what is actually causing it, and ended up thinking about the stages friendship moves through.</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read" onclick="showPage('blog-post-13')">Read more &rarr;</span>
+                  <span class="blog-post__readtime">~5 min read</span>
+                </div>
+              </div>
+            </article>
+
             <!-- POST 12: Another Year Around the Sun -->
             <article class="blog-post fade-up">
               <div class="blog-post__banner" style="background:linear-gradient(135deg,#6B3F5B 0%,#C9733C 55%,#F0C27B 100%);"></div>
@@ -4808,6 +4825,286 @@
     </div>
 
   </div><!-- end page-blog-post-12 -->
+  <div class="page" id="page-blog-post-13">
+
+    <style>
+    #page-blog-post-13{
+      --f-paper:#F6F3EC; --f-paper2:#ECE7DB; --f-rule:#D8D0BF;
+      --f-ink:#17202B; --f-soft:#5E5A52;
+      --f-teal:#2F6B6E; --f-clay:#C4703E; --f-plum:#7A4A63; --f-dim:#9AA3A8;
+      background:var(--f-paper); color:var(--f-ink);
+      font-family:'Inter',sans-serif; line-height:1.78; min-height:100vh;
+      -webkit-font-smoothing:antialiased;
+    }
+    #page-blog-post-13 ::selection{ background:var(--f-teal); color:#fff; }
+
+    .f-wrap{ max-width:790px; margin:0 auto; padding:0 44px 100px; box-sizing:border-box; }
+    .f-back{ background:none; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--f-soft); padding:26px 0 0; display:flex; align-items:center; gap:7px; transition:color .2s; }
+    .f-back:hover{ color:var(--f-teal); }
+
+    .f-kicker{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--f-teal); margin:46px 0 22px; display:flex; gap:10px; align-items:center; }
+    .f-kicker::after{ content:''; flex:1; height:1px; background:var(--f-rule); }
+    .f-h1{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.4rem,6.2vw,4rem); line-height:1.03; letter-spacing:-.022em; margin:0 0 20px; }
+    .f-h1 em{ font-style:italic; color:var(--f-clay); font-weight:500; }
+    .f-dek{ font-family:'Fraunces',serif; font-style:italic; font-size:1.2rem; line-height:1.56; color:var(--f-soft); max-width:46ch; margin:0; }
+    .f-byline{ font-family:'JetBrains Mono',monospace; font-size:.74rem; letter-spacing:.06em; color:var(--f-soft); text-transform:uppercase; margin:28px 0 0; padding-bottom:24px; border-bottom:1px solid var(--f-rule); }
+
+    .f-body{ font-size:1.07rem; }
+    #page-blog-post-13 section{ padding-top:54px; }
+    #page-blog-post-13 p{ margin:0 0 21px; color:#2A3139; }
+    .f-lede{ font-size:1.19rem; line-height:1.68; color:var(--f-ink); }
+
+    .f-sechead{ margin:0 0 24px; }
+    .f-h2n{ display:block; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--f-teal); opacity:.75; letter-spacing:.18em; margin-bottom:11px; }
+    .f-h2{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.48rem,3.2vw,1.9rem); line-height:1.2; letter-spacing:-.012em; margin:0; }
+
+    .f-beat{ font-family:'Fraunces',serif; font-size:1.24rem; line-height:1.45; color:var(--f-ink); margin:28px 0; }
+
+    /* figures */
+    .f-fig{ margin:30px 0; border:1px solid var(--f-rule); border-radius:5px; background:#fff; overflow:hidden; padding-top:16px; }
+    .f-figlab{ display:none; }
+    .f-fig svg{ display:block; width:100%; height:auto; }
+    .f-fignote{ font-size:.82rem; color:var(--f-soft); line-height:1.6; padding:4px 18px 16px; margin:0; border-top:1px solid var(--f-rule); padding-top:13px; }
+    .f-ax{ font-family:'JetBrains Mono',monospace; font-size:10px; fill:#8A8880; }
+    .f-grid{ stroke:#EBE6DA; stroke-width:1; }
+    .f-base{ stroke:var(--f-rule); stroke-width:1; }
+    .f-lbl{ font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.04em; }
+    .f-zl{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; }
+    .f-za{ font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:.05em; fill:#9A968C; }
+    .f-ya{ font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:.06em; fill:#9A968C; text-transform:uppercase; }
+    .f-yt{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.09em; fill:#7E7A72; }
+
+    /* stages band */
+    .f-stages{ display:grid; grid-template-columns:repeat(4,1fr); margin:34px 0; border:1px solid var(--f-rule); border-radius:5px; overflow:hidden; }
+    .f-st{ padding:20px 16px; border-right:1px solid var(--f-rule); background:#fff; }
+    .f-st:last-child{ border-right:none; }
+    .f-st .age{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; color:var(--f-soft); margin-bottom:9px; }
+    .f-st .nm{ font-family:'Fraunces',serif; font-size:1.12rem; font-weight:600; margin-bottom:8px; }
+    .f-st .ds{ font-size:.85rem; color:#4D5259; line-height:1.55; }
+    .f-st:nth-child(1) .nm{ color:var(--f-teal); }
+    .f-st:nth-child(2) .nm{ color:var(--f-clay); }
+    .f-st:nth-child(3) .nm{ color:var(--f-plum); }
+    .f-st:nth-child(4) .nm{ color:var(--f-ink); }
+    @media(max-width:700px){ .f-stages{ grid-template-columns:1fr 1fr; } .f-st{ border-bottom:1px solid var(--f-rule); } }
+    @media(max-width:430px){ .f-stages{ grid-template-columns:1fr; } .f-st{ border-right:none; } }
+
+    /* 2x2 */
+    .f-quad{ margin:34px 0; }
+    .f-qgrid{ display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--f-rule); border-radius:5px; overflow:hidden; }
+    .f-q{ padding:22px 20px; background:#fff; border-right:1px solid var(--f-rule); border-bottom:1px solid var(--f-rule); min-height:120px; }
+    .f-q:nth-child(2n){ border-right:none; }
+    .f-q:nth-child(n+3){ border-bottom:none; }
+    .f-q .qn{ font-family:'Fraunces',serif; font-size:1.1rem; font-weight:600; margin-bottom:8px; }
+    .f-q .qd{ font-size:.86rem; color:#4D5259; line-height:1.55; }
+    .f-q.keep{ background:rgba(47,107,110,0.06); } .f-q.keep .qn{ color:var(--f-teal); }
+    .f-q.tend{ background:rgba(196,112,62,0.06); } .f-q.tend .qn{ color:var(--f-clay); }
+    .f-q.fine .qn{ color:var(--f-soft); }
+    .f-q.drop{ background:rgba(122,74,99,0.06); } .f-q.drop .qn{ color:var(--f-plum); }
+    .f-qax{ display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--f-soft); margin-top:10px; }
+    @media(max-width:560px){ .f-qgrid{ grid-template-columns:1fr; } .f-q{ border-right:none; border-bottom:1px solid var(--f-rule); } .f-q:last-child{ border-bottom:none; } }
+
+    .f-statement{ background:rgba(47,107,110,0.07); border:1px solid rgba(47,107,110,0.3); border-radius:4px; padding:32px 34px; margin:42px 0; text-align:center; font-family:'Fraunces',serif; font-style:italic; font-size:1.3rem; line-height:1.5; color:var(--f-ink); position:relative; }
+    .f-statement::before{ content:''; position:absolute; top:-1px; left:50%; transform:translateX(-50%); width:54px; height:2px; background:var(--f-teal); }
+
+    .f-note{ background:var(--f-paper2); border-left:2px solid var(--f-clay); padding:18px 22px; margin:30px 0; }
+    .f-note p{ margin:0; font-size:.94rem; color:#4A4E52; line-height:1.68; }
+    .f-note .tag{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--f-clay); display:block; margin-bottom:9px; }
+
+    .f-close{ font-family:'Fraunces',serif; font-size:1.28rem; line-height:1.5; color:var(--f-ink); margin:34px 0 0; padding-top:28px; border-top:1px solid var(--f-rule); }
+
+    .f-rel{ margin-top:44px; padding:20px 22px; border:1px solid var(--f-rule); border-radius:5px; background:var(--f-paper2); }
+    .f-rel .k{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--f-soft); margin-bottom:9px; }
+    .f-rel a{ font-family:'Fraunces',serif; font-size:1.02rem; color:var(--f-teal); cursor:pointer; text-decoration:none; border-bottom:1px solid rgba(47,107,110,.35); display:block; margin-bottom:6px; }
+    .f-rel a:last-child{ margin-bottom:0; }
+    .f-rel a:hover{ border-bottom-color:var(--f-teal); }
+
+    .f-end{ margin-top:42px; padding-top:22px; border-top:1px solid var(--f-rule); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--f-soft); }
+    .f-src{ margin-top:14px; font-size:.78rem; color:var(--f-soft); line-height:1.6; }
+
+    @media(max-width:640px){
+      .f-wrap{ padding:0 22px 76px; }
+      .f-body{ font-size:1.02rem; }
+      .f-statement{ font-size:1.12rem; padding:24px 20px; }
+      .f-close,.f-beat{ font-size:1.12rem; }
+    }
+    </style>
+
+    <div class="f-wrap">
+      <button class="f-back" onclick="showPage('blog')">&larr; Back to Blog</button>
+
+      <p class="f-kicker">Personal Essay</p>
+      <h1 class="f-h1">The Stages of <em>Friendship</em></h1>
+      <p class="f-dek">A few friends told me I don&rsquo;t check up. They were right. This is me trying to work out why.</p>
+      <div class="f-byline">Michel Adurayi Amenah &nbsp;&middot;&nbsp; 5 min read</div>
+
+      <div class="f-body">
+
+        <section>
+          <p class="f-lede">Lately a few of my friends have said the same thing to me, in different ways.</p>
+
+          <p>You don&rsquo;t check up. We don&rsquo;t see each other anymore. You&rsquo;ve changed.</p>
+
+          <p>And the honest answer is that they are right. I don&rsquo;t check up as often as I should. I don&rsquo;t call. Weeks pass, sometimes months, and I tell myself I&rsquo;ll do it at the weekend, and then the weekend comes and I don&rsquo;t.</p>
+
+          <p>So I have been sitting with that for a while. Not defending myself, just trying to understand it. Because I don&rsquo;t think I love these people any less than I did ten years ago. Something else is going on, and I wanted to work out what.</p>
+
+          <p>These are only my thoughts, by the way. I am not going to pretend any of this is research. It is a thing I noticed about my own life and then started seeing everywhere once I began looking.</p>
+
+          <p>The first thing I did was mention it to a friend, half expecting him to tell me I was making excuses. He said the same thing was happening to him.</p>
+        </section>
+
+        <section>
+          <div class="f-sechead">
+            <span class="f-h2n">01</span>
+            <h2 class="f-h2">The Shape of It</h2>
+          </div>
+
+          <p>When I tried to draw what had actually happened to my friendships, it came out looking something like this.</p>
+
+          <div class="f-fig">
+            <svg viewBox="0 0 760 340" preserveAspectRatio="xMidYMid meet">
+              <path d="M76.0,233.0 C82.8,225.3 103.2,206.9 116.9,187.0 C130.5,167.1 145.8,134.1 157.8,113.4 C169.7,92.7 178.2,75.8 188.4,62.8 C198.6,49.8 208.8,41.3 219.1,35.2 C229.3,29.1 239.5,25.6 249.7,26.0 C259.9,26.4 270.2,31.4 280.4,37.5 C290.6,43.6 299.1,52.5 311.0,62.8 C323.0,73.2 336.6,88.1 351.9,99.6 C367.2,111.1 386.0,122.6 403.0,131.8 C420.0,141.0 437.1,148.7 454.1,154.8 C471.1,160.9 486.5,164.8 505.2,168.6 C523.9,172.4 546.1,175.1 566.5,177.8 C586.9,180.5 600.6,182.8 627.8,184.7 C655.1,186.6 713.0,188.5 730.0,189.3 L730.0,256.0 L76.0,256.0 Z" fill="rgba(47,107,110,0.09)"/>
+              <line x1="62" y1="256" x2="62" y2="22" stroke="#C9C2B2" stroke-width="1"/><path d="M62,16 l-3.5,7 h7 Z" fill="#C9C2B2"/><text class="f-ya" x="54" y="34" text-anchor="end">More</text><text class="f-ya" x="54" y="254" text-anchor="end">Fewer</text><text class="f-yt" x="22" y="141.0" text-anchor="middle" transform="rotate(-90 22 141.0)">Friends you actually speak to</text><line x1="62" y1="256" x2="730" y2="256" stroke="#D8D0BF" stroke-width="1"/><rect x="76.0" y="266" width="88.0" height="3" fill="#2F6B6E" opacity=".55"/><text class="f-zl" x="122.0" y="288" text-anchor="middle" fill="#2F6B6E">Proximity</text><text class="f-za" x="122.0" y="304" text-anchor="middle">childhood to ~17</text><rect x="168.0" y="266" width="118.6" height="3" fill="#C4703E" opacity=".55"/><text class="f-zl" x="229.3" y="288" text-anchor="middle" fill="#C4703E">Abundance</text><text class="f-za" x="229.3" y="304" text-anchor="middle">~18 to ~28</text><rect x="290.6" y="266" width="159.5" height="3" fill="#7A4A63" opacity=".55"/><text class="f-zl" x="372.3" y="288" text-anchor="middle" fill="#7A4A63">Sorting</text><text class="f-za" x="372.3" y="304" text-anchor="middle">~29 to ~45</text><rect x="454.1" y="266" width="271.9" height="3" fill="#17202B" opacity=".55"/><text class="f-zl" x="592.0" y="288" text-anchor="middle" fill="#17202B">Maintenance</text><text class="f-za" x="592.0" y="304" text-anchor="middle">~45 onwards</text>
+              <path d="M76.0,233.0 C82.8,225.3 103.2,206.9 116.9,187.0 C130.5,167.1 145.8,134.1 157.8,113.4 C169.7,92.7 178.2,75.8 188.4,62.8 C198.6,49.8 208.8,41.3 219.1,35.2 C229.3,29.1 239.5,25.6 249.7,26.0 C259.9,26.4 270.2,31.4 280.4,37.5 C290.6,43.6 299.1,52.5 311.0,62.8 C323.0,73.2 336.6,88.1 351.9,99.6 C367.2,111.1 386.0,122.6 403.0,131.8 C420.0,141.0 437.1,148.7 454.1,154.8 C471.1,160.9 486.5,164.8 505.2,168.6 C523.9,172.4 546.1,175.1 566.5,177.8 C586.9,180.5 600.6,182.8 627.8,184.7 C655.1,186.6 713.0,188.5 730.0,189.3" fill="none" stroke="#2F6B6E" stroke-width="2.6" stroke-linecap="round"/>
+              <circle cx="249.7" cy="26.0" r="5.5" fill="#C4703E"/>
+              <text class="f-zl" x="262.7" y="30.0" fill="#C4703E">around twenty-five</text>
+            </svg>
+            <p class="f-fignote">How it has felt, drawn out. The ages are approximate and nothing here is measured.</p>
+          </div>
+
+          <p>Four stretches, and what makes friendship work is completely different in each one. That is the part I had never thought about.</p>
+
+          <div class="f-stages">
+            <div class="f-st">
+              <div class="age">School</div>
+              <div class="nm">Proximity</div>
+              <div class="ds">You are friends with whoever is around. Same compound, same dormitory, same class. You did not really choose them. You just found them there.</div>
+            </div>
+            <div class="f-st">
+              <div class="age">University, early twenties</div>
+              <div class="nm">Abundance</div>
+              <div class="ds">Everybody is available and nobody is busy. Friendship costs you almost nothing. This is the peak, and at the time it feels permanent.</div>
+            </div>
+            <div class="f-st">
+              <div class="age">Late twenties, thirties</div>
+              <div class="nm">Sorting</div>
+              <div class="ds">Work, marriage, children. Accra. Abroad. People scatter, and everything that used to hold the group together quietly stops working.</div>
+            </div>
+            <div class="f-st">
+              <div class="age">Forties onwards</div>
+              <div class="nm">Maintenance</div>
+              <div class="ds">Nothing survives by itself anymore. What is left is only what somebody decided to keep alive on purpose.</div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="f-sechead">
+            <span class="f-h2n">02</span>
+            <h2 class="f-h2">So What Is Actually Going On?</h2>
+          </div>
+
+          <p>Here is where I landed, and it genuinely changed how I think about it.</p>
+
+          <p>For the first twenty-five years of your life, you are handed friendship for free. You are put in a classroom with the same forty people for years. You share a dormitory with them. You walk the same route home. None of it takes effort on your part, because the effort is being done by the school, the timetable, the neighbourhood.</p>
+
+          <p>Then that ends, and nobody tells you the supply has been cut off.</p>
+
+          <p>So you carry on behaving the way you always did, waiting for friendship to happen the way it always happened, and it does not come. And because you cannot see the machinery that used to produce it, you assume the problem is you. That you have become distant, or selfish, or bad at this.</p>
+
+          <p class="f-beat">I do not think we have become worse at friendship. I think we stopped being given it for free and nobody mentioned it.</p>
+
+          <p>Now, we do still have more of those structures here than in a lot of places. Church on Sunday. The old students association. The hometown. The funeral you attend whether or not you knew the person, because your friend is the one burying their father.</p>
+
+          <p>But I have started wondering how much of that is friendship and how much is just attendance. You can see three hundred people in a month and not have one real conversation. You greet, you contribute, you sit, you go home. And the group chat carries on long after the friendship inside it has gone quiet. A group chat is not a friendship. It is a notice board.</p>
+        </section>
+
+        <section>
+          <div class="f-sechead">
+            <span class="f-h2n">03</span>
+            <h2 class="f-h2">They Are Not All the Same</h2>
+          </div>
+
+          <p>The other thing I realised is that I had been treating all my friendships as one category, and they are obviously not.</p>
+
+          <div class="f-quad">
+            <div class="f-qgrid">
+              <div class="f-q keep">
+                <div class="qn">The ones that keep</div>
+                <div class="qd">Close, and somehow no upkeep. Two years of silence and you pick up mid-sentence. Rare, and almost always made before you were twenty-five.</div>
+              </div>
+              <div class="f-q tend">
+                <div class="qn">The ones that need tending</div>
+                <div class="qd">Close, but only while somebody is carrying them. These are the ones you actually lose, and this is where the effort should be going.</div>
+              </div>
+              <div class="f-q fine">
+                <div class="qn">The ones that are fine as they are</div>
+                <div class="qd">Warm, light, no pretence of depth. The group chat, the old students association. Not everything has to be more than it is.</div>
+              </div>
+              <div class="f-q drop">
+                <div class="qn">The ones to let go</div>
+                <div class="qd">Expensive and distant. Kept going by guilt and history. Letting one of these end is not a character flaw.</div>
+              </div>
+            </div>
+            <div class="f-qax"><span>&larr; Costs you little</span><span>Costs you a lot &rarr;</span></div>
+          </div>
+
+          <p>And I know exactly which box I have been getting wrong. I feel guilty about the fourth group and give it my attention, while the second group, the people I actually care about, quietly fades.</p>
+
+          <p>Part of it is that obligation is loud. The funeral announces itself. The contribution is requested in public. The friend who has simply gone quiet announces nothing at all.</p>
+        </section>
+
+        <section>
+          <div class="f-sechead">
+            <span class="f-h2n">04</span>
+            <h2 class="f-h2">What I Think Matters</h2>
+          </div>
+
+          <p>I have not solved any of this. I am much better at noticing the pattern than at doing anything about it. But a few things feel true.</p>
+
+          <p><strong>It is not a character flaw.</strong> This happens to almost everybody. You did not become cold. Your life filled up, which is mostly what you wanted it to do.</p>
+
+          <p><strong>But drifting and choosing are not the same thing.</strong> A smaller circle at forty is completely fine. A smaller circle you never chose, made up of whoever happened to still be there, is something else.</p>
+
+          <p><strong>Showing up is not the same as being close.</strong> We are good at attendance. That is genuinely not nothing. But you can do all of it perfectly and still not have properly spoken to anyone in a year.</p>
+
+          <p><strong>Somebody has to do the boring part.</strong> The message for no reason. Remembering the name of someone&rsquo;s child. Being the one who books the thing. It is the same person in every group doing this, and they are almost never thanked for it.</p>
+
+          <p><strong>Proximity still works. We just stop building it.</strong> Every friendship you have from school came from bumping into the same people over and over. Nothing stops that working at forty, except that adults do not build the structures that make it happen. A standing Saturday. The same table every month.</p>
+
+          <div class="f-statement">Friendship stops being something that happens to you and becomes something you do.</div>
+
+          <p>So to the friends who told me I do not check up: you are right, and I am not going to pretend the reason is more interesting than it is. I got busy, the structures fell away, and I did not replace them with anything.</p>
+
+          <p class="f-close">But I would like to be able to say, years from now, that the people still there are the ones I chose to keep, and not just the ones who happened to stay.</p>
+        </section>
+
+        <div class="f-rel">
+          <div class="k">Related</div>
+          <a onclick="showPage('blog-post-7')">Are You Above Average? &rarr;</a>
+          <a onclick="showPage('blog-post-10')">Be Intentional &rarr;</a>
+        </div>
+
+        <div class="f-end">
+          <span>Essay &middot; Accra</span>
+          <span>November 2026</span>
+        </div>
+
+        <div style="margin-top:32px;">
+          <button class="btn btn--navy" onclick="showPage('blog')">&larr; Back to Blog</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cmt-wrap">
+      <div class="cmt-inner">
+        <h2 class="cmt-title">Comments</h2>
+        <p class="cmt-sub">Thoughts, disagreements and corrections are all welcome. No account needed, just a name.</p>
+        <div class="cmt-thread" id="cmt-blog-post-13" data-title="The Stages of Friendship"></div>
+      </div>
+    </div>
+
+  </div><!-- end page-blog-post-13 -->
   <footer>
     <div class="container">
       <div class="footer__inner">
@@ -4849,7 +5146,7 @@
 
   <!-- ============ SCRIPTS ============ -->
   <script>
-    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','blog-post-8','blog-post-9','blog-post-10','blog-post-11','blog-post-12','contact'];
+    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','blog-post-8','blog-post-9','blog-post-10','blog-post-11','blog-post-12','blog-post-13','contact'];
 
     function showPage(id, pushState) {
       if (!VALID_PAGES.includes(id)) id = 'home';
