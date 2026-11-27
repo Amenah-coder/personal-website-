@@ -1809,6 +1809,24 @@
               </div>
             </article>
 
+            <!-- POST 14: CPHIA 2026 -->
+            <article class="blog-post fade-up">
+              <div class="blog-post__banner" style="background:linear-gradient(135deg,#1F2A26 0%,#27584D 50%,#C98A2E 100%);"></div>
+              <div class="blog-post__body">
+                <div class="blog-post__meta">
+                  <span class="blog-post__cat" style="background:#d1fae5;color:#065f46;">Health Policy</span>
+                  <span class="blog-post__cat" style="background:#fee2e2;color:#991b1b;margin-left:6px;">Opinion</span>
+                  <span class="blog-post__date">Nov 2026</span>
+                </div>
+                <h2 class="blog-post__title">Is Africa Ready?</h2>
+                <p class="blog-post__excerpt">Notes from CPHIA 2026 in Addis Ababa, where the week&rsquo;s hardest question was answered outside the hall rather than inside it. On sovereignty, a twelve-hour queue, and the difference between declaring readiness and demonstrating it.</p>
+                <div class="blog-post__footer">
+                  <span class="blog-post__read" onclick="showPage('blog-post-14')">Read more &rarr;</span>
+                  <span class="blog-post__readtime">~7 min read</span>
+                </div>
+              </div>
+            </article>
+
             <!-- POST 13: Stages of Friendship -->
             <article class="blog-post fade-up">
               <div class="blog-post__banner" style="background:linear-gradient(135deg,#17202B 0%,#2F6B6E 55%,#D98E5A 100%);"></div>
@@ -5105,6 +5123,314 @@
     </div>
 
   </div><!-- end page-blog-post-13 -->
+  <div class="page" id="page-blog-post-14">
+
+    <style>
+    #page-blog-post-14{
+      --p-paper:#F8F6F1; --p-paper2:#EFEBE1; --p-rule:#DCD5C6;
+      --p-ink:#1F2A26; --p-soft:#5F5C54; --p-green:#27584D; --p-ochre:#B8801F; --p-rust:#A8482F;
+      background:var(--p-paper); color:var(--p-ink);
+      font-family:'Inter',sans-serif; line-height:1.78; min-height:100vh;
+      -webkit-font-smoothing:antialiased;
+    }
+    #page-blog-post-14 ::selection{ background:var(--p-green); color:#fff; }
+
+    .p-wrap{ max-width:740px; margin:0 auto; padding:0 46px 100px; box-sizing:border-box; }
+    .p-back{ background:none; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--p-soft); padding:26px 0 0; display:flex; align-items:center; gap:7px; transition:color .2s; }
+    .p-back:hover{ color:var(--p-green); }
+
+    .p-kicker{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--p-green); margin:46px 0 10px; display:flex; gap:10px; align-items:center; }
+    .p-kicker::after{ content:''; flex:1; height:1px; background:var(--p-rule); }
+    .p-dateline{ font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.09em; color:var(--p-ochre); margin:0 0 22px; }
+    .p-h1{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.6rem,7vw,4.3rem); line-height:1.01; letter-spacing:-.024em; margin:0 0 20px; }
+    .p-h1 em{ font-style:italic; color:var(--p-ochre); font-weight:500; }
+    .p-dek{ font-family:'Fraunces',serif; font-style:italic; font-size:1.2rem; line-height:1.56; color:var(--p-soft); max-width:46ch; margin:0; }
+    .p-byline{ font-family:'JetBrains Mono',monospace; font-size:.74rem; letter-spacing:.06em; color:var(--p-soft); text-transform:uppercase; margin:28px 0 0; padding-bottom:24px; border-bottom:1px solid var(--p-rule); }
+
+    .p-body{ font-size:1.08rem; }
+    #page-blog-post-14 section{ padding-top:54px; }
+    #page-blog-post-14 p{ margin:0 0 21px; color:#2E332F; }
+    .p-lede{ font-size:1.2rem; line-height:1.68; color:var(--p-ink); }
+
+    .p-sechead{ margin:0 0 24px; }
+    .p-h2n{ display:block; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--p-green); opacity:.75; letter-spacing:.18em; margin-bottom:11px; }
+    .p-h2{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.5rem,3.3vw,1.94rem); line-height:1.2; letter-spacing:-.012em; margin:0; }
+
+    .p-beat{ font-family:'Fraunces',serif; font-size:1.26rem; line-height:1.45; color:var(--p-ink); margin:30px 0; }
+
+    .p-statement{ background:rgba(39,88,77,0.07); border:1px solid rgba(39,88,77,0.3); border-radius:4px; padding:32px 34px; margin:42px 0; text-align:center; font-family:'Fraunces',serif; font-style:italic; font-size:1.3rem; line-height:1.5; color:var(--p-ink); position:relative; }
+    .p-statement::before{ content:''; position:absolute; top:-1px; left:50%; transform:translateX(-50%); width:54px; height:2px; background:var(--p-green); }
+
+    /* worked / did not work ledger */
+    .p-ledger{ display:grid; grid-template-columns:1fr 1fr; margin:36px 0; border:1px solid var(--p-rule); border-radius:5px; overflow:hidden; }
+    .p-col{ padding:22px 22px 24px; }
+    .p-col.ok{ background:rgba(39,88,77,0.05); border-right:1px solid var(--p-rule); }
+    .p-col.no{ background:rgba(168,72,47,0.05); }
+    .p-colh{ font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:16px; }
+    .p-col.ok .p-colh{ color:var(--p-green); }
+    .p-col.no .p-colh{ color:var(--p-rust); }
+    .p-col ul{ list-style:none; padding:0; margin:0; }
+    .p-col li{ position:relative; padding-left:20px; margin-bottom:12px; font-size:.93rem; line-height:1.6; color:#3B403C; }
+    .p-col li:last-child{ margin-bottom:0; }
+    .p-col li::before{ position:absolute; left:0; top:0; font-family:'JetBrains Mono',monospace; font-size:.85rem; }
+    .p-col.ok li::before{ content:'+'; color:var(--p-green); }
+    .p-col.no li::before{ content:'\2212'; color:var(--p-rust); }
+    @media(max-width:600px){ .p-ledger{ grid-template-columns:1fr; } .p-col.ok{ border-right:none; border-bottom:1px solid var(--p-rule); } }
+
+    .p-we{ font-family:'Fraunces',serif; font-weight:600; font-style:italic; font-size:clamp(2rem,5.2vw,2.9rem); line-height:1.1; color:var(--p-rust); text-align:center; margin:44px 0 32px; padding:30px 20px; border-top:2px solid var(--p-rust); border-bottom:2px solid var(--p-rust); letter-spacing:-.015em; }
+
+    .p-timeline{ margin:34px 0; border:1px solid var(--p-rule); border-radius:5px; background:#fff; padding:18px 20px 14px; }
+    .p-tl-lab{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--p-soft); margin-bottom:14px; }
+    .p-timeline svg{ display:block; width:100%; height:auto; }
+    .p-tl-k{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; fill:#27584D; }
+    .p-tl-d{ font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.08em; fill:#3B403C; }
+    .p-tl-n{ font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:.04em; fill:#8E8A80; }
+    .p-tl-note{ font-size:.79rem !important; color:var(--p-soft) !important; margin:12px 0 0 !important; line-height:1.55; }
+
+    .p-note{ background:var(--p-paper2); border-left:2px solid var(--p-ochre); padding:18px 22px; margin:30px 0; }
+    .p-note p{ margin:0; font-size:.94rem; color:#4A4E4A; line-height:1.68; }
+    .p-note .tag{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--p-ochre); display:block; margin-bottom:9px; }
+
+    .p-close{ font-family:'Fraunces',serif; font-size:1.3rem; line-height:1.5; color:var(--p-ink); margin:34px 0 0; padding-top:28px; border-top:1px solid var(--p-rule); }
+
+    .p-disc{ margin-top:46px; padding:20px 24px; border:1px dashed var(--p-rule); border-radius:5px; background:transparent; }
+    .p-disc .tag{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--p-soft); display:block; margin-bottom:10px; }
+    .p-disc p{ margin:0 !important; font-size:.86rem !important; color:var(--p-soft) !important; line-height:1.68; }
+
+    .p-rel{ margin-top:44px; padding:20px 22px; border:1px solid var(--p-rule); border-radius:5px; background:var(--p-paper2); }
+    .p-rel .k{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--p-soft); margin-bottom:9px; }
+    .p-rel a{ font-family:'Fraunces',serif; font-size:1.02rem; color:var(--p-green); cursor:pointer; text-decoration:none; border-bottom:1px solid rgba(39,88,77,.35); }
+    .p-rel a:hover{ border-bottom-color:var(--p-green); }
+
+    .p-end{ margin-top:42px; padding-top:22px; border-top:1px solid var(--p-rule); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--p-soft); }
+
+    @media(max-width:640px){
+      .p-wrap{ padding:0 22px 76px; }
+      .p-body{ font-size:1.03rem; }
+      .p-statement{ font-size:1.12rem; padding:24px 20px; }
+      .p-close,.p-beat{ font-size:1.13rem; }
+    }
+    </style>
+
+    <div class="p-wrap">
+      <button class="p-back" onclick="showPage('blog')">&larr; Back to Blog</button>
+
+      <p class="p-kicker">Health Policy &middot; Opinion</p>
+      <p class="p-dateline">Addis Ababa &nbsp;&middot;&nbsp; CPHIA 2026</p>
+      <h1 class="p-h1">Is Africa <em>Ready?</em></h1>
+      <p class="p-dek">The hardest question of the week was answered outside the hall, not inside it.</p>
+      <div class="p-byline">Michel Adurayi Amenah &nbsp;&middot;&nbsp; 7 min read</div>
+
+      <div class="p-body">
+
+        <section>
+          <p class="p-lede">I have spent this week in Addis Ababa at CPHIA 2026, the fifth International Conference on Public Health in Africa, organised by Africa CDC.</p>
+
+          <p>The theme was health security and sovereignty. Moving, as the official framing put it, from dependency and vulnerability to ownership and resilience. The opening coverage carried the line <em>Africa is Ready to Lead</em>.</p>
+
+          <p>And the question underneath every session, asked directly in some and hovering over the rest, was the simple one.</p>
+
+          <p class="p-beat">Is Africa ready?</p>
+
+          <p>I have been thinking deeply about it all week, and I think the honest answer is that it depends entirely on what you are looking out for.</p>
+
+          <p>Our ambition is ready. Our analysis is ready. The people in those rooms are ready. Our systems are not.</p>
+
+          <p>And I do not think our systems are entirely asleep. They are gradually waking up. We are just opening our eyes, and we are now beginning to understand the fight we have on our hands.</p>
+
+          <p class="p-beat">But honestly, we are not dressed yet. We are not armed. We are not ready for the fight.</p>
+        </section>
+
+        <section>
+          <div class="p-sechead">
+            <span class="p-h2n">01</span>
+            <h2 class="p-h2">What Africa CDC Got Right</h2>
+          </div>
+
+          <p>Let me start where credit is due. Convening this many African public health people in one place is not a small thing, and nobody else was going to do it for us. The sovereignty theme was the right one, chosen at the right moment, and the discussion was serious rather than ceremonial.</p>
+
+          <p>Some presentations were excellent. The side events were often better than the main sessions, which is usually a good sign. And the networking, which people are sometimes embarrassed to admit is the real product of a conference, was worth the trip on its own. Ethiopia showed up properly as host too: good hotels, transport that ran, an organised tour. Easy to overlook and hard to do.</p>
+        </section>
+
+        <section>
+          <div class="p-sechead">
+            <span class="p-h2n">02</span>
+            <h2 class="p-h2">They Built a Good App, Then Assumed It Was the Plan</h2>
+          </div>
+
+          <p>If I had to name one thing to fix before everything else, it would not be the seating or even the payments. It would be communication.</p>
+
+          <p>It started before anyone arrived. Sponsorship details went out very late. I know someone who received their ticket two or three days before travelling, for an international trip, with visas and leave and clinics to arrange around it. Perhaps that is what happens at this volume. But something did not sit well.</p>
+
+          <p>To be fair, they made a serious attempt. The conference app was genuinely good, everything organised inside it, and I want to applaud that properly. It is the kind of investment many conferences skip.</p>
+
+          <p class="p-beat">But I think the app being good became the problem.</p>
+
+          <p>Once it existed, it was treated as the whole plan rather than one channel in it, and people who were not living inside it lost information.</p>
+
+          <p>The allowance collection was the clearest case. Yes, it was posted in the app. But there was almost nothing on site. No signage worth the name, no announcements in the halls, no one directing people. Which meant that in practice you found out when a friend told you.</p>
+
+          <div class="p-note">
+            <span class="tag">Why this matters more than it sounds</span>
+            <p>Information that travels by word of mouth does not reach everybody equally. It reaches whoever already knows the right people. At a conference about equity in African health systems, the best-connected delegates had the best information and the first-timers who came alone had the worst.</p>
+          </div>
+
+          <p>Even at the collection point, where everybody was already standing in one place, nobody could tell you which queue was which, how long it would take, or whether to come back tomorrow. That is the cheapest thing in the world to get right.</p>
+        </section>
+
+        <section>
+          <div class="p-sechead">
+            <span class="p-h2n">03</span>
+            <h2 class="p-h2">What the Week Actually Cost</h2>
+          </div>
+
+          <p>The organisers said 46,000 registered. I cannot tell you how many came. But even at 25,000, the management of that number was, I have to say it plainly, poor.</p>
+
+          <div class="p-ledger">
+            <div class="p-col ok">
+              <div class="p-colh">Worked</div>
+              <ul>
+                <li>The convening itself, and the choice of sovereignty as the theme</li>
+                <li>Strong presentations and genuinely useful side events</li>
+                <li>Networking across countries and institutions</li>
+                <li>Ethiopia as host: hotels, transport, the organised tour</li>
+                <li>A genuinely good conference app, well organised</li>
+              </ul>
+            </div>
+            <div class="p-col no">
+              <div class="p-colh">Did not</div>
+              <ul>
+                <li>Sponsorship and tickets reaching some people days before travel</li>
+                <li>On-site communication, with the app treated as the whole plan</li>
+                <li>Seating on day one. A conference of standing, for most of that first day</li>
+                <li>Hydration points that could not be found when you needed one</li>
+                <li>An allowance queue that ran from Tuesday evening to Friday</li>
+                <li>Most delegates I spoke to lost a day of sessions to it, some two</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>The first day was the worst of it. Finding somewhere to sit was a problem from the start and many of us simply stood through it. That is not a complaint about comfort. If people cannot sit, they leave, and the session they left was the point of the whole exercise.</p>
+
+          <p>In fairness, the AICC is a very large venue, and from the second day it was manageable. People worked it out for themselves, choosing when to come and which sessions to attend. But nobody should have to solve that on the delegate&rsquo;s side. Day one is the day everybody turns up at once, and it is entirely predictable.</p>
+
+          <p>Then the allowances, and I want to be careful here, because it is not about the money. Nobody travelled to Addis for a per diem. We came for the sessions. That is exactly why the way the payments were handled matters.</p>
+
+          <p>Sponsored delegates had to collect their allowance in person. The queueing began on Tuesday evening with the youth pre-conference group and ran through Wednesday, Thursday and into Friday. Twelve hours and more, in some cases. I lost a full day to it, and I was not unusual. Almost everyone I spoke to had lost a day, several had lost two.</p>
+
+          <div class="p-timeline">
+            <div class="p-tl-lab">What the week was meant to be, and what it became</div>
+            <svg viewBox="0 0 700 168" preserveAspectRatio="xMidYMid meet">
+              <text class="p-tl-k" x="0" y="14">SESSIONS</text>
+              <rect x="0" y="24" width="134" height="20" rx="2" fill="#27584D" opacity=".75"/>
+              <rect x="140" y="24" width="134" height="20" rx="2" fill="#27584D" opacity=".75"/>
+              <rect x="280" y="24" width="134" height="20" rx="2" fill="#27584D" opacity=".75"/>
+              <rect x="420" y="24" width="134" height="20" rx="2" fill="#27584D" opacity=".75"/>
+              <rect x="560" y="24" width="134" height="20" rx="2" fill="#27584D" opacity=".75"/>
+
+              <text class="p-tl-k" x="0" y="76" fill="#A8482F">THE ALLOWANCE QUEUE</text>
+              <rect x="196" y="86" width="78" height="20" rx="2" fill="#A8482F" opacity=".7"/>
+              <rect x="280" y="86" width="134" height="20" rx="2" fill="#A8482F" opacity=".7"/>
+              <rect x="420" y="86" width="134" height="20" rx="2" fill="#A8482F" opacity=".7"/>
+              <rect x="560" y="86" width="96" height="20" rx="2" fill="#A8482F" opacity=".7"/>
+
+              <text class="p-tl-d" x="67"  y="134" text-anchor="middle">MON</text>
+              <text class="p-tl-d" x="207" y="134" text-anchor="middle">TUE</text>
+              <text class="p-tl-d" x="347" y="134" text-anchor="middle">WED</text>
+              <text class="p-tl-d" x="487" y="134" text-anchor="middle">THU</text>
+              <text class="p-tl-d" x="627" y="134" text-anchor="middle">FRI</text>
+              <text class="p-tl-n" x="207" y="154" text-anchor="middle">queue starts</text>
+              <text class="p-tl-n" x="487" y="154" text-anchor="middle">most people lose a day here</text>
+            </svg>
+            <p class="p-tl-note">My own account of the week, not official figures. The bands show when the queue was running, not how many were in it.</p>
+          </div>
+
+          <p>The cost was never the money. It was the sessions people had flown across the continent for, spent standing or sitting in a queue instead.</p>
+
+          <p>Some delegates also came away saying the amount they received was short.</p>
+
+          <div class="p-note">
+            <span class="tag">Being careful here</span>
+            <p>I cannot tell you why those discrepancies happened. It may be administrative error, exchange rates, or confusion over rates between institutions. I am not in a position to say it was anything worse. But when a payment process is manual and opaque, people will reasonably assume the worst, and that assumption does its own damage to an institution that needs trust.</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="p-sechead">
+            <span class="p-h2n">04</span>
+            <h2 class="p-h2">The Queue Was the Answer</h2>
+          </div>
+
+          <p>We spent the week discussing whether Africa can manufacture its own vaccines, run its own surveillance systems and coordinate its own outbreak response. Serious, continental, operationally demanding things. And in the same building, over the same days, we could not move modest sums of money to a few thousand people standing in front of us without costing them the sessions they had come for.</p>
+
+          <div class="p-statement">If digital payment across African borders is still too hard for a conference, what exactly are we claiming is ready?</div>
+
+          <p>I am not being glib. Sovereignty is not primarily a question of ambition or analysis, and we have plenty of both. It is logistics. Procurement, payment rails, registration systems. The boring institutional plumbing that decides whether a declaration becomes a delivery. And a conference is the easiest possible test of that plumbing: a known number of people, in one place, with months of notice.</p>
+
+          <div class="p-we">We did not pass it.</div>
+
+          <p>And I want to be clear about that word. <strong>We.</strong> I have used it deliberately, and I will keep using it.</p>
+
+          <p>Africa CDC is ours. It was built by African governments, staffed by African professionals, and exists because the continent decided it would no longer wait for somebody else to coordinate its health security. So when it falls short, the failure is not somebody else&rsquo;s to explain, and I am not writing as a customer who had a bad week. I am writing as one of the people it belongs to.</p>
+
+          <p class="p-beat">Which is exactly why it should be held to the standard it is asking the rest of the continent to meet.</p>
+
+          <p>Sovereignty has to include being able to hear this from your own people, in public, without treating it as betrayal.</p>
+        </section>
+
+        <section>
+          <div class="p-sechead">
+            <span class="p-h2n">05</span>
+            <h2 class="p-h2">What I Would Want Next Time</h2>
+          </div>
+
+          <p>None of this is hard to fix, which is the frustrating part.</p>
+
+          <p><strong>Communication first, because everything else follows from it.</strong> Keep the app, but stop treating it as the plan. Put signage in the halls, announce practical things from the stage, and design for the delegate who knows nobody, because they are the one the app will never reach. And send tickets with enough notice for a person to arrange an international trip.</p>
+
+          <p><strong>Then the allowances.</strong> Pay digitally, to the account people registered with. If cross-border transfer is genuinely the obstacle, say so publicly and let us treat it as a continental problem worth solving, because it is one, and it is squarely within what this conference says it exists to fix.</p>
+
+          <p><strong>Then the room itself.</strong> The AICC is big enough, and by day two it worked. So plan for day one specifically, because that is the day everyone arrives at once. Overflow rooms, staggered opening sessions, a published sense of which halls will fill.</p>
+
+          <p><strong>And measure it like a health programme.</strong> Not by how many registered, but by how many people actually got into the sessions they came for. That is the number that tells you whether the week worked.</p>
+
+          <p>I will definitely attend this conference again if it is organised. I want it to exist. I want it to grow.</p>
+
+          <p>And I am writing it down rather than saying it quietly to a colleague in the corridor, which is where this conversation has been happening all week anyway. My training taught me to report what I observe plainly, and to put my name next to it. That is not supposed to switch off when the institution under discussion is one I admire.</p>
+
+          <p class="p-close">We are awake. We understand the fight. We are simply not dressed for it yet, and the only way through that is to say so out loud, including when the thing falling short is ours.</p>
+        </section>
+
+        <div class="p-disc">
+          <span class="tag">A note on where this comes from</span>
+          <p>I attended CPHIA 2026 as an exhibitor. This is a personal reflection written from what I saw and heard over six days, and the recommendations are my own. It does not represent the position of any institution I am affiliated with, and is not an official evaluation of the conference. Where I could not verify something, I have said so.</p>
+        </div>
+
+        <div class="p-rel">
+          <div class="k">Related</div>
+          <a onclick="showPage('blog-post-1')">Starting Where It Matters Most &rarr;</a>
+        </div>
+
+        <div class="p-end">
+          <span>Opinion &middot; Addis Ababa</span>
+          <span>November 2026</span>
+        </div>
+
+        <div style="margin-top:32px;">
+          <button class="btn btn--navy" onclick="showPage('blog')">&larr; Back to Blog</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cmt-wrap">
+      <div class="cmt-inner">
+        <h2 class="cmt-title">Comments</h2>
+        <p class="cmt-sub">Thoughts, disagreements and corrections are all welcome. No account needed, just a name.</p>
+        <div class="cmt-thread" id="cmt-blog-post-14" data-title="Is Africa Ready?"></div>
+      </div>
+    </div>
+
+  </div><!-- end page-blog-post-14 -->
   <footer>
     <div class="container">
       <div class="footer__inner">
@@ -5146,7 +5472,7 @@
 
   <!-- ============ SCRIPTS ============ -->
   <script>
-    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','blog-post-8','blog-post-9','blog-post-10','blog-post-11','blog-post-12','blog-post-13','contact'];
+    const VALID_PAGES = ['home','about','experience','research','consulting','community','blog','blog-post-1','blog-post-2','blog-post-3','blog-post-4','blog-post-5','blog-post-6','blog-post-7','blog-post-8','blog-post-9','blog-post-10','blog-post-11','blog-post-12','blog-post-13','blog-post-14','contact'];
 
     function showPage(id, pushState) {
       if (!VALID_PAGES.includes(id)) id = 'home';
